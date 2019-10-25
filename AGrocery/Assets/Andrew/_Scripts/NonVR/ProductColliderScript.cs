@@ -48,6 +48,7 @@ public class ProductColliderScript : MonoBehaviour
                 this.gameObject.GetComponent<ItemPickup>().enabled = true;
                 holdingProduct = true;
                 closeToProduct = false;
+                Destroy(gameObject);
             }
             if (holdingProduct && Input.GetKeyDown(KeyCode.R))
             {
@@ -59,7 +60,8 @@ public class ProductColliderScript : MonoBehaviour
         {
             if (player.GetComponent<PlayerColliderScript>().atCheckoutCounter == true && Input.GetKeyDown(KeyCode.E))
             {
-                transform.position = startPos;
+                //transform.position = startPos;
+                //Destroy(gameObject);
             }
         }
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerColliderScript : MonoBehaviour
+public class PlayerColliderScriptV2 : MonoBehaviour
 {
     public GameObject player;
     public Transform playerHand;
@@ -23,6 +23,9 @@ public class PlayerColliderScript : MonoBehaviour
 
     public GameObject totalMoneyCheckoutTextBox;
     public Text totalMoneyCheckoutText;
+
+    public GameObject notificationTextBox;
+    public Text notificationText;
 
     public static GameObject product1CountTextBox;
     public static Text product1CountText;
@@ -50,6 +53,7 @@ public class PlayerColliderScript : MonoBehaviour
         totalMoneyTextBox = GameObject.FindWithTag("TotalMoneyText");
         totalMoneyCheckoutTextBox = GameObject.FindWithTag("TotalMoneyCheckoutText");
         currentOfferCheckoutTextBox = GameObject.FindWithTag("CurrentOfferCheckoutText");
+        notificationTextBox = GameObject.FindWithTag("NotificationText");
         product1CountTextBox = GameObject.FindWithTag("Product1CountText");
         product2CountTextBox = GameObject.FindWithTag("Product2CountText");
         product3CountTextBox = GameObject.FindWithTag("Product3CountText");
@@ -103,15 +107,12 @@ public class PlayerColliderScript : MonoBehaviour
             atCheckoutCounter = true;
         }
     }
-    void OnTriggerStay(Collider product)
-    {
+void OnTriggerStay(Collider product)
+{
+
         if (product.gameObject.tag == "Product1")
         {
             if (Input.GetKeyDown(KeyCode.E))
-            {
-                holdingProduct1 = true;
-            }
-            if (holdingProduct1 && atCheckoutCounter && Input.GetKeyDown(KeyCode.R))
             {
                 PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost + PlayerMoneyHandler.Product1Cost;
 
@@ -127,25 +128,11 @@ public class PlayerColliderScript : MonoBehaviour
                 product1CountText.text = "Product 1: " + PlayerMoneyHandler.Product1Count;
                 holdingProduct1 = false;
             }
-            else if (holdingProduct1 && !atCheckoutCounter && Input.GetKeyDown(KeyCode.R))
-            {
-                PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost - PlayerMoneyHandler.Product1Cost;
-
-                totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
-                totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
-
-                totalMoneyCheckoutText = totalMoneyCheckoutTextBox.GetComponent<Text>();
-                totalMoneyCheckoutText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
-                holdingProduct1 = false;
-            }
         }
+
         if (product.gameObject.tag == "Product2")
         {
             if (Input.GetKeyDown(KeyCode.E))
-            {
-                holdingProduct2 = true;
-            }
-            if (holdingProduct2 && atCheckoutCounter && Input.GetKeyDown(KeyCode.R))
             {
                 PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost + PlayerMoneyHandler.Product2Cost;
 
@@ -161,26 +148,11 @@ public class PlayerColliderScript : MonoBehaviour
                 product2CountText.text = "Product 2: " + PlayerMoneyHandler.Product2Count;
                 holdingProduct2 = false;
             }
-            else if (holdingProduct2 && !atCheckoutCounter && Input.GetKeyDown(KeyCode.R))
-            {
-                PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost - PlayerMoneyHandler.Product2Cost;
-
-                totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
-                totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
-
-                totalMoneyCheckoutText = totalMoneyCheckoutTextBox.GetComponent<Text>();
-                totalMoneyCheckoutText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
-
-                holdingProduct2 = false;
-            }
         }
+
         if (product.gameObject.tag == "Product3")
         {
             if (Input.GetKeyDown(KeyCode.E))
-            {
-                holdingProduct3 = true;
-            }
-            if (holdingProduct3 && atCheckoutCounter && Input.GetKeyDown(KeyCode.R))
             {
                 PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost + PlayerMoneyHandler.Product3Cost;
 
@@ -196,61 +168,35 @@ public class PlayerColliderScript : MonoBehaviour
                 product3CountText.text = "Product 3: " + PlayerMoneyHandler.Product3Count;
                 holdingProduct3 = false;
             }
-            else if(holdingProduct3 && !atCheckoutCounter && Input.GetKeyDown(KeyCode.R))
-            {
-                PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost - PlayerMoneyHandler.Product3Cost;
-
-                totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
-                totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
-
-                totalMoneyCheckoutText = totalMoneyCheckoutTextBox.GetComponent<Text>();
-                totalMoneyCheckoutText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
-
-                holdingProduct3 = false;
-            }
         }
 
-        /*if(product.gameObject.tag == "ShoppingCart")
+        if (atCheckoutCounter && Input.GetKeyDown(KeyCode.E))
         {
-                    closeToCart = true;
-                    Debug.Log("PlayerCollision!");
-                    if (closeToCart && Input.GetKeyDown(KeyCode.E))
-                    {
-                        GetComponent<ItemPickupShoppingCart>().enabled = true;
-                        holdingCart = true;
-                    }
-                    if (holdingCart && Input.GetKeyDown(KeyCode.R))
-                    {
-                        this.GetComponent<ItemPickupShoppingCart>().enabled = false;
-                        holdingCart = false;
-                    }
-                }
-        else
-                {
-                    closeToCart = false;
-                }   */         
-
-        if(atCheckoutCounter && Input.GetKeyDown(KeyCode.E))
-        {
-            PlayerMoneyHandler.PlayerMoney = PlayerMoneyHandler.PlayerMoney - PlayerMoneyHandler.TotalCost;
-            PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost - PlayerMoneyHandler.TotalCost;
-            PlayerMoneyHandler.Product1Count = 0;
-            PlayerMoneyHandler.Product2Count = 0;
-            PlayerMoneyHandler.Product3Count = 0;
-            playerMoneyText = playerMoneyTextBox.GetComponent<Text>();
-            playerMoneyText.text = "Player Money: " + PlayerMoneyHandler.PlayerMoney;
-            playerMoneyCheckoutText = playerMoneyCheckoutTextBox.GetComponent<Text>();
-            playerMoneyCheckoutText.text = "Player Money: " + PlayerMoneyHandler.PlayerMoney;
-            totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
-            totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
-            totalMoneyCheckoutText = totalMoneyCheckoutTextBox.GetComponent<Text>();
-            totalMoneyCheckoutText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
-            product1CountText = product1CountTextBox.GetComponent<Text>();
-            product1CountText.text = "Product 1: " + PlayerMoneyHandler.Product1Count;
-            product2CountText = product2CountTextBox.GetComponent<Text>();
-            product2CountText.text = "Product 2: " + PlayerMoneyHandler.Product2Count;
-            product3CountText = product3CountTextBox.GetComponent<Text>();
-            product3CountText.text = "Product 3: " + PlayerMoneyHandler.Product3Count;
+            if (PlayerMoneyHandler.TotalCost == PlayerMoneyHandler.CurrentOffer)
+            {
+                PlayerMoneyHandler.PlayerMoney = PlayerMoneyHandler.PlayerMoney - PlayerMoneyHandler.TotalCost;
+                PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost - PlayerMoneyHandler.TotalCost;
+                PlayerMoneyHandler.CurrentOffer = 0.00m;
+                PlayerMoneyHandler.Product1Count = 0;
+                PlayerMoneyHandler.Product2Count = 0;
+                PlayerMoneyHandler.Product3Count = 0;
+                playerMoneyText = playerMoneyTextBox.GetComponent<Text>();
+                playerMoneyText.text = "Player Money: " + PlayerMoneyHandler.PlayerMoney;
+                playerMoneyCheckoutText = playerMoneyCheckoutTextBox.GetComponent<Text>();
+                playerMoneyCheckoutText.text = "Player Money: " + PlayerMoneyHandler.PlayerMoney;
+                totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
+                totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
+                totalMoneyCheckoutText = totalMoneyCheckoutTextBox.GetComponent<Text>();
+                totalMoneyCheckoutText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
+                currentOfferCheckoutText = currentOfferCheckoutTextBox.GetComponent<Text>();
+                currentOfferCheckoutText.text = "Current Offer: " + PlayerMoneyHandler.CurrentOffer;
+                product1CountText = product1CountTextBox.GetComponent<Text>();
+                product1CountText.text = "Product 1: " + PlayerMoneyHandler.Product1Count;
+                product2CountText = product2CountTextBox.GetComponent<Text>();
+                product2CountText.text = "Product 2: " + PlayerMoneyHandler.Product2Count;
+                product3CountText = product3CountTextBox.GetComponent<Text>();
+                product3CountText.text = "Product 3: " + PlayerMoneyHandler.Product3Count;
+            }
         }
     }
 

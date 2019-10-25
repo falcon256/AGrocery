@@ -42,10 +42,10 @@ public class NotificationHandler : MonoBehaviour
             text = textBox.GetComponent<Text>();
             text.text = "This item costs 2.00. Press E to pick it up!";
         }
-        if (Player.gameObject.name == "CheckoutCounter")
+        if (Player.gameObject.tag == "CheckoutCounter")
         {
             text = textBox.GetComponent<Text>();
-            text.text = "Press E to complete purchase!";
+            text.text = "Match the offer to the total cost and press E to complete the purchase!";
         }
     }
 

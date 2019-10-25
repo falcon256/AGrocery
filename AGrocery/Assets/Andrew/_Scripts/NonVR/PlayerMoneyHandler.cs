@@ -16,6 +16,24 @@ public class PlayerMoneyHandler : MonoBehaviour
 
     public static decimal TotalCost = 0.00m;
 
+    public static decimal CurrentOffer = 0.00m;
+
+    public static decimal Penny = 0.01m;
+
+    public static decimal Nickel = 0.05m;
+
+    public static decimal Dime = 0.10m;
+
+    public static decimal Quarter = 0.25m;
+
+    public static decimal OneDollar = 1.00m;
+
+    public static decimal FiveDollars = 5.00m;
+
+    public static decimal TenDollars = 10.00m;
+
+    public static decimal TwentyDollars = 20.00m;
+
     public static decimal Product1Cost = 1.00m;
 
     public static decimal Product2Cost = 1.50m;
