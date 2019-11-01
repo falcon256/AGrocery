@@ -10,6 +10,9 @@ public class ShelfGenerator : MonoBehaviour
     public float shelfBaseHeightOffset = 0.1f;// this depends on the geometery of the individual shelf prefab.
     public float shelf1Width = 1;
     public float shelf1Length = 1;
+
+    public ProductData.CATAGORY[] shelfCatagories = null;
+
     // Start is called before the first frame update
     void Start()
     {
