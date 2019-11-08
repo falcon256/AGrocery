@@ -18,6 +18,8 @@ public class PlayerMoneyHandler : MonoBehaviour
 
     public static decimal CurrentOffer = 0.00m;
 
+    public static decimal Change = 0.00m;
+
     public static decimal Penny = 0.01m;
 
     public static decimal Nickel = 0.05m;

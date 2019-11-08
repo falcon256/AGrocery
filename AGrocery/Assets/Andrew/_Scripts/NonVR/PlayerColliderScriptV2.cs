@@ -196,6 +196,52 @@ void OnTriggerStay(Collider product)
                 product2CountText.text = "Product 2: " + PlayerMoneyHandler.Product2Count;
                 product3CountText = product3CountTextBox.GetComponent<Text>();
                 product3CountText.text = "Product 3: " + PlayerMoneyHandler.Product3Count;
+                notificationText = notificationTextBox.GetComponent<Text>();
+                notificationText.text = "That's the exact amount! Have a nice Day!";
+            }
+            else if (PlayerMoneyHandler.CurrentOffer > PlayerMoneyHandler.TotalCost)
+            {
+                PlayerMoneyHandler.PlayerMoney = PlayerMoneyHandler.PlayerMoney - PlayerMoneyHandler.TotalCost;
+                PlayerMoneyHandler.Change = PlayerMoneyHandler.CurrentOffer - PlayerMoneyHandler.TotalCost;
+                PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost - PlayerMoneyHandler.TotalCost;
+                PlayerMoneyHandler.CurrentOffer = 0.00m;
+                PlayerMoneyHandler.Product1Count = 0;
+                PlayerMoneyHandler.Product2Count = 0;
+                PlayerMoneyHandler.Product3Count = 0;
+                playerMoneyText = playerMoneyTextBox.GetComponent<Text>();
+                playerMoneyText.text = "Player Money: " + PlayerMoneyHandler.PlayerMoney;
+                playerMoneyCheckoutText = playerMoneyCheckoutTextBox.GetComponent<Text>();
+                playerMoneyCheckoutText.text = "Player Money: " + PlayerMoneyHandler.PlayerMoney;
+                totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
+                totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
+                totalMoneyCheckoutText = totalMoneyCheckoutTextBox.GetComponent<Text>();
+                totalMoneyCheckoutText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
+                currentOfferCheckoutText = currentOfferCheckoutTextBox.GetComponent<Text>();
+                currentOfferCheckoutText.text = "Current Offer: " + PlayerMoneyHandler.CurrentOffer;
+                product1CountText = product1CountTextBox.GetComponent<Text>();
+                product1CountText.text = "Product 1: " + PlayerMoneyHandler.Product1Count;
+                product2CountText = product2CountTextBox.GetComponent<Text>();
+                product2CountText.text = "Product 2: " + PlayerMoneyHandler.Product2Count;
+                product3CountText = product3CountTextBox.GetComponent<Text>();
+                product3CountText.text = "Product 3: " + PlayerMoneyHandler.Product3Count;
+                notificationText = notificationTextBox.GetComponent<Text>();
+                notificationText.text = "Here's your change! You get " + PlayerMoneyHandler.Change + " back. Have a nice Day!";
+
+                while (PlayerMoneyHandler.TotalCost > 0)
+                {
+                    /*(if PlayerMoneyHandler.TotalCost > 100)
+                    {
+                    instantiate(hundredDollarBillPrefab);
+                    }
+                */
+
+                }
+                //For instatiating change use a while loop. While TotalCost > 0, Instantiate Money with denominations adding to the change amount.
+            }
+            else if (PlayerMoneyHandler.TotalCost > PlayerMoneyHandler.CurrentOffer)
+            {
+                notificationText = notificationTextBox.GetComponent<Text>();
+                notificationText.text = "You don't have enough money! GIVE ME MORE CASH OR PUT SOMETHING BACK!";
             }
         }
     }
