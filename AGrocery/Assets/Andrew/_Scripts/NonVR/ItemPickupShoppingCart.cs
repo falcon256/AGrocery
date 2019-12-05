@@ -24,6 +24,6 @@ public class ItemPickupShoppingCart : MonoBehaviour
         //GetComponent<Rigidbody>().isKinematic = true;
         //GetComponent<Rigidbody>().useGravity = false;
         transform.position = playerHand.transform.position;
-        transform.rotation = player.transform.rotation;
+        transform.rotation = playerHand.transform.rotation;
     }
 }
