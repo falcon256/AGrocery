@@ -121,8 +121,9 @@ GameObject:
   - component: {fileID: 2033389460322561038}
   - component: {fileID: 2469794520738184216}
   - component: {fileID: 2904243406154548262}
+  - component: {fileID: 1520989076}
   m_Layer: 0
-  m_Name: ToiletPaper1
+  m_Name: PaperTowels1
   m_TagString: Product1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +136,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935782344792310698}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 44.8, y: -1.251, z: 0.20000076}
   m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_Children:
@@ -189,6 +190,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   playerHand: {fileID: 0}
+--- !u!114 &1520989076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935782344792310698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 1
+  m_snapOrientation: 1
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1001 &7106336145389425876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,11 +218,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: toilet_paper
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 3f99219a86c3647dfb50fed3e565df2d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3f99219a86c3647dfb50fed3e565df2d,
         type: 3}
