@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 1811981555404279561}
   - component: {fileID: 7369477505226816244}
   - component: {fileID: 2949387529789128745}
+  - component: {fileID: 5119059861393484153}
   m_Layer: 0
   m_Name: Product3
   m_TagString: Product3
@@ -206,3 +207,19 @@ MonoBehaviour:
   m_snapOrientation: 1
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!54 &5119059861393484153
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7668006281162657833}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0

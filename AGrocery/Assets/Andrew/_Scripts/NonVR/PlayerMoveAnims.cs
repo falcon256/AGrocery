@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMoveAnims : MonoBehaviour
 {
+    public GameObject player;
+    public GameObject player2;
+
     public Animator playerAnims;
     public int walkSpeed = 5;
     public int runSpeed = 20;
@@ -11,7 +14,7 @@ public class PlayerMoveAnims : MonoBehaviour
 
     void Start()
     {
-        
+        player = GameObject.FindWithTag("Player");
     }
 
     void Update()
@@ -30,13 +33,21 @@ public class PlayerMoveAnims : MonoBehaviour
 
         //These are animation booleans which are activated when the player is or is not pressing a button. They are connected to a animation controller called PlayerAnims
 
-        if (Input.GetKey("Horizontal") || Input.GetKey("Vertical"))
+        if (Input.GetKey(KeyCode.W))
         {
             playerAnims.SetBool("isWalkingForward", true);
         }
         else
         {
             playerAnims.SetBool("isWalkingForward", false);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            playerAnims.SetBool("isWalkingBackward", true);
+        }
+        else
+        {
+            playerAnims.SetBool("isWalkingBackward", false);
         }
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -47,7 +58,7 @@ public class PlayerMoveAnims : MonoBehaviour
         {
             playerAnims.SetBool("isRunningForward", false);
         }
-        if (Input.GetKey("Jump"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             playerAnims.SetBool("isJumping", true);
         }
@@ -55,7 +66,7 @@ public class PlayerMoveAnims : MonoBehaviour
         {
             playerAnims.SetBool("isJumping", false);
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKey(KeyCode.E))
         {
             playerAnims.SetBool("isGrabbing", true);
         }

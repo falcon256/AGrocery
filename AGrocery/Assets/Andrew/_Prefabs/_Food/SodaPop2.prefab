@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5157954208996372529}
   - component: {fileID: 6213970487046996482}
   - component: {fileID: 1670855826}
+  - component: {fileID: -1048154051904267695}
   m_Layer: 0
   m_Name: SodaPop2
   m_TagString: Product2
@@ -98,6 +99,22 @@ MonoBehaviour:
   m_snapOrientation: 1
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!54 &-1048154051904267695
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4455014884189817783}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &5126361014045457091
 GameObject:
   m_ObjectHideFlags: 0

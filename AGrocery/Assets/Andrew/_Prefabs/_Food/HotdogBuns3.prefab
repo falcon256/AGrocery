@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6996884357501967510}
   - component: {fileID: 6834955120470796640}
   - component: {fileID: 139362935}
+  - component: {fileID: 8164647654595201693}
   m_Layer: 0
   m_Name: HotdogBuns3
   m_TagString: Product3
@@ -98,6 +99,22 @@ MonoBehaviour:
   m_snapOrientation: 1
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!54 &8164647654595201693
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506778695085851673}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &2682938807784758908
 GameObject:
   m_ObjectHideFlags: 0
