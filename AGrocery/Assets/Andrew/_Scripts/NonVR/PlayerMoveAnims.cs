@@ -30,21 +30,13 @@ public class PlayerMoveAnims : MonoBehaviour
 
         //These are animation booleans which are activated when the player is or is not pressing a button. They are connected to a animation controller called PlayerAnims
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey("Horizontal") || Input.GetKey("Vertical"))
         {
             playerAnims.SetBool("isWalkingForward", true);
         }
         else
         {
             playerAnims.SetBool("isWalkingForward", false);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            playerAnims.SetBool("isWalkingBackward", true);
-        }
-        else
-        {
-            playerAnims.SetBool("isWalkingBackward", false);
         }
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -55,7 +47,7 @@ public class PlayerMoveAnims : MonoBehaviour
         {
             playerAnims.SetBool("isRunningForward", false);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey("Jump"))
         {
             playerAnims.SetBool("isJumping", true);
         }
