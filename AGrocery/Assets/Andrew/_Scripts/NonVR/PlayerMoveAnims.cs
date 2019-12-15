@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMoveAnims : MonoBehaviour
 {
     public GameObject player;
-    public GameObject player2;
 
     public Animator playerAnims;
     public int walkSpeed = 5;
