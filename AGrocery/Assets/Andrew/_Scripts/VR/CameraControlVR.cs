@@ -34,7 +34,7 @@ public class CameraControlVR : MonoBehaviour
         {
             moneyCanvas.GetComponent<Canvas>().enabled = true;
         }
-        }
+    }
     void OnTriggerEnter(Collider player)
     {
         if (player.gameObject.tag == "CheckoutCounter")
@@ -47,14 +47,14 @@ public class CameraControlVR : MonoBehaviour
         }
     }
     void OnTriggerExit(Collider player)
-        {
+    {
         if (player.gameObject.tag == "CheckoutCounter")
         {
-            if(checkoutCounterCanvasShowing)
+            if (checkoutCounterCanvasShowing)
             {
                 checkoutCounterCanvasShowing = false;
                 checkoutCounterCanvasHidden = true;
             }
         }
-        }
     }
+}
