@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5290732393823631015}
   - component: {fileID: 822791540925616232}
   - component: {fileID: 4287219634827701517}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Product1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 820702444353272728}
   - component: {fileID: 149572984}
   - component: {fileID: -3105585926134613588}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ToiletPaper1
   m_TagString: Product1
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 6}
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4448119585639484969
 MonoBehaviour:
@@ -204,8 +204,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
-  m_snapPosition: 1
-  m_snapOrientation: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
 --- !u!54 &-3105585926134613588
@@ -216,9 +216,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4314288052234421041}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 1000000
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -235,6 +235,56 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: paper_towels
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: ee1e5484386404d8ea1587ef8432aea4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355946205072984129, guid: ee1e5484386404d8ea1587ef8432aea4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -6340160415834234880, guid: ee1e5484386404d8ea1587ef8432aea4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -4306741362086730716, guid: ee1e5484386404d8ea1587ef8432aea4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6777265232623492606, guid: ee1e5484386404d8ea1587ef8432aea4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107602813690585097, guid: ee1e5484386404d8ea1587ef8432aea4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -1470932356877270075, guid: ee1e5484386404d8ea1587ef8432aea4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706744521714518265, guid: ee1e5484386404d8ea1587ef8432aea4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -1217900348469176846, guid: ee1e5484386404d8ea1587ef8432aea4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2007211712037911249, guid: ee1e5484386404d8ea1587ef8432aea4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ee1e5484386404d8ea1587ef8432aea4,
         type: 3}

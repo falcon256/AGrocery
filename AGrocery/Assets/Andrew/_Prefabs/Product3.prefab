@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6339534006065223473}
   - component: {fileID: 7256536437874068497}
   - component: {fileID: 7205378765134684621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Product3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 7369477505226816244}
   - component: {fileID: 2949387529789128745}
   - component: {fileID: 5119059861393484153}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Product3
   m_TagString: Product3
   m_Icon: {fileID: 0}
@@ -203,8 +203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
-  m_snapPosition: 1
-  m_snapOrientation: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
 --- !u!54 &5119059861393484153
@@ -215,11 +215,11 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7668006281162657833}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 1000000
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 112
   m_CollisionDetection: 0

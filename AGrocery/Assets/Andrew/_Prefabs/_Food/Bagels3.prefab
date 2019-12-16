@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4336588271025011282}
   - component: {fileID: 5549735138984037666}
   - component: {fileID: 5549045385339914296}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Product3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 1454156069760242924}
   - component: {fileID: 1448365317}
   - component: {fileID: -4887014840539977415}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bagels3
   m_TagString: Product3
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 6}
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4799174990214033419
 MonoBehaviour:
@@ -204,8 +204,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
-  m_snapPosition: 1
-  m_snapOrientation: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
 --- !u!54 &-4887014840539977415
@@ -216,9 +216,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3110581700450207806}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 1000000
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -235,6 +235,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bagels (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568998755497832391, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -5102530947620581811, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a53eee5101c4db44e943dc7ba8b0ede3,
         type: 3}
@@ -305,6 +320,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164566716457838015, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -3164220449637510858, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -3006091614195549367, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335975045913516189, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -6520957560641263882, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a53eee5101c4db44e943dc7ba8b0ede3, type: 3}

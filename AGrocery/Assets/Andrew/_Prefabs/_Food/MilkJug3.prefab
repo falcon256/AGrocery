@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4535239576092038465}
   - component: {fileID: 1732698470}
   - component: {fileID: 6007160718053334803}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MilkJug3
   m_TagString: Product3
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 6}
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6514370949998817703
 MonoBehaviour:
@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
-  m_snapPosition: 1
-  m_snapOrientation: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
 --- !u!54 &6007160718053334803
@@ -107,9 +107,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016847012899819128}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 1000000
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 622049416536025384}
   - component: {fileID: 4235420823544918955}
   - component: {fileID: 8807966089944305464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Product3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,6 +235,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: milk_jug (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 98d532e1e7466e049a2a0b3743ca3565,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101430577481724397, guid: 98d532e1e7466e049a2a0b3743ca3565,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8626751840527039810, guid: 98d532e1e7466e049a2a0b3743ca3565,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 98d532e1e7466e049a2a0b3743ca3565,
         type: 3}
