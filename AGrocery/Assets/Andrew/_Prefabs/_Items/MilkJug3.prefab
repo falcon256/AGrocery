@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8393762033218716180}
   - component: {fileID: 3879941622453679828}
+  - component: {fileID: -9012691530625371149}
   - component: {fileID: 6514370949998817703}
   - component: {fileID: 4535239576092038465}
   - component: {fileID: 1732698470}
@@ -48,6 +49,19 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 6}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &-9012691530625371149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016847012899819128}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6514370949998817703
 MonoBehaviour:
@@ -110,7 +124,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
