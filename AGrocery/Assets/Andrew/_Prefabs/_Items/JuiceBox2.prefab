@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8482712405921933922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 44.8, y: -1.251, z: 0.20000076}
-  m_LocalScale: {x: 1, y: 1, z: 0.5}
+  m_LocalScale: {x: 1, y: 0.8, z: 0.5}
   m_Children:
   - {fileID: 3158147214775159951}
   m_Father: {fileID: 0}
@@ -220,6 +220,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: -3701727588016112575, guid: 72bf306f5eee24155995fab2c8963deb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0f1d001a25dd8214c8ebd841ad805d59, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72bf306f5eee24155995fab2c8963deb, type: 3}
 --- !u!4 &3158147214775159951 stripped
