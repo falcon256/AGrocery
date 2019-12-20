@@ -67,28 +67,12 @@ public class MenuControllerVR : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetButtonDown(("Oculus_CrossPlatform_Button3")))
         {
             ReturnToGame();
             GameMenuCanvas.GetComponent<Canvas>().enabled = true;
         }
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            ReturnToGame();
-            ItemMenuCanvas.GetComponent<Canvas>().enabled = true;
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            ReturnToGame();
-            ControlsMenuCanvas.GetComponent<Canvas>().enabled = true;
-        }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            ReturnToGame();
-            ObjectivesMenuCanvas.GetComponent<Canvas>().enabled = true;
-
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown(("Oculus_CrossPlatform_Button4")))
         {
             ReturnToGame();
         }
