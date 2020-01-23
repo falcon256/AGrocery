@@ -15,7 +15,10 @@ public class CartColliderScript : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        playerHand = GameObject.FindWithTag("ShoppingCartLocation").transform;
+        if (GameObject.FindWithTag("ShoppingCartLocation"))
+        {
+            playerHand = GameObject.FindWithTag("ShoppingCartLocation").transform;
+        }        
         cart = GameObject.FindWithTag("ShoppingCart");
     }
 
