@@ -9,6 +9,8 @@ public class ScannerColliderScriptVR : MonoBehaviour
     public Transform playerHand;
     //public GameObject product;
 
+    public static int timeSinceScanned;
+
     public GameObject playerMoneyTextBox;
     public Text playerMoneyText;
 
@@ -36,12 +38,9 @@ public class ScannerColliderScriptVR : MonoBehaviour
     public static GameObject product3CountTextBox;
     public static Text product3CountText;
 
-    public bool holdingProduct1 = false;
-    public bool holdingProduct2 = false;
-    public bool holdingProduct3 = false;
-    public bool atCheckoutCounter = false;
-    public bool closeToCart = false;
-    public bool holdingCart = false;
+    public bool scanningProduct1 = false;
+    public bool scanningProduct2 = false;
+    public bool scanningProduct3 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -71,60 +70,111 @@ public class ScannerColliderScriptVR : MonoBehaviour
         {
             PlayerMoneyHandler.TotalCost = 0.00m;
         }
+
+        if (scanningProduct1 && timeSinceScanned > 5)
+        {
+            PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost + PlayerMoneyHandler.Product1Cost;
+
+            PlayerMoneyHandler.Product1Count = PlayerMoneyHandler.Product1Count + 1;
+
+            totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
+            totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
+
+            totalMoneyCheckoutText = totalMoneyCheckoutTextBox.GetComponent<Text>();
+            totalMoneyCheckoutText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
+
+            product1CountText = product1CountTextBox.GetComponent<Text>();
+            product1CountText.text = "Product 1: " + PlayerMoneyHandler.Product1Count;
+
+            timeSinceScanned = 0;
+
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.scanObjectBeep);
+        }
+
+        if (scanningProduct2 && timeSinceScanned > 5)
+        {
+            PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost + PlayerMoneyHandler.Product2Cost;
+
+            PlayerMoneyHandler.Product2Count = PlayerMoneyHandler.Product2Count + 1;
+
+            totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
+            totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
+
+            totalMoneyCheckoutText = totalMoneyCheckoutTextBox.GetComponent<Text>();
+            totalMoneyCheckoutText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
+
+            product2CountText = product2CountTextBox.GetComponent<Text>();
+            product2CountText.text = "Product 2: " + PlayerMoneyHandler.Product2Count;
+
+            timeSinceScanned = 0;
+
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.scanObjectBeep);
+        }
+
+        if (scanningProduct3 && timeSinceScanned > 5)
+        {
+            PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost + PlayerMoneyHandler.Product3Cost;
+
+            PlayerMoneyHandler.Product3Count = PlayerMoneyHandler.Product3Count + 1;
+
+            totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
+            totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
+
+            totalMoneyCheckoutText = totalMoneyCheckoutTextBox.GetComponent<Text>();
+            totalMoneyCheckoutText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
+
+            product3CountText = product3CountTextBox.GetComponent<Text>();
+            product3CountText.text = "Product 3: " + PlayerMoneyHandler.Product3Count;
+
+            timeSinceScanned = 0;
+
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.scanObjectBeep);
+        }
+
     }
-void OnTriggerExit(Collider product)
-{
+    void OnTriggerExit(Collider product)
+    {
+        
 
         if (product.gameObject.tag == "Product1")
         {
-                PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost + PlayerMoneyHandler.Product1Cost;
-
-                PlayerMoneyHandler.Product1Count = PlayerMoneyHandler.Product1Count + 1;
-
-                totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
-                totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
-
-                totalMoneyCheckoutText = totalMoneyCheckoutTextBox.GetComponent<Text>();
-                totalMoneyCheckoutText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
-
-                product1CountText = product1CountTextBox.GetComponent<Text>();
-                product1CountText.text = "Product 1: " + PlayerMoneyHandler.Product1Count;
-                holdingProduct1 = false;
+            scanningProduct1 = true;
         }
 
         if (product.gameObject.tag == "Product2")
         {
-                PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost + PlayerMoneyHandler.Product2Cost;
-
-                PlayerMoneyHandler.Product2Count = PlayerMoneyHandler.Product2Count + 1;
-
-                totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
-                totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
-
-                totalMoneyCheckoutText = totalMoneyCheckoutTextBox.GetComponent<Text>();
-                totalMoneyCheckoutText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
-
-                product2CountText = product2CountTextBox.GetComponent<Text>();
-                product2CountText.text = "Product 2: " + PlayerMoneyHandler.Product2Count;
-                holdingProduct2 = false;            
+            scanningProduct2 = true;
         }
 
         if (product.gameObject.tag == "Product3")
         {
-                PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost + PlayerMoneyHandler.Product3Cost;
-
-                PlayerMoneyHandler.Product3Count = PlayerMoneyHandler.Product3Count + 1;
-
-                totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
-                totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
-
-                totalMoneyCheckoutText = totalMoneyCheckoutTextBox.GetComponent<Text>();
-                totalMoneyCheckoutText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
-
-                product3CountText = product3CountTextBox.GetComponent<Text>();
-                product3CountText.text = "Product 3: " + PlayerMoneyHandler.Product3Count;
-                holdingProduct3 = false;
+            scanningProduct3 = true;
         }
+    }
+
+    void OnTriggerStay(Collider product)
+    {
+
+        if (product.gameObject.tag == "Product1")
+        {
+            scanningProduct1 = false;
+            timeSinceScanned++;
+        }
+
+        if (product.gameObject.tag == "Product2")
+        {
+            scanningProduct2 = false;
+            timeSinceScanned++;
+        }
+
+        if (product.gameObject.tag == "Product3")
+        {
+            scanningProduct3 = false;
+            timeSinceScanned++;
+        }
+    }
+
+    /*
 
         if (atCheckoutCounter && Input.GetKeyDown(KeyCode.E))
         {
@@ -185,11 +235,11 @@ void OnTriggerExit(Collider product)
 
                 while (PlayerMoneyHandler.TotalCost > 0)
                 {
-                    /*(if PlayerMoneyHandler.TotalCost > 100)
+                    (if PlayerMoneyHandler.TotalCost > 100)
                     {
                     instantiate(hundredDollarBillPrefab);
                     }
-                */
+                
 
                 }
                 //For instatiating change use a while loop. While TotalCost > 0, Instantiate Money with denominations adding to the change amount.
@@ -198,7 +248,5 @@ void OnTriggerExit(Collider product)
             {
                 notificationText = notificationTextBox.GetComponent<Text>();
                 notificationText.text = "You don't have enough money! GIVE ME MORE CASH OR PUT SOMETHING BACK!";
-            }
-        }
-    }
-    }
+            }*/
+}
