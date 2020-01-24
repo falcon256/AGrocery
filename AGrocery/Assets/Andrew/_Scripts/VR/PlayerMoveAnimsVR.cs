@@ -20,11 +20,11 @@ public class PlayerMoveAnimsVR : MonoBehaviour
     {
         //These are the controls for the player. They use the default Unity inputs along with ints I have set up for different speeds
 
-        var rotate = Input.GetAxis("Oculus_CrossPlatform_PrimaryThumbstickHorizontal") * Time.deltaTime * 150.0f;
+        var rotate = Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickHorizontal") * Time.deltaTime * 150.0f;
         var walkForward = Input.GetAxis("Oculus_CrossPlatform_PrimaryThumbstickVertical") * Time.deltaTime * walkSpeed;
         var runForward = Input.GetAxis("Oculus_CrossPlatform_PrimaryThumbstickVertical") * Time.deltaTime * runSpeed;
         var updown = Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickVertical") * Time.deltaTime * 5.0f;
-        var leftright = Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickHorizontal") * Time.deltaTime * 5.0f;
+        var leftright = Input.GetAxis("Oculus_CrossPlatform_PrimaryThumbstickHorizontal") * Time.deltaTime * 5.0f;
         var jump = Input.GetAxis("Oculus_CrossPlatform_Button1") * Time.deltaTime * jumpHeight;
 
         transform.Translate(walkForward, 0, 0);
