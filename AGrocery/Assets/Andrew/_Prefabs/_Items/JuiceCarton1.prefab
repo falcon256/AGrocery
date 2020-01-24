@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8477866171016510122}
   - component: {fileID: 609904483}
   - component: {fileID: 7415008838317124092}
+  - component: {fileID: 5298457791183400784}
   m_Layer: 0
   m_Name: JuiceCarton1
   m_TagString: Product1
@@ -128,6 +129,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5298457791183400784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533470993969070085}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a7708e76601b4ea829921c33bc624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
+  m_materialColorField: _OutlineColor
 --- !u!1001 &4365271018792275412
 PrefabInstance:
   m_ObjectHideFlags: 0

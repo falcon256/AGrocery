@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4750203011344645492}
   - component: {fileID: 1727426623}
   - component: {fileID: -7658039437223685943}
+  - component: {fileID: -442577735888292876}
   m_Layer: 0
   m_Name: PaperTowels3
   m_TagString: Product3
@@ -128,6 +129,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-442577735888292876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7991549132086935963}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a7708e76601b4ea829921c33bc624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
+  m_materialColorField: _OutlineColor
 --- !u!1001 &6857045436338484441
 PrefabInstance:
   m_ObjectHideFlags: 0

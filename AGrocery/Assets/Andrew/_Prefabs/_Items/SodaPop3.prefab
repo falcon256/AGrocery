@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4081909903850186527}
   - component: {fileID: 104257703}
   - component: {fileID: -7643449042333406047}
+  - component: {fileID: -3906981850649283653}
   m_Layer: 0
   m_Name: SodaPop3
   m_TagString: Product3
@@ -128,6 +129,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-3906981850649283653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423742677858258144}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a7708e76601b4ea829921c33bc624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
+  m_materialColorField: _OutlineColor
 --- !u!1001 &389455811221493225
 PrefabInstance:
   m_ObjectHideFlags: 0
