@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 4643831266393704214}
   - component: {fileID: 3885306697092609248}
   - component: {fileID: 8941681964062815291}
-  - component: {fileID: 4799174990214033419}
   - component: {fileID: 1454156069760242924}
   - component: {fileID: 1448365317}
   - component: {fileID: -4887014840539977415}
   - component: {fileID: 8766107510409482348}
+  - component: {fileID: -7598832601096385575}
   m_Layer: 0
   m_Name: Bagels3
   m_TagString: Product3
@@ -64,24 +64,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4799174990214033419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3110581700450207806}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6280a809688e2843a592f8f5ed50fcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerHand: {fileID: 0}
-  totalMoneyTextBox: {fileID: 0}
-  totalMoneyText: {fileID: 0}
-  closeToProduct: 0
-  holdingProduct: 0
 --- !u!114 &1454156069760242924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +129,23 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
   m_materialColorField: _OutlineColor
+--- !u!114 &-7598832601096385575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110581700450207806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deaccf319afcf874199b6fa29acf4945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dimensions: {x: 0, y: 0, z: 0}
+  positioningOffset: {x: 0, y: 0.5, z: 0}
+  catagory: 10
+  price: 0
+  density: 1
 --- !u!1001 &551261372515958721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154,6 +153,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4643831266393704214}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Name
+      value: bagels (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568998755497832391, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5102530947620581811, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a53eee5101c4db44e943dc7ba8b0ede3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -224,22 +243,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+    - target: {fileID: -3701727588016112575, guid: a53eee5101c4db44e943dc7ba8b0ede3,
         type: 3}
-      propertyPath: m_Name
-      value: bagels (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8568998755497832391, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -5102530947620581811, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5d88c880a7f3b6b43bd0201c29d5897e, type: 2}
+    - target: {fileID: -3164220449637510858, guid: a53eee5101c4db44e943dc7ba8b0ede3,
         type: 3}
       propertyPath: m_Layer
       value: 0
@@ -249,27 +258,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -3164220449637510858, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -3006091614195549367, guid: a53eee5101c4db44e943dc7ba8b0ede3,
         type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -3701727588016112575, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5d88c880a7f3b6b43bd0201c29d5897e, type: 2}
-    - target: {fileID: 3335975045913516189, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+    - target: {fileID: -6520957560641263882, guid: a53eee5101c4db44e943dc7ba8b0ede3,
         type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6520957560641263882, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+    - target: {fileID: 3335975045913516189, guid: a53eee5101c4db44e943dc7ba8b0ede3,
         type: 3}
       propertyPath: m_Layer
       value: 0

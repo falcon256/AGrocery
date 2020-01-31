@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 799246460254353668}
   - component: {fileID: 112251644242420271}
   - component: {fileID: 935683071715478615}
-  - component: {fileID: 2470783207888858072}
   - component: {fileID: 8058242549805411544}
   - component: {fileID: 1384943845}
   - component: {fileID: 1432740838350203194}
   - component: {fileID: -3030248053070902079}
+  - component: {fileID: -8575026716511661292}
   m_Layer: 0
   m_Name: EggCarton1
   m_TagString: Product1
@@ -64,24 +64,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2470783207888858072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5439298219553572366}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6280a809688e2843a592f8f5ed50fcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerHand: {fileID: 0}
-  totalMoneyTextBox: {fileID: 0}
-  totalMoneyText: {fileID: 0}
-  closeToProduct: 0
-  holdingProduct: 0
 --- !u!114 &8058242549805411544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +129,23 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
   m_materialColorField: _OutlineColor
+--- !u!114 &-8575026716511661292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439298219553572366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deaccf319afcf874199b6fa29acf4945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dimensions: {x: 0, y: 0, z: 0}
+  positioningOffset: {x: 0, y: 0.5, z: 0}
+  catagory: 10
+  price: 0
+  density: 1
 --- !u!1001 &4267440227970316011
 PrefabInstance:
   m_ObjectHideFlags: 0

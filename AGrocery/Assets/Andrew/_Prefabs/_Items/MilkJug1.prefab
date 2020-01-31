@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 6943207716540281160}
   - component: {fileID: 76682544246169838}
   - component: {fileID: -5267864817764596249}
-  - component: {fileID: 1978092015323320866}
   - component: {fileID: 2342692791978749184}
   - component: {fileID: 2068185018}
   - component: {fileID: -2541353816739958230}
   - component: {fileID: 4207183053334771238}
+  - component: {fileID: 7841571026079388584}
   m_Layer: 0
   m_Name: MilkJug1
   m_TagString: Product1
@@ -64,24 +64,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1978092015323320866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677480643484344747}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6280a809688e2843a592f8f5ed50fcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerHand: {fileID: 0}
-  totalMoneyTextBox: {fileID: 0}
-  totalMoneyText: {fileID: 0}
-  closeToProduct: 0
-  holdingProduct: 0
 --- !u!114 &2342692791978749184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +129,23 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
   m_materialColorField: _OutlineColor
+--- !u!114 &7841571026079388584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677480643484344747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deaccf319afcf874199b6fa29acf4945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dimensions: {x: 0, y: 0, z: 0}
+  positioningOffset: {x: 0, y: 0.5, z: 0}
+  catagory: 10
+  price: 0
+  density: 1
 --- !u!1001 &6250858391852749398
 PrefabInstance:
   m_ObjectHideFlags: 0
