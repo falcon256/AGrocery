@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 3226274562450105346}
   - component: {fileID: 7962521561574792862}
   - component: {fileID: 4598939830029372238}
+  - component: {fileID: 8035305570435238503}
   m_Layer: 0
   m_Name: Scanner
   m_TagString: Untagged
@@ -145,7 +146,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3226274562450105347}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ad97bd1957b2c2479097991cf3fa242, type: 3}
   m_Name: 
@@ -164,9 +165,39 @@ MonoBehaviour:
   totalMoneyCheckoutText: {fileID: 0}
   notificationTextBox: {fileID: 0}
   notificationText: {fileID: 0}
-  holdingProduct1: 0
-  holdingProduct2: 0
-  holdingProduct3: 0
-  atCheckoutCounter: 0
-  closeToCart: 0
-  holdingCart: 0
+  scanningProduct1: 0
+  scanningProduct2: 0
+  scanningProduct3: 0
+--- !u!114 &8035305570435238503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3226274562450105347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98da032413737164aaebe8c9db058322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productData: {fileID: 0}
+  player: {fileID: 0}
+  playerHand: {fileID: 0}
+  product: {fileID: 0}
+  products: []
+  currentProduct: {fileID: 0}
+  timeSinceScanned: 0
+  currentProductPrice: 0
+  playerMoneyTextBox: {fileID: 0}
+  playerMoneyText: {fileID: 0}
+  playerMoneyCheckoutTextBox: {fileID: 0}
+  playerMoneyCheckoutText: {fileID: 0}
+  currentOfferCheckoutTextBox: {fileID: 0}
+  currentOfferCheckoutText: {fileID: 0}
+  totalMoneyTextBox: {fileID: 0}
+  totalMoneyText: {fileID: 0}
+  totalMoneyCheckoutTextBox: {fileID: 0}
+  totalMoneyCheckoutText: {fileID: 0}
+  notificationTextBox: {fileID: 0}
+  notificationText: {fileID: 0}
+  scanningProduct: 0

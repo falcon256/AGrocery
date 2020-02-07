@@ -58,10 +58,10 @@ public class ShopperAIMultiScriptStates : MonoBehaviour
             safeDistance = false;
         }
 
-        /*if (closeToPlayer)
+        if (closeToPlayer)
         {
             ChaseState();
-        }*/
+        }
         if(safeDistance)
         {
             stateTimer();

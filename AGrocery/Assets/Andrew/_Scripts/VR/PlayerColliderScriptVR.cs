@@ -65,11 +65,11 @@ public class PlayerColliderScriptVR : MonoBehaviour
     {
         if (PlayerMoneyHandler.PlayerMoney >= 100)
         {
-            PlayerMoneyHandler.PlayerMoney = 100.00m;
+            PlayerMoneyHandler.PlayerMoney = 100.00f;
         }
-        if (PlayerMoneyHandler.TotalCost <= 0.00m)
+        if (PlayerMoneyHandler.TotalCost <= 0.00f)
         {
-            PlayerMoneyHandler.TotalCost = 0.00m;
+            PlayerMoneyHandler.TotalCost = 0.00f;
         }
     }
     private void OnTriggerEnter(Collider product)

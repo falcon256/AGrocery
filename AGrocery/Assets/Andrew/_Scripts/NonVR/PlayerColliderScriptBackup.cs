@@ -50,7 +50,7 @@ public class PlayerColliderScriptBackup : MonoBehaviour
             //Debug.Log("PlayerCollision!");
             if (closeToProduct && Input.GetKeyDown(KeyCode.E))
             {
-                PlayerMoneyHandler.TotalCost += 1.00m;
+                PlayerMoneyHandler.TotalCost += 1.00f;
 
                 totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
                 totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
@@ -63,7 +63,7 @@ public class PlayerColliderScriptBackup : MonoBehaviour
             //Debug.Log("PlayerCollision!");
             if (closeToProduct && Input.GetKeyDown(KeyCode.E))
             {
-                PlayerMoneyHandler.TotalCost += 1.50m;
+                PlayerMoneyHandler.TotalCost += 1.50f;
 
                 totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
                 totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
@@ -76,7 +76,7 @@ public class PlayerColliderScriptBackup : MonoBehaviour
             //Debug.Log("PlayerCollision!");
             if (closeToProduct && Input.GetKeyDown(KeyCode.E))
             {
-                PlayerMoneyHandler.TotalCost += 2.00m;
+                PlayerMoneyHandler.TotalCost += 2.00f;
 
                 totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
                 totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
@@ -89,7 +89,7 @@ public class PlayerColliderScriptBackup : MonoBehaviour
             if (holdingProduct && Input.GetKeyDown(KeyCode.R))
             {
 
-                PlayerMoneyHandler.TotalCost = 0.00m;
+                PlayerMoneyHandler.TotalCost = 0.00f;
 
                 totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
                 totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
