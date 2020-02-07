@@ -38,7 +38,7 @@ public class ShopperAIMultiScriptStates : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distToPlayer = Vector3.Distance(this.transform.position, cashier.transform.position);
+        float distToPlayer = Vector3.Distance(this.transform.position, player.transform.position);
         //Debug.Log("player" + distTocashier);
         if (distToPlayer < 29)
         {
@@ -58,10 +58,10 @@ public class ShopperAIMultiScriptStates : MonoBehaviour
             safeDistance = false;
         }
 
-        if (closeToPlayer)
+        /*if (closeToPlayer)
         {
             ChaseState();
-        }
+        }*/
         if(safeDistance)
         {
             stateTimer();
