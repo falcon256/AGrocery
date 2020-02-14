@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProductData : MonoBehaviour
+public class MoneyData : MonoBehaviour
 {
-    public enum CATEGORY {SNACKS, DAIRY, FRUITS, VEGETABLES, DRYGOODS, MEAT, FROZENGOODS, HYGIENE, BAKERY, COFFEE, OTHER} //TODO
+    public enum CATEGORY {ONEDOLLAR, FIVEDOLLAR, TENDOLLAR, TWENTYDOLLAR, PENNY, NICKEL, DIME, QUARTER, MONEY}
     public Vector3 dimensions = Vector3.zero;
     public Vector3 positioningOffset = new Vector3(0, 0.5f, 0);
-    public CATEGORY category = CATEGORY.OTHER;
-    public float price = 0;
-    public float density = 1.0f;
-
-
+    public CATEGORY category = CATEGORY.MONEY;
+    public float value = 0;
 
     // Start is called before the first frame update
     void Start()

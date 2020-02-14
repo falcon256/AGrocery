@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8517878163130841200}
   - component: {fileID: 2917985460637705013}
   - component: {fileID: 2546729469782428439}
+  - component: {fileID: -6556983639715783381}
   m_Layer: 0
   m_Name: Nickel
-  m_TagString: Untagged
+  m_TagString: Money
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,6 +81,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &-6556983639715783381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732910260159238440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4d2b4b966138e4381a50bb29b02d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dimensions: {x: 0, y: 0, z: 0}
+  positioningOffset: {x: 0, y: 0.5, z: 0}
+  catagory: 5
+  value: 0.05
 --- !u!1 &8639177521819126509
 GameObject:
   m_ObjectHideFlags: 0

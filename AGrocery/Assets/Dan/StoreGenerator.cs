@@ -40,7 +40,7 @@ public class StoreGenerator : MonoBehaviour
         storeGeneratorSingleton = null;     
     }
 
-    public GameObject[] getListOfProductPrefabsByCatagory(ProductData.CATAGORY catagory)
+    public GameObject[] getListOfProductPrefabsByCatagory(ProductData.CATEGORY category)
     {
         List<GameObject> list = new List<GameObject>();
         for(int i = 0; i < productPrefabs.Length; i++)
@@ -51,7 +51,7 @@ public class StoreGenerator : MonoBehaviour
                 Debug.LogError("A product prefab is missing a product data component.");
                 return null;
             }
-            if (pd.catagory == catagory)
+            if (pd.category == category)
                 list.Add(productPrefabs[i]);
         }
         return list.ToArray();
