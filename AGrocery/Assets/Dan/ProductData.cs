@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ProductData : MonoBehaviour
 {
-    public enum CATAGORY {SNACKS, DAIRY, FRUITS, VEGETABLES, DRYGOODS, MEAT, FROZENGOODS, HYGIENE, BAKERY, COFFEE, OTHER} //TODO
+    public enum CATEGORY {SNACKS, DAIRY, FRUITS, VEGETABLES, DRYGOODS, MEAT, FROZENGOODS, HYGIENE, BAKERY, COFFEE, OTHER} //TODO
     public Vector3 dimensions = Vector3.zero;
     public Vector3 positioningOffset = new Vector3(0, 0.5f, 0);
-    public CATAGORY catagory = CATAGORY.OTHER;
+    public CATEGORY category = CATEGORY.OTHER;
     public float price = 0;
     public float density = 1.0f;
 

@@ -93,11 +93,11 @@ public class PlayerColliderScriptV2 : MonoBehaviour
 
         if (PlayerMoneyHandler.PlayerMoney >= 100)
         {
-            PlayerMoneyHandler.PlayerMoney = 100.00m;
+            PlayerMoneyHandler.PlayerMoney = 100.00f;
         }
-        if (PlayerMoneyHandler.TotalCost <= 0.00m)
+        if (PlayerMoneyHandler.TotalCost <= 0.00f)
         {
-            PlayerMoneyHandler.TotalCost = 0.00m;
+            PlayerMoneyHandler.TotalCost = 0.00f;
         }
     }
     private void OnTriggerEnter(Collider product)
@@ -176,7 +176,7 @@ void OnTriggerStay(Collider product)
             {
                 PlayerMoneyHandler.PlayerMoney = PlayerMoneyHandler.PlayerMoney - PlayerMoneyHandler.TotalCost;
                 PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost - PlayerMoneyHandler.TotalCost;
-                PlayerMoneyHandler.CurrentOffer = 0.00m;
+                PlayerMoneyHandler.CurrentOffer = 0.00f;
                 PlayerMoneyHandler.Product1Count = 0;
                 PlayerMoneyHandler.Product2Count = 0;
                 PlayerMoneyHandler.Product3Count = 0;
@@ -204,7 +204,7 @@ void OnTriggerStay(Collider product)
                 PlayerMoneyHandler.PlayerMoney = PlayerMoneyHandler.PlayerMoney - PlayerMoneyHandler.TotalCost;
                 PlayerMoneyHandler.Change = PlayerMoneyHandler.CurrentOffer - PlayerMoneyHandler.TotalCost;
                 PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost - PlayerMoneyHandler.TotalCost;
-                PlayerMoneyHandler.CurrentOffer = 0.00m;
+                PlayerMoneyHandler.CurrentOffer = 0.00f;
                 PlayerMoneyHandler.Product1Count = 0;
                 PlayerMoneyHandler.Product2Count = 0;
                 PlayerMoneyHandler.Product3Count = 0;

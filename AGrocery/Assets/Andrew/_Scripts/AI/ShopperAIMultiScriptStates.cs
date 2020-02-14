@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class NPCCivilianAIMultiScriptStates : MonoBehaviour
+public class ShopperAIMultiScriptStates : MonoBehaviour
 {
     public Transform player;
     public Transform cashier;
@@ -17,7 +17,7 @@ public class NPCCivilianAIMultiScriptStates : MonoBehaviour
     public static int count = 0;
     public int directionToTurn;
 
-    public bool closeToCashier = false;
+    public bool closeToPlayer = false;
     public bool safeDistance = false;
     public bool idleState = false;
     public bool wanderState = false;
@@ -38,18 +38,18 @@ public class NPCCivilianAIMultiScriptStates : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distToCashier = Vector3.Distance(this.transform.position, cashier.transform.position);
-        //Debug.Log("cashier" + distTocashier);
-        if (distToCashier < 10)
+        float distToPlayer = Vector3.Distance(this.transform.position, player.transform.position);
+        //Debug.Log("player" + distTocashier);
+        if (distToPlayer < 29)
         {
-            closeToCashier = true;
+            closeToPlayer = true;
         }
         else
         {
-            closeToCashier = false;
+            closeToPlayer = false;
         }
 
-        if (distToCashier > 10)
+        if (distToPlayer > 30)
         {
             safeDistance = true;
         }
@@ -58,7 +58,7 @@ public class NPCCivilianAIMultiScriptStates : MonoBehaviour
             safeDistance = false;
         }
 
-        if (closeToCashier)
+        if (closeToPlayer)
         {
             ChaseState();
         }
