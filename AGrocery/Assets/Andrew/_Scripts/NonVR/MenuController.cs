@@ -67,17 +67,13 @@ public class MenuController : MonoBehaviour
 
   public void Update()
   {
-    if (OVRInput.GetDown(OVRInput.RawButton.X))
+   
+
+    if (Input.GetKeyDown(KeyCode.Q))
     {
       ReturnToGame();
       GameMenuCanvas.GetComponent<Canvas>().enabled = true;
     }
-
-    /*  if (Input.GetKeyDown(KeyCode.Q))
-      {
-          ReturnToGame();
-          GameMenuCanvas.GetComponent<Canvas>().enabled = true;
-      }*/
     if (Input.GetKeyDown(KeyCode.I))
     {
       ReturnToGame();
