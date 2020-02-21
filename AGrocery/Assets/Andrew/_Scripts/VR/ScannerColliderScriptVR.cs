@@ -54,14 +54,15 @@ public class ScannerColliderScriptVR : MonoBehaviour
   public StringBuilder outputTotalText;
   public StringBuilder itemizedText;
   public PayScreen payScreen;
-  public double productTotal = 0;
-  public double productCost = 5;
+  public float productTotal = 0;
+  public float productCost;
+  public string productName;
 
   float scanTime = .5f;
   float scanTimer = 0;
   bool scannable = true;
-  public double total;
-  public double newTotal; 
+  public float total;
+  public float newTotal; 
 
   // Start is called before the first frame update
  
@@ -142,23 +143,23 @@ public class ScannerColliderScriptVR : MonoBehaviour
       scanningProduct = true;
 
       productData = collidedProduct.GetComponent<ProductData>();
-   
-      //productCost = Convert.ToDouble(productData.price);
-      //Debug.Log(productData.price);
+      productCost = productData.price;
+      productName = collidedProduct.name.Replace("(Clone)", " ");
+
       
-      itemizedText.Append("new product \n");
+      itemizedText.Append($"{productName} {productCost.ToString("c")} \n");
       payScreen.itemizedText.text = itemizedText.ToString();
 
-      newTotal = total + 5.00;
+      newTotal = total + productCost;
 
       outputTotalText.Clear();
-      outputTotalText.Append(newTotal);
+      outputTotalText.Append(newTotal.ToString("c"));
       payScreen.outputTotalText.text = outputTotalText.ToString();
 
 
       scannable = false;
       scanTimer = 0;
-      total += 5.00;
+      total += productCost;
     }
   }
 
