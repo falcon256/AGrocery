@@ -63,5 +63,10 @@ public class PayScreen : MonoBehaviour
     cardSwipe.SetActive(true);
     cardInsert.SetActive(true);
   }
+
+    public void ZeroOutTotal()
+    {
+        outputTotalText.text = "0.00";
+    }
   
 }
