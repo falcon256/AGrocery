@@ -61,6 +61,7 @@ public class ScannerColliderScriptVR : MonoBehaviour
   float scanTime = .5f;
   float scanTimer = 0;
   bool scannable = true;
+  
   public float total;
   public float newTotal; 
 
