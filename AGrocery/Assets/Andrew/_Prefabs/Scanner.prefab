@@ -201,7 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3226274562450105346}
   - component: {fileID: 7962521561574792862}
-  - component: {fileID: 8035305570435238503}
+  - component: {fileID: 6477632474322247973}
   m_Layer: 0
   m_Name: Scanner
   m_TagString: Untagged
@@ -238,7 +238,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 10, z: 1}
   m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &8035305570435238503
+--- !u!114 &6477632474322247973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3226274562450105347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98da032413737164aaebe8c9db058322, type: 3}
+  m_Script: {fileID: 11500000, guid: 14bc68a820704ce439c61c4ce972aa13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   productData: {fileID: 0}
@@ -271,6 +271,12 @@ MonoBehaviour:
   notificationTextBox: {fileID: 0}
   notificationText: {fileID: 0}
   scanningProduct: 0
+  payScreen: {fileID: 0}
+  productTotal: 0
+  productCost: 0
+  productName: 
+  total: 0
+  newTotal: 0
 --- !u!1 &5121833949953420558
 GameObject:
   m_ObjectHideFlags: 0
