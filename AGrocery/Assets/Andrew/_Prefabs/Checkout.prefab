@@ -2216,39 +2216,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &5961884639005377111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6028858802116336585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98da032413737164aaebe8c9db058322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  productData: {fileID: 0}
-  player: {fileID: 0}
-  playerHand: {fileID: 0}
-  product: {fileID: 0}
-  products: []
-  currentProduct: {fileID: 0}
-  timeSinceScanned: 0
-  currentProductPrice: 0
-  playerMoneyTextBox: {fileID: 0}
-  playerMoneyText: {fileID: 0}
-  playerMoneyCheckoutTextBox: {fileID: 0}
-  playerMoneyCheckoutText: {fileID: 0}
-  currentOfferCheckoutTextBox: {fileID: 0}
-  currentOfferCheckoutText: {fileID: 0}
-  totalMoneyTextBox: {fileID: 0}
-  totalMoneyText: {fileID: 0}
-  totalMoneyCheckoutTextBox: {fileID: 0}
-  totalMoneyCheckoutText: {fileID: 0}
-  notificationTextBox: {fileID: 0}
-  notificationText: {fileID: 0}
-  scanningProduct: 0
 --- !u!1 &6473734474450997449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3304,11 +3271,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scan Trigger
       objectReference: {fileID: 0}
-    - target: {fileID: 3226274562450105347, guid: 03a888a38fddbb14bbfeb02c3def4965,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3226274562450105346, guid: 03a888a38fddbb14bbfeb02c3def4965,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3364,29 +3326,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3226274562450105346, guid: 03a888a38fddbb14bbfeb02c3def4965,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1224.6917
-      objectReference: {fileID: 0}
-    - target: {fileID: 3226274562450105346, guid: 03a888a38fddbb14bbfeb02c3def4965,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 223.83913
-      objectReference: {fileID: 0}
-    - target: {fileID: 3226274562450105346, guid: 03a888a38fddbb14bbfeb02c3def4965,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1191.0768
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03a888a38fddbb14bbfeb02c3def4965, type: 3}
---- !u!1 &6028858802116336585 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3226274562450105347, guid: 03a888a38fddbb14bbfeb02c3def4965,
-    type: 3}
-  m_PrefabInstance: {fileID: 9181934457053396938}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6028858802116336584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3226274562450105346, guid: 03a888a38fddbb14bbfeb02c3def4965,
