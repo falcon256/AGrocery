@@ -1464,6 +1464,7 @@ GameObject:
   - component: {fileID: 1680323763}
   - component: {fileID: 1680323762}
   - component: {fileID: 2762639496230411177}
+  - component: {fileID: 98398052306817436}
   m_Layer: 0
   m_Name: Scan Trigger
   m_TagString: Untagged
@@ -1583,6 +1584,39 @@ MonoBehaviour:
   productName: 
   total: 0
   newTotal: 0
+--- !u!114 &98398052306817436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680323760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98da032413737164aaebe8c9db058322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productData: {fileID: 0}
+  player: {fileID: 0}
+  playerHand: {fileID: 0}
+  product: {fileID: 0}
+  products: []
+  currentProduct: {fileID: 0}
+  timeSinceScanned: 0
+  currentProductPrice: 0
+  playerMoneyTextBox: {fileID: 0}
+  playerMoneyText: {fileID: 0}
+  playerMoneyCheckoutTextBox: {fileID: 0}
+  playerMoneyCheckoutText: {fileID: 0}
+  currentOfferCheckoutTextBox: {fileID: 0}
+  currentOfferCheckoutText: {fileID: 0}
+  totalMoneyTextBox: {fileID: 0}
+  totalMoneyText: {fileID: 0}
+  totalMoneyCheckoutTextBox: {fileID: 0}
+  totalMoneyCheckoutText: {fileID: 0}
+  notificationTextBox: {fileID: 0}
+  notificationText: {fileID: 0}
+  scanningProduct: 0
 --- !u!1 &1790345268
 GameObject:
   m_ObjectHideFlags: 0
