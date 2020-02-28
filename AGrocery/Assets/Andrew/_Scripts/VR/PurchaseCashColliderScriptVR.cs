@@ -102,7 +102,7 @@ public class PurchaseCashColliderScriptVR : MonoBehaviour
 
             timeSinceScanned = 0;
 
-            currentMoney.transform.position = currentMoney.GetComponent<MoneyData>().startPos;
+            Destroy(currentMoney);
 
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.scanObjectBeep);
         }
