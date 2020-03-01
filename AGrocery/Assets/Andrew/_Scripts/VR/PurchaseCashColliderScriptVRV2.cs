@@ -18,7 +18,7 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
     public GameObject[] allMoney;
 
     public GameObject currentMoney;
-
+   
     public int timeSinceScanned;
     public float currentMoneyValue;
 
@@ -93,20 +93,25 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
             PlayerMoneyHandler.TotalCost = 0.00f;
         }
 
+        scanTimer += Time.deltaTime;
+
+        if (scanTimer > scanTime)
+        {
+            scannable = true;
+        }
     }
     void OnTriggerExit(Collider collidedMoney)
     {
         
-        if (collidedMoney.gameObject.tag == "Money")
-        {  
-            if(!costReached)
-            {
+        if (collidedMoney.gameObject.tag == "Money" && !costReached)
+        {
             payScreen = GetComponentInParent<PayScreen>();
             scanner.GetComponent<ScannerColliderScriptVRV2>();
 
             total = scanner.GetComponent<ScannerColliderScriptVRV2>().total;
             newTotal = scanner.GetComponent<ScannerColliderScriptVRV2>().newTotal;
 
+            itemizedText = scanner.GetComponent<ScannerColliderScriptVRV2>().itemizedText;
             selfCheckoutMainText = scanner.GetComponent<ScannerColliderScriptVRV2>().selfCheckoutMainText;
             outputTotalText = scanner.GetComponent<ScannerColliderScriptVRV2>().outputTotalText;
 
@@ -121,31 +126,26 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
 
             newTotal = total - moneyValue;
 
+            PlayerMoneyHandler.PlayerMoney = PlayerMoneyHandler.PlayerMoney - moneyValue;
+
+            playerMoneyText = playerMoneyTextBox.GetComponent<Text>();
+            playerMoneyText.text = "Player Money: " + PlayerMoneyHandler.PlayerMoney.ToString("c");
+
             outputTotalText.Clear();
             outputTotalText.Append(newTotal.ToString("c"));
             payScreen.outputTotalText.text = outputTotalText.ToString();
 
-
             scannable = false;
             scanTimer = 0;
-            total -= moneyValue;
 
-            if(moneyValue > total)
-            {
-                costReached = true;
-                payScreen.outputTotalText.text = "Your Change is " + outputTotalText.ToString();
-            }
-            }            
-        }
+            //if (currentOffer > total)
+            //{
+            //    costReached = true;
+            //    payScreen.outputTotalText.text = "Your Change is " + outputTotalText.ToString();
+            //}
         }
 
-    void OnTriggerStay(Collider collidedMoney)
-    {
+        //Destroy(currentMoney);
 
-        if (collidedMoney.gameObject.tag == "Money")
-        {
-            usingCash = false;
-            timeSinceScanned++;
-        }
-    }
+    }        
 }

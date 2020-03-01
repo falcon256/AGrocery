@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3370149693022340096}
   - component: {fileID: 3115753219632393269}
   - component: {fileID: 7451751982345590166}
+  - component: {fileID: 3136886130131048854}
+  - component: {fileID: 4381454123794366928}
   m_Layer: 0
   m_Name: Credit_DebitCard
   m_TagString: Card
@@ -141,3 +143,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3136886130131048854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439365046156406266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4d2b4b966138e4381a50bb29b02d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPos: {x: 0, y: 0, z: 0}
+  dimensions: {x: 0, y: 0, z: 0}
+  positioningOffset: {x: 0, y: 0.5, z: 0}
+  category: 8
+  value: 100
+--- !u!114 &4381454123794366928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439365046156406266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5382e4bcd6b12f544ad56388a90280be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creditCardValue: 0
