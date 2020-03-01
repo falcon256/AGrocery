@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Text;
 
-public class ScannerColliderScriptVRV2 : MonoBehaviour
+public class ScannerColliderScriptVRV3 : MonoBehaviour
 {
   public ProductData productData;
 
@@ -50,7 +50,6 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
 
   public StringBuilder outputTotalText;
   public StringBuilder itemizedText;
-  public StringBuilder selfCheckoutMainText;
   public PayScreen payScreen;
   public float productTotal = 0;
   public float productCost;
@@ -59,9 +58,6 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
   float scanTime = .5f;
   float scanTimer = 0;
   bool scannable = true;
-  
-  public float total;
-  public float newTotal;
 
   // Start is called before the first frame update
  
@@ -79,13 +75,9 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
     product = GameObject.FindWithTag("Product");
     products = GameObject.FindGameObjectsWithTag("Product");
     itemizedText = new StringBuilder();
-    outputTotalText = new StringBuilder();
-    selfCheckoutMainText = new StringBuilder();
-    
-    
+    outputTotalText = new StringBuilder();   
 
-
-  }
+}
 
   // Update is called once per frame
   void Update()
@@ -99,7 +91,27 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
       PlayerMoneyHandler.TotalCost = 0.00f;
     }
 
-    scanTimer += Time.deltaTime;
+        //if (scanningProduct && timeSinceScanned > 5)
+        //{
+        //  PlayerMoneyHandler.TotalCost = PlayerMoneyHandler.TotalCost + currentProductPrice;
+
+        //  PlayerMoneyHandler.Product1Count = PlayerMoneyHandler.Product1Count + 1;
+
+        //  totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
+        //  totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
+
+        //  totalMoneyCheckoutText = totalMoneyCheckoutTextBox.GetComponent<Text>();
+        //  totalMoneyCheckoutText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
+
+        //  product1CountText = product1CountTextBox.GetComponent<Text>();
+        //  product1CountText.text = "Products: " + PlayerMoneyHandler.Product1Count;
+
+        //  timeSinceScanned = 0;
+
+        //  SoundManager.Instance.PlayOneShot(SoundManager.Instance.scanObjectBeep);
+        //}
+
+        scanTimer += Time.deltaTime;
      
     if(scanTimer > scanTime)
     {
@@ -123,20 +135,21 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
       productData = collidedProduct.GetComponent<ProductData>();
       productCost = productData.price;
       productName = collidedProduct.name.Replace("(Clone)", " ");
-     
+
+      
       itemizedText.Append($"{productName} {productCost.ToString("c")} \n");
       payScreen.itemizedText.text = itemizedText.ToString();
 
-      newTotal = total + productCost;
+      TotalCostHandler.newTotal = TotalCostHandler.total + productCost;
 
       outputTotalText.Clear();
-      outputTotalText.Append(newTotal.ToString("c"));
+      outputTotalText.Append(TotalCostHandler.newTotal.ToString("c"));
       payScreen.outputTotalText.text = outputTotalText.ToString();
 
 
       scannable = false;
       scanTimer = 0;
-      total += productCost;
+      TotalCostHandler.total += productCost;
         }
   }
 
