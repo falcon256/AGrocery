@@ -15,7 +15,6 @@ public class PurchaseCashColliderScriptVR : MonoBehaviour
 
     public GameObject currentMoney;
 
-
     public int timeSinceScanned;
     public float currentMoneyValue;
 
@@ -108,7 +107,7 @@ public class PurchaseCashColliderScriptVR : MonoBehaviour
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.scanObjectBeep);
         }
     }
-    void OnTriggerExit(Collider collidedMoney)
+    void OnTriggerEnter(Collider collidedMoney)
     {
         
         if (collidedMoney.gameObject.tag == "Money")

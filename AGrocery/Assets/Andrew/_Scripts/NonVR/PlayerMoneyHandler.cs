@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class PlayerMoneyHandler : MonoBehaviour
 {
@@ -48,19 +47,16 @@ public class PlayerMoneyHandler : MonoBehaviour
     public static int Product3Count = 0;
 
     public GameObject playerMoneyTextBox;
-    public TextMeshProUGUI playerMoneyText;
+    public Text playerMoneyText;
 
     public static GameObject product1CountTextBox;
-    public static TextMeshProUGUI product1CountText;
-
-    public static GameObject currentOfferTextBox;
-    public static TextMeshProUGUI currentOfferText;
+    public static Text product1CountText;
 
     public static GameObject product2CountTextBox;
-    public static TextMeshProUGUI product2CountText;
+    public static Text product2CountText;
 
     public static GameObject product3CountTextBox;
-    public static TextMeshProUGUI product3CountText;
+    public static Text product3CountText;
 
     public bool closeToProduct1 = false;
     public bool closeToProduct2 = false;

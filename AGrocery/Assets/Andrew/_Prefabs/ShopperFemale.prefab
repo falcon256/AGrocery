@@ -813,7 +813,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 3, z: 2.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.7, z: 0}
 --- !u!65 &7807416304906632670
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -926,10 +926,6 @@ MonoBehaviour:
   runSpeed: 20
   jumpHeight: 1
   count: 0
-  closeToPlayer: 0
-  awayFromPlayer: 0
-  tooFarFromPlayer: 0
-  followingPlayer: 0
 --- !u!114 &5027870141308081114
 MonoBehaviour:
   m_ObjectHideFlags: 0

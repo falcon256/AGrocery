@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 3886134336216970900}
   - component: {fileID: -9068731178477456063}
   - component: {fileID: 6732659408362358154}
-  - component: {fileID: 2176171929419084768}
+  - component: {fileID: 4575494456181983323}
   m_Layer: 0
   m_Name: Product2
   m_TagString: Product
@@ -108,9 +108,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7817903541112602746}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 44.8, y: -1.251, z: 0.20000076}
-  m_LocalScale: {x: 0.33408, y: 0.33408, z: 0.16704}
+  m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_Children:
   - {fileID: 8937585023314475929}
   m_Father: {fileID: 0}
@@ -127,8 +127,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1.0162697}
-  m_Center: {x: 0, y: 0, z: 0.010242462}
+  m_Size: {x: 1, y: 1, z: 6}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &9189424118043104960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -207,7 +207,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &2176171929419084768
+--- !u!114 &4575494456181983323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,6 +221,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dimensions: {x: 0, y: 0, z: 0}
   positioningOffset: {x: 0, y: 0.5, z: 0}
-  category: 5
-  price: 10.99
+  category: 10
+  price: 0
   density: 1

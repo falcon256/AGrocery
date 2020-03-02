@@ -49,7 +49,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 6}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &4668484466503487270
 BoxCollider:
@@ -143,8 +143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dimensions: {x: 0, y: 0, z: 0}
   positioningOffset: {x: 0, y: 0.5, z: 0}
-  catagory: 10
-  price: 0
+  category: 8
+  price: 1.78
   density: 1
 --- !u!1001 &4654154924166059482
 PrefabInstance:
@@ -157,21 +157,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bagels
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8568998755497832391, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -5102530947620581811, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a53eee5101c4db44e943dc7ba8b0ede3,
         type: 3}
@@ -248,31 +233,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 6109ed49c87008746b1ce7ca92703131, type: 2}
-    - target: {fileID: -3164220449637510858, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6164566716457838015, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -3006091614195549367, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -6520957560641263882, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3335975045913516189, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a53eee5101c4db44e943dc7ba8b0ede3, type: 3}
 --- !u!4 &426810554663059136 stripped
