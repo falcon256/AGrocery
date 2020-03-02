@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6552519346436645527}
   - component: {fileID: 4800772335850584466}
   - component: {fileID: 5144728010328008265}
-  - component: {fileID: 3533056409672972251}
   - component: {fileID: 7492502229187097143}
-  m_Layer: 0
+  - component: {fileID: 4055903531250040022}
+  - component: {fileID: 3533056409672972251}
+  m_Layer: 11
   m_Name: Penny
   m_TagString: Money
   m_Icon: {fileID: 0}
@@ -66,25 +67,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3533056409672972251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6164709852813259184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c4d2b4b966138e4381a50bb29b02d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startPos: {x: 0, y: 0, z: 0}
-  dimensions: {x: 0, y: 0, z: 0}
-  positioningOffset: {x: 0, y: 0.5, z: 0}
-  category: 8
-  value: 0.01
 --- !u!65 &7492502229187097143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98,6 +82,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &4055903531250040022
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164709852813259184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.05
+  m_Height: 0.01
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &3533056409672972251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164709852813259184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4d2b4b966138e4381a50bb29b02d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dimensions: {x: 0, y: 0, z: 0}
+  positioningOffset: {x: 0, y: 0.5, z: 0}
+  category: 8
+  value: 0.01
+  hasBeenUsed: 0
 --- !u!1 &7813226419988079488
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +124,6 @@ GameObject:
   - component: {fileID: 824143554619467064}
   - component: {fileID: 6068084245042825565}
   - component: {fileID: 8135336630726165009}
-  - component: {fileID: 2641325366106181677}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -177,17 +191,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &2641325366106181677
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7813226419988079488}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.1
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: -0.00006097555, y: 0, z: 0.000015169382}

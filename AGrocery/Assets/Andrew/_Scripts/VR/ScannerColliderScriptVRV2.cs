@@ -114,29 +114,33 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
     {
       return;
     }
-    if (collidedProduct.gameObject.tag == "Product")
-    {
-      payScreen = GetComponentInParent<PayScreen>();
-      
-      scanningProduct = true;
+        if (collidedProduct.gameObject.tag == "Product")
+        {
+            if (collidedProduct.GetComponent<ProductData>().hasBeenScanned == false)
+            {
+                payScreen = GetComponentInParent<PayScreen>();
 
-      productData = collidedProduct.GetComponent<ProductData>();
-      productCost = productData.price;
-      productName = collidedProduct.name.Replace("(Clone)", " ");
-     
-      itemizedText.Append($"{productName} {productCost.ToString("c")} \n");
-      payScreen.itemizedText.text = itemizedText.ToString();
+                scanningProduct = true;
+                collidedProduct.GetComponent<ProductData>().hasBeenScanned = true;
 
-      newTotal = total + productCost;
+                productData = collidedProduct.GetComponent<ProductData>();
+                productCost = productData.price;
+                productName = collidedProduct.name.Replace("(Clone)", " ");
 
-      outputTotalText.Clear();
-      outputTotalText.Append(newTotal.ToString("c"));
-      payScreen.outputTotalText.text = outputTotalText.ToString();
+                itemizedText.Append($"{productName} {productCost.ToString("c")} \n");
+                payScreen.itemizedText.text = itemizedText.ToString();
+
+                newTotal = total + productCost;
+
+                outputTotalText.Clear();
+                outputTotalText.Append(newTotal.ToString("c"));
+                payScreen.outputTotalText.text = outputTotalText.ToString();
 
 
-      scannable = false;
-      scanTimer = 0;
-      total += productCost;
+                scannable = false;
+                scanTimer = 0;
+                total += productCost;
+            }
         }
   }
 
