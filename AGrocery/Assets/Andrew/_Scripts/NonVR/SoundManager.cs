@@ -7,6 +7,9 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance = null;
     private AudioSource soundEffectAudio;
     public AudioClip scanObjectBeep;
+    public AudioClip footsteps;
+    public AudioClip cartWheels;
+    public AudioClip cartStop;
 
     // Use this for initialization
     void Start()

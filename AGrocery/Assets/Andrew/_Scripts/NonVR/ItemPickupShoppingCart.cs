@@ -12,8 +12,8 @@ public class ItemPickupShoppingCart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
-        playerHand = GameObject.FindWithTag("ShoppingCartLocation").transform;
+        //player = GameObject.FindWithTag("Player");
+        //playerHand = GameObject.FindWithTag("ShoppingCartLocation").transform;
     }
 
     // Update is called once per frame

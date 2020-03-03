@@ -72,7 +72,7 @@ public class PayScreen : MonoBehaviour
     okButton.SetActive(false);
     creditButton.SetActive(true);
     cashButton.SetActive(true);
-
+    Debug.Log("OK has been pressed");
     audioSource2.PlayOneShot(clip3);
   }
   public void OnClickCash()
