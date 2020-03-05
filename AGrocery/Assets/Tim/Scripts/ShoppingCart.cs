@@ -38,7 +38,7 @@ public class ShoppingCart : MonoBehaviour
 
       if (footstepTimer > .7f)
       {
-        soundPlayer.volume = .2f;
+        soundPlayer.volume = .3f;
         soundPlayer.PlayOneShot(soundManager.cartWheels);
 
 

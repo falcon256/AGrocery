@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip footsteps;
     public AudioClip cartWheels;
     public AudioClip cartStop;
+    public AudioClip storeDoors;
 
     // Use this for initialization
     void Start()

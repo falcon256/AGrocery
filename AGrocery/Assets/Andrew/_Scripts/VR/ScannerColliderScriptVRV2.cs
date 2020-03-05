@@ -63,6 +63,9 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
   public float total;
   public float newTotal;
 
+  SoundManager soundManager;
+  AudioSource soundPlayer;
+
   // Start is called before the first frame update
  
   void Start()
@@ -81,7 +84,9 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
     itemizedText = new StringBuilder();
     outputTotalText = new StringBuilder();
     selfCheckoutMainText = new StringBuilder();
-    
+
+    soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+    soundPlayer = gameObject.GetComponent<AudioSource>();
     
 
 
@@ -133,7 +138,7 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
       outputTotalText.Append(newTotal.ToString("c"));
       payScreen.outputTotalText.text = outputTotalText.ToString();
 
-
+      soundPlayer.PlayOneShot(soundManager.scanObjectBeep);
       scannable = false;
       scanTimer = 0;
       total += productCost;
