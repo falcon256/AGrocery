@@ -13,6 +13,9 @@ public class PlayerControlsVR : MonoBehaviour
 
     public GameObject gameSettingsButton;
 
+    public bool mainMenuActive;
+
+
 
     //public GameObject moneySpawnButton;
 
@@ -25,19 +28,16 @@ public class PlayerControlsVR : MonoBehaviour
         eventSystem = GameObject.FindWithTag("EventSystem");
         gameSettingsButton = GameObject.FindWithTag("GameSettingsButton");
         //moneySpawnButton = GameObject.FindWithTag("MoneySpawnButton");
+
+        mainMenuActive = false;
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Oculus_CrossPlatform_Button4"))
+        if (Input.GetButton("Oculus_CrossPlatform_Button4"))
         {
             GameMenuCanvas.GetComponent<Canvas>().enabled = true;
             eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(gameSettingsButton);
-        }
-
-        if (Input.GetButtonDown("Oculus_CrossPlatform_Button2"))
-        {
-            //eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(moneySpawnButton);
         }
     }
 }
