@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMoveAnims : MonoBehaviour
 {
+    public GameObject player;
+
     public Animator playerAnims;
     public int walkSpeed = 5;
     public int runSpeed = 20;
@@ -11,7 +13,7 @@ public class PlayerMoveAnims : MonoBehaviour
 
     void Start()
     {
-        
+        player = GameObject.FindWithTag("Player");
     }
 
     void Update()
@@ -63,7 +65,7 @@ public class PlayerMoveAnims : MonoBehaviour
         {
             playerAnims.SetBool("isJumping", false);
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKey(KeyCode.E))
         {
             playerAnims.SetBool("isGrabbing", true);
         }
