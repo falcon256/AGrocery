@@ -59,8 +59,6 @@ public class PurchaseCardColliderScriptVRV2 : MonoBehaviour
     float total;
     float newTotal;
 
-    float currentOffer;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -97,12 +95,10 @@ public class PurchaseCardColliderScriptVRV2 : MonoBehaviour
         }
 
     }
-    void OnTriggerEnter(Collider collidedMoney)
-    {
-        if (collidedMoney.gameObject.tag == "Card")
+    void OnTriggerExit(Collider collidedMoney)
+    {      
+        if (collidedMoney.gameObject.tag == "Card" && !costReached)
         {
-            if (!costReached)
-            {
                 payScreen = GetComponentInParent<PayScreen>();
                 scanner.GetComponent<ScannerColliderScriptVRV2>();
 
@@ -121,12 +117,10 @@ public class PurchaseCardColliderScriptVRV2 : MonoBehaviour
 
                 newTotal = total - total;
 
-                currentOffer = currentOffer + moneyValue;
-
                 PlayerMoneyHandler.PlayerMoney = PlayerMoneyHandler.PlayerMoney - total;
 
-                //playerMoneyText = playerMoneyTextBox.GetComponent<Text>();
-                //playerMoneyText.text = "Player Money: " + PlayerMoneyHandler.PlayerMoney.ToString("c");
+                playerMoneyText = playerMoneyTextBox.GetComponent<Text>();
+                playerMoneyText.text = "Player Money: " + PlayerMoneyHandler.PlayerMoney.ToString("c");
 
                 outputTotalText.Clear();
                 outputTotalText.Append(newTotal.ToString("c"));
@@ -135,15 +129,14 @@ public class PurchaseCardColliderScriptVRV2 : MonoBehaviour
                 scannable = false;
                 scanTimer = 0;
 
-                if (currentOffer >= total)
+                if (moneyValue > total)
                 {
                     costReached = true;
                     payScreen.outputTotalText.text = "You paid with card. No change for you." + outputTotalText.ToString();
 
                     selfCheckoutMainText.Append($"{currencyType} {PlayerMoneyHandler.PlayerMoney.ToString("c")} \n");
-                    payScreen.mainText.text = selfCheckoutMainText.ToString();
+                    payScreen.mainText.text = selfCheckoutMainText.ToString();                  
                 }
             }
-        }
         }
     }

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3521558379817904893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.23264074, y: 3.266, z: 0.33176136}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 1204719781425173847}
   m_Father: {fileID: 0}
@@ -44,7 +44,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 500, y: 500, z: 500}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &432030805018379759
 MonoBehaviour:
@@ -62,7 +62,7 @@ MonoBehaviour:
   player: {fileID: 0}
   playerHand: {fileID: 0}
   scanner: {fileID: 0}
-  timeoutCounter: 0
+  timeSinceScanned: 0
   currentMoneyValue: 0
   playerMoneyTextBox: {fileID: 0}
   playerMoneyText: {fileID: 0}
@@ -77,7 +77,6 @@ MonoBehaviour:
   notificationTextBox: {fileID: 0}
   notificationText: {fileID: 0}
   usingCard: 0
-  costReached: 0
   payScreen: {fileID: 0}
   productTotal: 0
   moneyValue: 0

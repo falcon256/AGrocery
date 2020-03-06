@@ -12,35 +12,35 @@ public class PlayerMoneyHandler : MonoBehaviour
     public GameObject product3;
     public GameObject[] products3;
 
-    public static float PlayerMoney = 100f;
+    public static decimal PlayerMoney = 100m;
 
-    public static float TotalCost = 0.00f;
+    public static decimal TotalCost = 0.00m;
 
-    public static float CurrentOffer = 0.00f;
+    public static decimal CurrentOffer = 0.00m;
 
-    public static float Change = 0.00f;
+    public static decimal Change = 0.00m;
 
-    public static float Penny = 0.01f;
+    public static decimal Penny = 0.01m;
 
-    public static float Nickel = 0.05f;
+    public static decimal Nickel = 0.05m;
 
-    public static float Dime = 0.10f;
+    public static decimal Dime = 0.10m;
 
-    public static float Quarter = 0.25f;
+    public static decimal Quarter = 0.25m;
 
-    public static float OneDollar = 1.00f;
+    public static decimal OneDollar = 1.00m;
 
-    public static float FiveDollars = 5.00f;
+    public static decimal FiveDollars = 5.00m;
 
-    public static float TenDollars = 10.00f;
+    public static decimal TenDollars = 10.00m;
 
-    public static float TwentyDollars = 20.00f;
+    public static decimal TwentyDollars = 20.00m;
 
-    public static float Product1Cost = 1.00f;
+    public static decimal Product1Cost = 1.00m;
 
-    public static float Product2Cost = 1.50f;
+    public static decimal Product2Cost = 1.50m;
 
-    public static float Product3Cost = 2.00f;
+    public static decimal Product3Cost = 2.00m;
 
     public static int Product1Count = 0;
     public static int Product2Count = 0;
