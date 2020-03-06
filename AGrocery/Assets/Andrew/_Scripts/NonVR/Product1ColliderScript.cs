@@ -51,7 +51,7 @@ public class Product1ColliderScript : MonoBehaviour
             {
                 if (holdingProduct && Input.GetKeyDown(KeyCode.R))
                 {
-                    PlayerMoneyHandler.TotalCost += 2.00m;
+                    PlayerMoneyHandler.TotalCost += (float)2.00m;
 
                     totalMoneyText = totalMoneyTextBox.GetComponent<Text>();
                     totalMoneyText.text = "Total Cost: " + PlayerMoneyHandler.TotalCost;
