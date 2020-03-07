@@ -12,6 +12,14 @@ public class ShoppingCart : MonoBehaviour
   AudioSource soundPlayer;
   GameObject soundObject;
   SoundManager soundManager;
+  OvrAvatar avatar;
+  GameObject cartHand1;
+  GameObject cartHand2;
+  [SerializeField] GameObject leftHand;
+  [SerializeField] GameObject rightHand;
+  public Transform camTransform;
+  public float distanceFromCamera;
+
 
 
   void Start()
@@ -20,6 +28,10 @@ public class ShoppingCart : MonoBehaviour
     soundObject = GameObject.Find("SoundManager");
     soundPlayer = transform.GetComponent<AudioSource>();
     soundManager = soundObject.GetComponent<SoundManager>();
+    cartHand1 = GameObject.Find("CartHand1");
+    cartHand2 = GameObject.Find("CartHand2");
+
+    avatar = GameObject.Find("LocalAvatar").GetComponent<OvrAvatar>();
 
   }
 
@@ -48,7 +60,7 @@ public class ShoppingCart : MonoBehaviour
 
 
 
-      transform.rotation = player.transform.rotation;
+      //transform.rotation = player.transform.rotation;
 
 
 
@@ -60,8 +72,25 @@ public class ShoppingCart : MonoBehaviour
   }
   void Update()
   {
-   
 
+    if (transform.GetComponent<OVRGrabbable>().isGrabbed)
+    {
+      avatar.ShowFirstPerson = false;
+      cartHand1.SetActive(true);
+      cartHand2.SetActive(true);
+
+      gameObject.transform.localPosition = new Vector3(player.transform.localPosition.x + 1.2f, gameObject.transform.position.y, player.transform.localPosition.z) ;
+
+  
+
+      
+
+    }
+    else {
+      avatar.ShowFirstPerson = true;
+      cartHand1.SetActive(false);
+      cartHand2.SetActive(false);
+    }
 
   }
 
