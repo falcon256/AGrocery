@@ -1,0 +1,168 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using TMPro;
+using System.Text;
+
+public class DifficultyChooseVR : MonoBehaviour
+{
+    public GameObject player;
+
+    public GameObject difficultyMenuCanvas;
+
+    public GameObject mainScreenCanvas;
+
+    public GameObject eventSystem;
+
+    public GameObject easyDifficultyButton;
+
+    public GameObject product;
+
+    public GameObject[] products;
+
+    public List<GameObject> allProducts;
+
+    public GameObject currentProduct;
+
+    public GameObject productManager;
+
+    public int count = 0;
+
+    public int productIndex;
+
+    public GameObject shoppingListTextObject;
+    public TextMeshProUGUI shoppingListText;
+
+    public StringBuilder listText;
+
+    public bool easyDifficulty = false;
+
+    public bool normalDifficulty = false;
+
+    public bool hardDifficulty = false;
+
+
+    //public GameObject moneySpawnButton;
+
+    void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+
+        difficultyMenuCanvas = GameObject.FindWithTag("DifficultyMenuCanvas");
+
+        eventSystem = GameObject.FindWithTag("EventSystem");
+        easyDifficultyButton = GameObject.FindWithTag("EasyModeButton");
+
+        //product = productManager.GetComponent<ProductManager>().product;
+        //products = productManager.GetComponent<ProductManager>().products;
+
+        shoppingListTextObject = GameObject.FindWithTag("shoppingListText");
+        shoppingListText = shoppingListTextObject.GetComponent<TMPro.TextMeshProUGUI>();
+
+
+
+        listText = new StringBuilder();
+
+
+    }
+
+    void Update()
+    {
+        if(Input.GetButtonDown("Oculus_CrossPlatform_Button4"))
+        {
+            eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(easyDifficultyButton);
+        }
+
+
+        if (easyDifficulty)
+        {
+            while (count < 3)
+            {
+                count++;
+                var objectsToFind = Random.Range(0, products.Length);
+
+                product = GameObject.FindGameObjectWithTag("Product");
+                products = GameObject.FindGameObjectsWithTag("Product");
+                productIndex = Random.Range(0, products.Length);
+                currentProduct = products[productIndex];
+                Debug.Log(currentProduct.name);
+
+                listText.Clear();
+                listText.Append(currentProduct.ToString() +" \n");
+                shoppingListText.text = listText.ToString();
+            }
+            closeDifficultyMenu();
+        }
+        if(normalDifficulty)
+        {
+            while(count < 6)
+            {
+                count++;
+                var objectsToFind = Random.Range(0, products.Length);
+
+                product = GameObject.FindGameObjectWithTag("Product");
+                products = GameObject.FindGameObjectsWithTag("Product");
+                productIndex = Random.Range(0, products.Length);
+                currentProduct = products[productIndex];
+                Debug.Log(currentProduct.name);
+
+                listText.Clear();
+                listText.Append(currentProduct.ToString() + " \n");
+                shoppingListText.text = listText.ToString();
+            }
+            closeDifficultyMenu();
+        }
+
+        if(hardDifficulty)
+        {
+            while(count < 9)
+            {
+                count++;
+                var objectsToFind = Random.Range(0, products.Length);
+
+                product = GameObject.FindGameObjectWithTag("Product");
+                products = GameObject.FindGameObjectsWithTag("Product");
+                productIndex = Random.Range(0, products.Length);
+                currentProduct = products[productIndex];
+                Debug.Log(currentProduct.name);
+
+                listText.Clear();
+                listText.Append(currentProduct.ToString() + " \n");
+                shoppingListText.text = listText.ToString();
+            }
+            closeDifficultyMenu();
+        }
+    }
+
+    public void resetDifficulty()
+    {
+        easyDifficulty = false;
+        normalDifficulty = false;
+        hardDifficulty = false;
+    }
+
+    public void SetEasyDifficulty()
+    {
+        resetDifficulty();
+        easyDifficulty = true;
+    }
+
+    public void SetNormalDifficulty()
+    {
+        resetDifficulty();
+        normalDifficulty = true;
+    }
+
+    public void SetHardDifficulty()
+    {
+        resetDifficulty();
+        hardDifficulty = true;
+    }
+
+    public void closeDifficultyMenu()
+    {
+        difficultyMenuCanvas.GetComponent<Canvas>().enabled = false;
+    }
+
+}

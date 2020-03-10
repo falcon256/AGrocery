@@ -76,7 +76,7 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
     currentOfferCheckoutTextBox = GameObject.FindWithTag("CurrentOfferCheckoutText");
     notificationTextBox = GameObject.FindWithTag("NotificationText");
     product1CountTextBox = GameObject.FindWithTag("Product1CountText");
-    product = GameObject.FindWithTag("Product");
+    product = GameObject.FindGameObjectWithTag("Product");
     products = GameObject.FindGameObjectsWithTag("Product");
     itemizedText = new StringBuilder();
     outputTotalText = new StringBuilder();
