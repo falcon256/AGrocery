@@ -152,11 +152,11 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
                 total += productCost;
             }
 
-            if(collidedProduct == difficultyChooseVR.GetComponent<DifficultyChooseVR>().currentProduct && shoppingListText != null && shoppingListTextObject != null)
-            {
-                listText.Remove(currentProduct.name.Length, currentProduct.name.Length);
-                shoppingListText.text = listText.ToString();
-            }
+            //if(collidedProduct == difficultyChooseVR.GetComponent<DifficultyChooseVR>().currentProduct && shoppingListText != null && shoppingListTextObject != null)
+            //{
+            //    listText.Remove(currentProduct.name.Length, currentProduct.name.Length);
+            //    shoppingListText.text = listText.ToString();
+            //}
 
         }
   }

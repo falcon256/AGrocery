@@ -64,6 +64,8 @@ public class DifficultyChooseVR : MonoBehaviour
 
         listText = new StringBuilder();
 
+        //Time.timeScale = 0;
+
         noDifficultyChosen = true;
     }
 
@@ -88,6 +90,8 @@ public class DifficultyChooseVR : MonoBehaviour
                 currentProduct = products[productIndex];
                 Debug.Log(currentProduct.name);
 
+                currentProduct.GetComponent<Light>().enabled = true;
+
                 listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
                 shoppingListText.text = listText.ToString();
             }
@@ -105,6 +109,8 @@ public class DifficultyChooseVR : MonoBehaviour
                 productIndex = Random.Range(0, products.Length);
                 currentProduct = products[productIndex];
                 Debug.Log(currentProduct.name);
+
+                currentProduct.GetComponent<Light>().enabled = true;
 
                 listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
                 shoppingListText.text = listText.ToString();
@@ -124,7 +130,7 @@ public class DifficultyChooseVR : MonoBehaviour
                 productIndex = Random.Range(0, products.Length);
                 currentProduct = products[productIndex];
 
-                currentProductName = currentProduct.name.Replace("(Clone)", " ");
+                currentProduct.GetComponent<Light>().enabled = true;
 
                 listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
                 shoppingListText.text = listText.ToString();
@@ -160,6 +166,7 @@ public class DifficultyChooseVR : MonoBehaviour
 
     public void closeDifficultyMenu()
     {
+        //Time.timeScale = 1;
         difficultyMenuCanvas.SetActive(false);
         noDifficultyChosen = false;
     }

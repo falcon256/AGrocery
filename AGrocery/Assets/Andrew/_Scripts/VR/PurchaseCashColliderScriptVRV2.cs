@@ -141,9 +141,9 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
                     //playerMoneyText = playerMoneyTextBox.GetComponent<Text>();
                     //playerMoneyText.text = "Player Money: " + PlayerMoneyHandler.PlayerMoney.ToString("c");
 
-                    outputTotalText.Clear();
-                    outputTotalText.Append(newTotal.ToString("c"));
-                    payScreen.outputTotalText.text = outputTotalText.ToString();
+                    //outputTotalText.Clear();
+                    //outputTotalText.Append(newTotal.ToString("c"));
+                    //payScreen.outputTotalText.text = outputTotalText.ToString();
 
                     scannable = false;
                     scanTimer = 0;
