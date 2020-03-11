@@ -36,6 +36,8 @@ public class DifficultyChooseVR : MonoBehaviour
 
     public StringBuilder listText;
 
+    public bool noDifficultyChosen;
+
     public bool easyDifficulty = false;
 
     public bool normalDifficulty = false;
@@ -61,11 +63,13 @@ public class DifficultyChooseVR : MonoBehaviour
         shoppingListText = shoppingListTextObject.GetComponent<TMPro.TextMeshProUGUI>();
 
         listText = new StringBuilder();
+
+        noDifficultyChosen = true;
     }
 
     void Update()
     {
-        if(Input.GetButtonDown("Oculus_CrossPlatform_Button4"))
+        if (Input.GetButtonDown("Oculus_CrossPlatform_Button4") && noDifficultyChosen == true)
         {
             eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(easyDifficultyButton);
         }
@@ -156,7 +160,8 @@ public class DifficultyChooseVR : MonoBehaviour
 
     public void closeDifficultyMenu()
     {
-        difficultyMenuCanvas.GetComponent<Canvas>().enabled = false;
+        difficultyMenuCanvas.SetActive(false);
+        noDifficultyChosen = false;
     }
 
 }

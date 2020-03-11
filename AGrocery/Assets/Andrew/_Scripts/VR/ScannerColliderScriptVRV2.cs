@@ -8,6 +8,8 @@ using System.Text;
 
 public class ScannerColliderScriptVRV2 : MonoBehaviour
 {
+  public DifficultyChooseVR difficultyChooseVR;
+
   public ProductData productData;
 
   public GameObject player;
@@ -44,6 +46,11 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
     public static GameObject currentOfferTextBox;
     public static Text currentOfferText;
 
+    public GameObject shoppingListTextObject;
+    public TextMeshProUGUI shoppingListText;
+
+    public StringBuilder listText;
+
     public bool scanningProduct = false;
 
  // public TextMeshProUGUI outputTotalText;
@@ -78,14 +85,17 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
     product1CountTextBox = GameObject.FindWithTag("Product1CountText");
     product = GameObject.FindGameObjectWithTag("Product");
     products = GameObject.FindGameObjectsWithTag("Product");
+
+    shoppingListTextObject = GameObject.FindWithTag("shoppingListText");
+    shoppingListText = shoppingListTextObject.GetComponent<TMPro.TextMeshProUGUI>();
+
     itemizedText = new StringBuilder();
     outputTotalText = new StringBuilder();
     selfCheckoutMainText = new StringBuilder();
-    
-    
+    listText = new StringBuilder();
 
 
-  }
+    }
 
   // Update is called once per frame
   void Update()
@@ -141,6 +151,13 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
                 scanTimer = 0;
                 total += productCost;
             }
+
+            if(collidedProduct == difficultyChooseVR.GetComponent<DifficultyChooseVR>().currentProduct && shoppingListText != null && shoppingListTextObject != null)
+            {
+                listText.Remove(currentProduct.name.Length, currentProduct.name.Length);
+                shoppingListText.text = listText.ToString();
+            }
+
         }
   }
 
