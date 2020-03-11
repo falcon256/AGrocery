@@ -9,7 +9,7 @@ public class PlayerMoveAnimsVR : MonoBehaviour
     public Animator playerAnims;
     public int walkSpeed = 5;
     public int runSpeed = 20;
-    public int jumpHeight = 1;
+    public int jumpHeight = 5;
 
     void Start()
     {
@@ -20,38 +20,16 @@ public class PlayerMoveAnimsVR : MonoBehaviour
     {
         //These are the controls for the player. They use the default Unity inputs along with ints I have set up for different speeds
 
-        var rotate = Input.GetAxis("Oculus_CrossPlatform_PrimaryThumbstickHorizontal") * Time.deltaTime * 150.0f;
-        var walkForward = Input.GetAxis("Oculus_CrossPlatform_PrimaryThumbstickVertical") * Time.deltaTime * walkSpeed;
-        var runForward = Input.GetAxis("Oculus_CrossPlatform_PrimaryThumbstickVertical") * Time.deltaTime * runSpeed;
-        var updown = Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickVertical") * Time.deltaTime * 5.0f;
-        var leftright = Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickHorizontal") * Time.deltaTime * 5.0f;
-        var jump = Input.GetAxis("Oculus_CrossPlatform_Button1") * Time.deltaTime * jumpHeight;
+        var forwardbackward = Input.GetAxis("Oculus_CrossPlatform_PrimaryThumbstickVertical") * Time.deltaTime * walkSpeed;
+        var updown = Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickVertical") * Time.deltaTime * jumpHeight;
+        var leftright = Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickHorizontal") * Time.deltaTime * walkSpeed;
 
-        transform.Translate(walkForward, 0, 0);
-        transform.Rotate(0, rotate, 0);
+        transform.Translate(0, 0 , forwardbackward);
         transform.Translate(0, updown, 0);
         transform.Translate(leftright, 0, 0);
-        transform.Translate(0, jump, 0);
 
         //These are animation booleans which are activated when the player is or is not pressing a button. They are connected to a animation controller called PlayerAnims
 
-        /*if (Input.GetButton("Oculus_CrossPlatform_PrimaryThumbstickVertical"))
-        {
-            playerAnims.SetBool("isWalkingForward", true);
-        }
-        else
-        {
-            playerAnims.SetBool("isWalkingForward", false);
-        }*/
-        if (Input.GetButtonDown("Oculus_CrossPlatform_Button2"))
-        {
-            playerAnims.SetBool("isRunningForward", true);
-            transform.Translate(runForward, 0, 0);
-        }
-        else
-        {
-            playerAnims.SetBool("isRunningForward", false);
-        }
         if (Input.GetButtonDown("Oculus_CrossPlatform_Button1"))
         {
             playerAnims.SetBool("isJumping", true);

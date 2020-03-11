@@ -9,8 +9,8 @@ public class IsleAnchor : MonoBehaviour
     public enum ISLEORIENTATION { X, Y };
     public ISLEORIENTATION isleOrientation = ISLEORIENTATION.X;
 
-    public ProductData.CATAGORY[] leftIsleProducts = null;
-    public ProductData.CATAGORY[] rightIsleProducts = null;
+    public ProductData.CATEGORY[] leftIsleProducts = null;
+    public ProductData.CATEGORY[] rightIsleProducts = null;
 
     void Start()
     {

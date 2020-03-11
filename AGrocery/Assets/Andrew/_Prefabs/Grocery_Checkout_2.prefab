@@ -1805,7 +1805,6 @@ GameObject:
   - component: {fileID: 5794285571864178375}
   - component: {fileID: 6699649234382523165}
   - component: {fileID: 840376284396308617}
-  - component: {fileID: 5150761857596724839}
   m_Layer: 0
   m_Name: Icosphere.001
   m_TagString: Untagged
@@ -1873,20 +1872,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5150761857596724839
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 445984334054560895}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -1579241630799410176, guid: 741f69b209bc3ab4ea37d76d0a52f528, type: 3}
 --- !u!1 &449429783495397818
 GameObject:
   m_ObjectHideFlags: 0
@@ -7726,8 +7711,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 6, y: 5.5, z: 22}
+  m_Center: {x: 0.5, y: 2.7, z: 0}
 --- !u!1 &2497462091978241655
 GameObject:
   m_ObjectHideFlags: 0
@@ -10235,7 +10220,6 @@ GameObject:
   - component: {fileID: 4220803502786825442}
   - component: {fileID: 1364630021621918097}
   - component: {fileID: 510831693414805121}
-  - component: {fileID: 4009005601271403608}
   m_Layer: 0
   m_Name: Icosphere
   m_TagString: Untagged
@@ -10303,20 +10287,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4009005601271403608
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3266026275950054917}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 289301614986012343, guid: 741f69b209bc3ab4ea37d76d0a52f528, type: 3}
 --- !u!1 &3267310494871206622
 GameObject:
   m_ObjectHideFlags: 0
