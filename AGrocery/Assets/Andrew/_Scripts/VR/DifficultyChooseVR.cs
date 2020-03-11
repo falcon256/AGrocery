@@ -25,7 +25,7 @@ public class DifficultyChooseVR : MonoBehaviour
 
     public GameObject currentProduct;
 
-    public GameObject productManager;
+    public string currentProductName;
 
     public int count = 0;
 
@@ -60,11 +60,7 @@ public class DifficultyChooseVR : MonoBehaviour
         shoppingListTextObject = GameObject.FindWithTag("shoppingListText");
         shoppingListText = shoppingListTextObject.GetComponent<TMPro.TextMeshProUGUI>();
 
-
-
         listText = new StringBuilder();
-
-
     }
 
     void Update()
@@ -88,8 +84,7 @@ public class DifficultyChooseVR : MonoBehaviour
                 currentProduct = products[productIndex];
                 Debug.Log(currentProduct.name);
 
-                listText.Clear();
-                listText.Append(currentProduct.ToString() +" \n");
+                listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
                 shoppingListText.text = listText.ToString();
             }
             closeDifficultyMenu();
@@ -107,8 +102,7 @@ public class DifficultyChooseVR : MonoBehaviour
                 currentProduct = products[productIndex];
                 Debug.Log(currentProduct.name);
 
-                listText.Clear();
-                listText.Append(currentProduct.ToString() + " \n");
+                listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
                 shoppingListText.text = listText.ToString();
             }
             closeDifficultyMenu();
@@ -116,7 +110,7 @@ public class DifficultyChooseVR : MonoBehaviour
 
         if(hardDifficulty)
         {
-            while(count < 9)
+            while (count < 9)
             {
                 count++;
                 var objectsToFind = Random.Range(0, products.Length);
@@ -125,10 +119,10 @@ public class DifficultyChooseVR : MonoBehaviour
                 products = GameObject.FindGameObjectsWithTag("Product");
                 productIndex = Random.Range(0, products.Length);
                 currentProduct = products[productIndex];
-                Debug.Log(currentProduct.name);
 
-                listText.Clear();
-                listText.Append(currentProduct.ToString() + " \n");
+                currentProductName = currentProduct.name.Replace("(Clone)", " ");
+
+                listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
                 shoppingListText.text = listText.ToString();
             }
             closeDifficultyMenu();
