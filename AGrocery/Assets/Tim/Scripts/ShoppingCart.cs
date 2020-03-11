@@ -7,8 +7,6 @@ public class ShoppingCart : MonoBehaviour
 
   
   GameObject player;
- 
-  float footstepTimer;
   AudioSource soundPlayer;
   GameObject soundObject;
   SoundManager soundManager;
@@ -17,10 +15,10 @@ public class ShoppingCart : MonoBehaviour
   GameObject cartHand2;
   [SerializeField] GameObject leftHand;
   [SerializeField] GameObject rightHand;
-  public Transform camTransform;
-  public float distanceFromCamera;
-
-
+ 
+  public float distanceToPlayer;
+  float footstepTimer;
+  public bool isGrabbed = false;
 
   void Start()
   {
@@ -41,11 +39,11 @@ public class ShoppingCart : MonoBehaviour
     soundPlayer.Stop();
   }
 
-  // Update is called once per frame
+ 
 
   private void FixedUpdate()
   {
-    if (transform.GetComponent<OVRGrabbable>().isGrabbed && player.GetComponent<PlayerSound>().isMoving == true)
+    if (player.GetComponent<PlayerSound>().isMoving == true &&  isGrabbed == true)
     {
 
       if (footstepTimer > .7f)
@@ -60,9 +58,6 @@ public class ShoppingCart : MonoBehaviour
 
 
 
-      //transform.rotation = player.transform.rotation;
-
-
 
     }
    
@@ -73,24 +68,37 @@ public class ShoppingCart : MonoBehaviour
   void Update()
   {
 
-    if (transform.GetComponent<OVRGrabbable>().isGrabbed)
+    distanceToPlayer = Vector3.Distance(gameObject.transform.position, player.transform.position);
+    
+    GameObject rotateAnchor = GameObject.Find("TrackerAnchor");
+
+    if (distanceToPlayer <= 2.2 && (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > 0 || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0))
     {
-      avatar.ShowFirstPerson = false;
-      cartHand1.SetActive(true);
-      cartHand2.SetActive(true);
+      isGrabbed = true;
 
-      gameObject.transform.localPosition = new Vector3(player.transform.localPosition.x + 1.2f, gameObject.transform.position.y, player.transform.localPosition.z) ;
+      if (isGrabbed)
+      {
+        avatar.ShowFirstPerson = false;
+        cartHand1.SetActive(true);
+        cartHand2.SetActive(true);
 
-  
-
+    
+        gameObject.transform.parent = rotateAnchor.transform;
+      }
       
-
     }
-    else {
+    else
+    {
+      isGrabbed = false;
+
+      gameObject.transform.parent = null;
       avatar.ShowFirstPerson = true;
       cartHand1.SetActive(false);
       cartHand2.SetActive(false);
     }
+
+  
+  
 
   }
 
