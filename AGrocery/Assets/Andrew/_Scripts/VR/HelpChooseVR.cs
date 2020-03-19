@@ -369,4 +369,11 @@ public class HelpChooseVR : MonoBehaviour
         resetMoveToPoints();
         moveToWine = true;
     }
+
+    public void closeAskMenu()
+    {
+        //Time.timeScale = 1;
+        askForHelpMenuCanvas.GetComponent<Canvas>().enabled = false;
+    }
+
 }

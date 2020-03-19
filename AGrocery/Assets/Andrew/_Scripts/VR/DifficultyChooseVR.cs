@@ -169,6 +169,13 @@ public class DifficultyChooseVR : MonoBehaviour
         //Time.timeScale = 1;
         difficultyMenuCanvas.SetActive(false);
         noDifficultyChosen = false;
+        SetNormalDifficulty();
     }
-
+    public void closeDifficultyMenu2()
+    {
+        //Time.timeScale = 1;
+        difficultyMenuCanvas.SetActive(false);
+        noDifficultyChosen = false;
+        SetNormalDifficulty();
+    }
 }
