@@ -7,20 +7,18 @@ public class ShoppingCart : MonoBehaviour
 
   
   GameObject player;
- 
-  float footstepTimer;
   AudioSource soundPlayer;
   GameObject soundObject;
   SoundManager soundManager;
-  //OvrAvatar avatar;
-  //GameObject cartHand1;
-  //GameObject cartHand2;
+  OvrAvatar avatar;
+  GameObject cartHand1;
+  GameObject cartHand2;
   [SerializeField] GameObject leftHand;
   [SerializeField] GameObject rightHand;
-  public Transform camTransform;
-  public float distanceFromCamera;
-
-
+ 
+  public float distanceToPlayer;
+  float footstepTimer;
+  public bool isGrabbed = false;
 
   void Start()
   {
@@ -28,10 +26,10 @@ public class ShoppingCart : MonoBehaviour
     soundObject = GameObject.Find("SoundManager");
     soundPlayer = transform.GetComponent<AudioSource>();
     soundManager = soundObject.GetComponent<SoundManager>();
-    //cartHand1 = GameObject.Find("CartHand1");
-    //cartHand2 = GameObject.Find("CartHand2");
+    cartHand1 = GameObject.Find("CartHand1");
+    cartHand2 = GameObject.Find("CartHand2");
 
-    //avatar = GameObject.Find("LocalAvatar").GetComponent<OvrAvatar>();
+    avatar = GameObject.Find("LocalAvatar").GetComponent<OvrAvatar>();
 
   }
 
@@ -41,11 +39,11 @@ public class ShoppingCart : MonoBehaviour
     soundPlayer.Stop();
   }
 
-  // Update is called once per frame
+ 
 
   private void FixedUpdate()
   {
-    if (transform.GetComponent<OVRGrabbable>().isGrabbed && player.GetComponent<PlayerSound>().isMoving == true)
+    if (player.GetComponent<PlayerSound>().isMoving == true &&  isGrabbed == true)
     {
 
       if (footstepTimer > .7f)
@@ -60,9 +58,6 @@ public class ShoppingCart : MonoBehaviour
 
 
 
-      //transform.rotation = player.transform.rotation;
-
-
 
     }
    
@@ -73,24 +68,37 @@ public class ShoppingCart : MonoBehaviour
   void Update()
   {
 
-    if (transform.GetComponent<OVRGrabbable>().isGrabbed)
-    {
-      //avatar.ShowFirstPerson = false;
-      //cartHand1.SetActive(true);
-      //cartHand2.SetActive(true);
+    distanceToPlayer = Vector3.Distance(gameObject.transform.position, player.transform.position);
+    
+    GameObject rotateAnchor = GameObject.Find("TrackerAnchor");
 
-      gameObject.transform.localPosition = new Vector3(player.transform.localPosition.x + 1.2f, gameObject.transform.position.y, player.transform.localPosition.z) ;
+    if (distanceToPlayer <= 2.2 && (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > 0 || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0))
+    {
+      isGrabbed = true;
+
+      if (isGrabbed)
+      {
+        avatar.ShowFirstPerson = false;
+        cartHand1.SetActive(true);
+        cartHand2.SetActive(true);
+
+    
+        gameObject.transform.parent = rotateAnchor.transform;
+      }
+      
+    }
+    else
+    {
+      isGrabbed = false;
+
+      gameObject.transform.parent = null;
+      avatar.ShowFirstPerson = true;
+      cartHand1.SetActive(false);
+      cartHand2.SetActive(false);
+    }
 
   
-
-      
-
-    }
-    else {
-      //avatar.ShowFirstPerson = true;
-      //cartHand1.SetActive(false);
-      //cartHand2.SetActive(false);
-    }
+  
 
   }
 

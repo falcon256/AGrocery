@@ -33,6 +33,10 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+    }
+
     public void PlayOneShot(AudioClip clip)
     {
         soundEffectAudio.PlayOneShot(clip);
