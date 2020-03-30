@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -624335199384827403}
   - component: {fileID: 8127846865976274468}
   - component: {fileID: 7911832359000025144}
+  - component: {fileID: -1547439937968014881}
   m_Layer: 9
   m_Name: Bagels2
   m_TagString: Product
@@ -146,6 +147,19 @@ MonoBehaviour:
   category: 8
   price: 1.98
   density: 1
+  hasBeenScanned: 0
+--- !u!114 &-1547439937968014881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6656358007019778552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6761203653509412234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,26 +167,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6009835964355918388}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Name
-      value: bagels (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8568998755497832391, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -5102530947620581811, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a53eee5101c4db44e943dc7ba8b0ede3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -242,6 +236,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Name
+      value: bagels (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568998755497832391, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -5102530947620581811, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6164566716457838015, guid: a53eee5101c4db44e943dc7ba8b0ede3,
         type: 3}

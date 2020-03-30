@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 7773693952270206117}
   - component: {fileID: -341599856977746984}
   - component: {fileID: 585102276494311723}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cashier
   m_TagString: Cashier
   m_Icon: {fileID: 0}
@@ -410,8 +410,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.6907573, y: 1.3822454, z: 2.5}
-  m_Center: {x: 0.0120165525, y: -0.8088773, z: 0}
+  m_Size: {x: 2, y: 3, z: 2.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1837115879144163319
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -423,8 +423,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.45070446, z: 7.09771}
-  m_Center: {x: 0, y: -1.2746477, z: -1.1045647}
+  m_Size: {x: 10, y: 3, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &7773693952270206117
 Animator:
   serializedVersion: 3
@@ -1201,7 +1201,7 @@ PrefabInstance:
     - target: {fileID: 399327765765803059, guid: 1f47f455b49f8cd41975b72cd71ab1ac,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.67
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 399327765765803059, guid: 1f47f455b49f8cd41975b72cd71ab1ac,
         type: 3}
@@ -1242,66 +1242,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6018952666999399737, guid: 1f47f455b49f8cd41975b72cd71ab1ac,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6018952666999399737, guid: 1f47f455b49f8cd41975b72cd71ab1ac,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 904403120330769082, guid: 1f47f455b49f8cd41975b72cd71ab1ac,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.990566
-      objectReference: {fileID: 0}
-    - target: {fileID: 904403120330769082, guid: 1f47f455b49f8cd41975b72cd71ab1ac,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9672036
-      objectReference: {fileID: 0}
-    - target: {fileID: 904403120330769082, guid: 1f47f455b49f8cd41975b72cd71ab1ac,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.9672036
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413156657575672235, guid: 1f47f455b49f8cd41975b72cd71ab1ac,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5916521871725081065, guid: 1f47f455b49f8cd41975b72cd71ab1ac,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.19379672
-      objectReference: {fileID: 0}
-    - target: {fileID: 5916521871725081065, guid: 1f47f455b49f8cd41975b72cd71ab1ac,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.44462508
-      objectReference: {fileID: 0}
-    - target: {fileID: 5916521871725081065, guid: 1f47f455b49f8cd41975b72cd71ab1ac,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.63529414
-      objectReference: {fileID: 0}
-    - target: {fileID: 5916521871725081065, guid: 1f47f455b49f8cd41975b72cd71ab1ac,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0.46666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 5916521871725081065, guid: 1f47f455b49f8cd41975b72cd71ab1ac,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5916521871725081065, guid: 1f47f455b49f8cd41975b72cd71ab1ac,
-        type: 3}
-      propertyPath: m_FillMethod
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f47f455b49f8cd41975b72cd71ab1ac, type: 3}

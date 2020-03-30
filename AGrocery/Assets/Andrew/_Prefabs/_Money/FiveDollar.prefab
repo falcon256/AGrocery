@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8523843630937027273}
   - component: {fileID: 150074306}
   - component: {fileID: 150074307}
+  - component: {fileID: 8264545684925078845}
   - component: {fileID: 3388320974122888391}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FiveDollar
   m_TagString: Money
   m_Icon: {fileID: 0}
@@ -79,7 +80,20 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &8264545684925078845
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091598238630425292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.1, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3388320974122888391
 MonoBehaviour:
@@ -93,11 +107,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4d2b4b966138e4381a50bb29b02d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPos: {x: 0, y: 0, z: 0}
   dimensions: {x: 0, y: 0, z: 0}
   positioningOffset: {x: 0, y: 0.5, z: 0}
   category: 8
   value: 5
+  hasBeenUsed: 0
 --- !u!1 &4746167737478316166
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +123,6 @@ GameObject:
   - component: {fileID: 1445319806064380550}
   - component: {fileID: 1444737425294810047}
   - component: {fileID: 5112107744479752522}
-  - component: {fileID: 7108996711208431633}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -177,16 +190,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7108996711208431633
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4746167737478316166}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

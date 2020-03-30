@@ -35,7 +35,7 @@ public class MenuControllerVR : MonoBehaviour
     public bool mainCanvasMode;
     public bool firstPersonCanvasMode;
     public bool BEVCanvasMode;
-    
+
 
     void Start()
     {
@@ -67,15 +67,7 @@ public class MenuControllerVR : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetButtonDown(("Oculus_CrossPlatform_Button3")))
-        {
-            ReturnToGame();
-            GameMenuCanvas.GetComponent<Canvas>().enabled = true;
-        }
-        if (Input.GetButtonDown(("Oculus_CrossPlatform_Button4")))
-        {
-            ReturnToGame();
-        }
+
     }
 public void LoadByIndex(int sceneIndex)
 		{ 
@@ -107,79 +99,91 @@ public void LoadByIndex(int sceneIndex)
         AmbientSettingsMenuCanvas.GetComponent<Canvas>().enabled = false;
         VoiceSettingsMenuCanvas.GetComponent<Canvas>().enabled = false;
         FootstepsSettingsMenuCanvas.GetComponent<Canvas>().enabled = false;
+        Time.timeScale = 1;
     }
 
     public void ShowGameMenuCanvas()
     {
         ReturnToGame();
         GameMenuCanvas.GetComponent<Canvas>().enabled = true;
-        
+        Time.timeScale = 0;
     }
 
     public void ShowItemMenuCanvas()
     {
         ReturnToGame();
         ItemMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowFoodItemMenuCanvas()
     {
         ReturnToGame();
         FoodItemMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowControlsMenuCanvas()
     {
         ReturnToGame();
         ControlsMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowObjectivesMenuCanvas()
     {
         ReturnToGame();
         ObjectivesMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowGameSettingsCanvas()
     {
         ReturnToGame();
         GameSettingsMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowVolumeSettingsCanvas()
     {
         ReturnToGame();
         VolumeSettingsMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowDeliMeatsMenuCanvas()
     {
         ReturnToGame();
         DeliMeatsMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowProduceMenuCanvas()
     {
         ReturnToGame();
         ProduceMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowDryGoodsMenuCanvas()
     {
         ReturnToGame();
         DryGoodsMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowBeveragesMenuCanvas()
     {
         ReturnToGame();
         BeveragesMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowSnackFoodsMenuCanvas()
     {
         ReturnToGame();
         SnackFoodsMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     //
@@ -188,30 +192,35 @@ public void LoadByIndex(int sceneIndex)
     {
         ReturnToGame();
         HousewaresMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowElectronicsMenuCanvas()
     {
         ReturnToGame();
         ElectronicsMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowToysMenuCanvas()
     {
         ReturnToGame();
         ToysMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowBathroomMenuCanvas()
     {
         ReturnToGame();
         BathroomMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowOtherMenuCanvas()
     {
         ReturnToGame();
         OtherMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     //
@@ -221,6 +230,7 @@ public void LoadByIndex(int sceneIndex)
         ReturnToGame();
         VolumeSettingsMenuCanvas.GetComponent<Canvas>().enabled = true;
         MusicSettingsMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowAmbientSettingsCanvas()
@@ -228,6 +238,7 @@ public void LoadByIndex(int sceneIndex)
         ReturnToGame();
         VolumeSettingsMenuCanvas.GetComponent<Canvas>().enabled = true;
         AmbientSettingsMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowVoiceSettingsCanvas()
@@ -235,6 +246,7 @@ public void LoadByIndex(int sceneIndex)
         ReturnToGame();
         VolumeSettingsMenuCanvas.GetComponent<Canvas>().enabled = true;
         VoiceSettingsMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ShowFootstepsSettingsCanvas()
@@ -242,6 +254,7 @@ public void LoadByIndex(int sceneIndex)
         ReturnToGame();
         VolumeSettingsMenuCanvas.GetComponent<Canvas>().enabled = true;
         FootstepsSettingsMenuCanvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ActivateItem()

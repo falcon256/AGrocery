@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1302288003416265288}
   - component: {fileID: 1160897174967231158}
   - component: {fileID: -2193688391819341368}
+  - component: {fileID: 8661184422406015066}
   m_Layer: 9
   m_Name: PaperTowels2
   m_TagString: Product
@@ -146,6 +147,19 @@ MonoBehaviour:
   category: 7
   price: 4.98
   density: 1
+  hasBeenScanned: 0
+--- !u!114 &8661184422406015066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2876552187163438740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1683219224618411504
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 5554503524637244357}
   - component: {fileID: 7855489193937945688}
   m_Layer: 5
-  m_Name: Return To Game
+  m_Name: ReturnToGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +104,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5554503524637244358}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.9999639}
   m_Children:
@@ -174,9 +174,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.19215687, g: 0.44313726, b: 0.63529414, a: 0.46666667}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.19215687, g: 0.44313726, b: 0.63529414, a: 0.46666667}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -222,11 +222,25 @@ MonoBehaviour:
   player: {fileID: 0}
   GameMenuCanvas: {fileID: 0}
   ItemMenuCanvas: {fileID: 0}
-  MapMenuCanvas: {fileID: 0}
+  FoodItemMenuCanvas: {fileID: 0}
   ControlsMenuCanvas: {fileID: 0}
   ObjectivesMenuCanvas: {fileID: 0}
   GameSettingsMenuCanvas: {fileID: 0}
   VolumeSettingsMenuCanvas: {fileID: 0}
+  DeliMeatsMenuCanvas: {fileID: 0}
+  ProduceMenuCanvas: {fileID: 0}
+  DryGoodsMenuCanvas: {fileID: 0}
+  BeveragesMenuCanvas: {fileID: 0}
+  SnackFoodsMenuCanvas: {fileID: 0}
+  HousewaresMenuCanvas: {fileID: 0}
+  ElectronicsMenuCanvas: {fileID: 0}
+  ToysMenuCanvas: {fileID: 0}
+  BathroomMenuCanvas: {fileID: 0}
+  OtherMenuCanvas: {fileID: 0}
+  MusicSettingsMenuCanvas: {fileID: 0}
+  AmbientSettingsMenuCanvas: {fileID: 0}
+  VoiceSettingsMenuCanvas: {fileID: 0}
+  FootstepsSettingsMenuCanvas: {fileID: 0}
   mainCanvasMode: 0
   firstPersonCanvasMode: 0
   BEVCanvasMode: 0

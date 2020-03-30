@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6007160718053334803}
   - component: {fileID: 4706460788993882569}
   - component: {fileID: 8639984223873308449}
+  - component: {fileID: 2967646367990774972}
   m_Layer: 9
   m_Name: MilkJug3
   m_TagString: Product
@@ -146,6 +147,19 @@ MonoBehaviour:
   category: 1
   price: 3.7
   density: 1
+  hasBeenScanned: 0
+--- !u!114 &2967646367990774972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016847012899819128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &977132961184630867
 PrefabInstance:
   m_ObjectHideFlags: 0

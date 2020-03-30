@@ -11,6 +11,7 @@ public class ProductData : MonoBehaviour
     public float price = 0;
     public float density = 1.0f;
 
+    public bool hasBeenScanned = false;
 
 
     // Start is called before the first frame update

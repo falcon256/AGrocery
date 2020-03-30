@@ -8,6 +8,8 @@ using System.Text;
 
 public class ScannerColliderScriptVRV2 : MonoBehaviour
 {
+  public DifficultyChooseVR difficultyChooseVR;
+
   public ProductData productData;
 
   public GameObject player;
@@ -44,6 +46,11 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
     public static GameObject currentOfferTextBox;
     public static Text currentOfferText;
 
+    public GameObject shoppingListTextObject;
+    public TextMeshProUGUI shoppingListText;
+
+    public StringBuilder listText;
+
     public bool scanningProduct = false;
 
  // public TextMeshProUGUI outputTotalText;
@@ -63,9 +70,6 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
   public float total;
   public float newTotal;
 
-  SoundManager soundManager;
-  AudioSource soundPlayer;
-
   // Start is called before the first frame update
  
   void Start()
@@ -79,18 +83,19 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
     currentOfferCheckoutTextBox = GameObject.FindWithTag("CurrentOfferCheckoutText");
     notificationTextBox = GameObject.FindWithTag("NotificationText");
     product1CountTextBox = GameObject.FindWithTag("Product1CountText");
-    product = GameObject.FindWithTag("Product");
+    product = GameObject.FindGameObjectWithTag("Product");
     products = GameObject.FindGameObjectsWithTag("Product");
+
+   // shoppingListTextObject = GameObject.FindWithTag("shoppingListText");
+   // shoppingListText = shoppingListTextObject.GetComponent<TMPro.TextMeshProUGUI>();
+
     itemizedText = new StringBuilder();
     outputTotalText = new StringBuilder();
     selfCheckoutMainText = new StringBuilder();
-
-    soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
-    soundPlayer = gameObject.GetComponent<AudioSource>();
-    
+    listText = new StringBuilder();
 
 
-  }
+    }
 
   // Update is called once per frame
   void Update()
@@ -119,29 +124,40 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
     {
       return;
     }
-    if (collidedProduct.gameObject.tag == "Product")
-    {
-      payScreen = GetComponentInParent<PayScreen>();
-      
-      scanningProduct = true;
+        if (collidedProduct.gameObject.tag == "Product")
+        {
+            if (collidedProduct.GetComponent<ProductData>().hasBeenScanned == false)
+            {
+                payScreen = GetComponentInParent<PayScreen>();
 
-      productData = collidedProduct.GetComponent<ProductData>();
-      productCost = productData.price;
-      productName = collidedProduct.name.Replace("(Clone)", " ");
-     
-      itemizedText.Append($"{productName} {productCost.ToString("c")} \n");
-      payScreen.itemizedText.text = itemizedText.ToString();
+                scanningProduct = true;
+                collidedProduct.GetComponent<ProductData>().hasBeenScanned = true;
 
-      newTotal = total + productCost;
+                productData = collidedProduct.GetComponent<ProductData>();
+                productCost = productData.price;
+                productName = collidedProduct.name.Replace("(Clone)", " ");
 
-      outputTotalText.Clear();
-      outputTotalText.Append(newTotal.ToString("c"));
-      payScreen.outputTotalText.text = outputTotalText.ToString();
+                itemizedText.Append($"{productName} {productCost.ToString("c")} \n");
+                payScreen.itemizedText.text = itemizedText.ToString();
 
-      soundPlayer.PlayOneShot(soundManager.scanObjectBeep);
-      scannable = false;
-      scanTimer = 0;
-      total += productCost;
+                newTotal = total + productCost;
+
+                outputTotalText.Clear();
+                outputTotalText.Append(newTotal.ToString("c"));
+                payScreen.outputTotalText.text = outputTotalText.ToString();
+
+
+                scannable = false;
+                scanTimer = 0;
+                total += productCost;
+            }
+
+            //if(collidedProduct == difficultyChooseVR.GetComponent<DifficultyChooseVR>().currentProduct && shoppingListText != null && shoppingListTextObject != null)
+            //{
+            //    listText.Remove(currentProduct.name.Length, currentProduct.name.Length);
+            //    shoppingListText.text = listText.ToString();
+            //}
+
         }
   }
 

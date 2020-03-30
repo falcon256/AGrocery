@@ -13614,11 +13614,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cashier (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 4889564235667804271, guid: b0f82d3e4ad5f8a49ba84887a3f9ed89,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4484523777951007812, guid: b0f82d3e4ad5f8a49ba84887a3f9ed89,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13673,16 +13668,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4889564235667804264, guid: b0f82d3e4ad5f8a49ba84887a3f9ed89,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 585102276494311723, guid: b0f82d3e4ad5f8a49ba84887a3f9ed89,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0f82d3e4ad5f8a49ba84887a3f9ed89, type: 3}
@@ -25542,6 +25527,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3232908539305697403, guid: b9338846adb238244b1199cd9d3b666f,
+        type: 3}
+      propertyPath: leftHand
+      value: 
+      objectReference: {fileID: 891567018511166358}
+    - target: {fileID: 3232908539305697403, guid: b9338846adb238244b1199cd9d3b666f,
+        type: 3}
+      propertyPath: rightHand
+      value: 
+      objectReference: {fileID: 891567018511135342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9338846adb238244b1199cd9d3b666f, type: 3}
 --- !u!1 &1388379959
@@ -28434,11 +28429,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4d2b4b966138e4381a50bb29b02d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPos: {x: 0, y: 0, z: 0}
   dimensions: {x: 0, y: 0, z: 0}
   positioningOffset: {x: 0, y: 0.5, z: 0}
   category: 8
   value: 100
+  hasBeenUsed: 0
 --- !u!1001 &1584628769
 PrefabInstance:
   m_ObjectHideFlags: 0

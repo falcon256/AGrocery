@@ -19,6 +19,10 @@ public class ShoppingCart : MonoBehaviour
   public float distanceToPlayer;
   float footstepTimer;
   public bool isGrabbed = false;
+  public bool isDisabled;
+
+  float disabledTimer;
+  float disabledTime = .0f;
 
   void Start()
   {
@@ -26,8 +30,12 @@ public class ShoppingCart : MonoBehaviour
     soundObject = GameObject.Find("SoundManager");
     soundPlayer = transform.GetComponent<AudioSource>();
     soundManager = soundObject.GetComponent<SoundManager>();
-    cartHand1 = GameObject.Find("CartHand1");
-    cartHand2 = GameObject.Find("CartHand2");
+  
+    cartHand1 = new List<GameObject>(GameObject.FindGameObjectsWithTag("CartHand1")).Find(g => g.transform.IsChildOf(this.transform));
+    cartHand2 = new List<GameObject>(GameObject.FindGameObjectsWithTag("CartHand2")).Find(g => g.transform.IsChildOf(this.transform));
+
+    cartHand1.SetActive(false);
+    cartHand2.SetActive(false);
 
     avatar = GameObject.Find("LocalAvatar").GetComponent<OvrAvatar>();
 
@@ -43,7 +51,7 @@ public class ShoppingCart : MonoBehaviour
 
   private void FixedUpdate()
   {
-    if (player.GetComponent<PlayerSound>().isMoving == true &&  isGrabbed == true)
+    if (player.GetComponent<PlayerSound>().isMoving == true && isGrabbed == true)
     {
 
       if (footstepTimer > .7f)
@@ -72,31 +80,47 @@ public class ShoppingCart : MonoBehaviour
     
     GameObject rotateAnchor = GameObject.Find("TrackerAnchor");
 
-    if (distanceToPlayer <= 2.2 && (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > 0 || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0))
+    if (OVRInput.GetDown(OVRInput.RawButton.A) == true)
     {
-      isGrabbed = true;
 
-      if (isGrabbed)
-      {
-        avatar.ShowFirstPerson = false;
-        cartHand1.SetActive(true);
-        cartHand2.SetActive(true);
-
-    
-        gameObject.transform.parent = rotateAnchor.transform;
-      }
+        isDisabled = !isDisabled;
+        
       
+    
+    }
+
+    if(isDisabled != true)
+    {
+      if (distanceToPlayer <= 2.2 && (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > 0 || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0))
+      {
+        isGrabbed = true;
+
+        if (isGrabbed)
+        {
+          avatar.ShowFirstPerson = false;
+          cartHand1.SetActive(true);
+          cartHand2.SetActive(true);
+
+
+          gameObject.transform.parent = rotateAnchor.transform;
+        }
+
+      }
+      else
+      {
+        isGrabbed = false;
+
+        gameObject.transform.parent = null;
+        avatar.ShowFirstPerson = true;
+        cartHand1.SetActive(false);
+        cartHand2.SetActive(false);
+        //GetComponent<Rigidbody>().mass
+      }
     }
     else
     {
-      isGrabbed = false;
-
-      gameObject.transform.parent = null;
-      avatar.ShowFirstPerson = true;
-      cartHand1.SetActive(false);
-      cartHand2.SetActive(false);
+      return;
     }
-
   
   
 

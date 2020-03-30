@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -7850888965710774483}
   - component: {fileID: 5312091661103611954}
   - component: {fileID: 6285809924698120754}
+  - component: {fileID: -6289505718137732054}
   m_Layer: 9
   m_Name: GreenApple
   m_TagString: Product
@@ -120,6 +121,7 @@ MonoBehaviour:
   category: 2
   price: 1.48
   density: 1
+  hasBeenScanned: 0
 --- !u!135 &5312091661103611954
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -146,6 +148,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.45516196
   m_Center: {x: 0.010702376, y: 0, z: 0}
+--- !u!114 &-6289505718137732054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5240675875051489091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1065292015339664856
 PrefabInstance:
   m_ObjectHideFlags: 0
