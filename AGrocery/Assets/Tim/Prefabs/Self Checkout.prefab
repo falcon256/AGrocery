@@ -1555,6 +1555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14bc68a820704ce439c61c4ce972aa13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  difficultyChooseVR: {fileID: 0}
   productData: {fileID: 0}
   player: {fileID: 0}
   playerHand: {fileID: 0}
@@ -1575,6 +1576,8 @@ MonoBehaviour:
   totalMoneyCheckoutText: {fileID: 0}
   notificationTextBox: {fileID: 0}
   notificationText: {fileID: 0}
+  shoppingListTextObject: {fileID: 0}
+  shoppingListText: {fileID: 0}
   scanningProduct: 0
   payScreen: {fileID: 0}
   productTotal: 0
@@ -2772,6 +2775,7 @@ GameObject:
   - component: {fileID: 6016088869255693557}
   - component: {fileID: 460278039}
   - component: {fileID: 1317907381}
+  - component: {fileID: 7027269401431834715}
   m_Layer: 0
   m_Name: self_checkout
   m_TagString: Untagged
@@ -2870,8 +2874,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.8978028, y: 1.5909222, z: 1.3261068}
-  m_Center: {x: 0, y: 0.7954611, z: 0.1501043}
+  m_Size: {x: 1.417492, y: 1.5909221, z: 1.3261068}
+  m_Center: {x: -0.7401553, y: 0.79546106, z: 0.1501043}
+--- !u!65 &7027269401431834715
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5422799040489779241}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4681816, y: 0.9971813, z: 1.3261068}
+  m_Center: {x: 0.71026325, y: 0.49859065, z: 0.1501043}
 --- !u!1 &7649307207491915491
 GameObject:
   m_ObjectHideFlags: 0
