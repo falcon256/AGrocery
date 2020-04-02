@@ -1,16 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using TMPro;
+using System.Text;
 
 public class CameraControlVR : MonoBehaviour
 {
     public GameObject player;
 
-    public GameObject moneyCanvas;
-    public GameObject checkoutCounterCam;
+    public GameObject askForHelpMenuCanvas;
 
-    public bool checkoutCounterCanvasHidden = false;
-    public bool checkoutCounterCanvasShowing = false;
+    public GameObject mainScreenCanvas;
+
+    public GameObject eventSystem;
+
+    public GameObject beveragesButton;
+
+    //public GameObject moneyCanvas;
+    //public GameObject checkoutCounterCam;
+
+    //public bool checkoutCounterCanvasHidden = false;
+    //public bool checkoutCounterCanvasShowing = false;
 
 
     // Start is called before the first frame update
@@ -18,43 +29,77 @@ public class CameraControlVR : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
 
-        moneyCanvas = GameObject.FindWithTag("MoneyCanvas");
+        askForHelpMenuCanvas = GameObject.FindWithTag("AskMenuCanvas");
 
-        checkoutCounterCanvasHidden = true;
+        eventSystem = GameObject.FindWithTag("EventSystem");
+
+        beveragesButton = GameObject.FindWithTag("BeveragesButton");
+
+        //moneyCanvas = GameObject.FindWithTag("MoneyCanvas");
+
+        //checkoutCounterCanvasHidden = true;
     }
     // Update is called once per frame
     void Update()
     {
-        if (checkoutCounterCanvasHidden)
+        if (Input.GetButtonDown("Oculus_CrossPlatform_Button4"))
         {
-            moneyCanvas.GetComponent<Canvas>().enabled = false;
+            eventSystem = GameObject.FindWithTag("EventSystem");
 
+            beveragesButton = GameObject.FindWithTag("BeveragesButton");
+
+            eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(beveragesButton);
         }
-        if (checkoutCounterCanvasShowing)
-        {
-            moneyCanvas.GetComponent<Canvas>().enabled = true;
-        }
+
+        //if (checkoutCounterCanvasHidden)
+        //{
+        //    moneyCanvas.GetComponent<Canvas>().enabled = false;
+
+        //}
+        //if (checkoutCounterCanvasShowing)
+        //{
+        //    moneyCanvas.GetComponent<Canvas>().enabled = true;
+        //}
     }
     void OnTriggerEnter(Collider player)
     {
-        if (player.gameObject.tag == "CheckoutCounter")
+        if (player.gameObject.tag == "Employee")
         {
-            if (checkoutCounterCanvasHidden)
-            {
-                checkoutCounterCanvasShowing = true;
-                checkoutCounterCanvasHidden = false;
-            }
+
         }
+        //if (player.gameObject.tag == "CheckoutCounter")
+        //{
+        //    if (checkoutCounterCanvasHidden)
+        //    {
+        //        checkoutCounterCanvasShowing = true;
+        //        checkoutCounterCanvasHidden = false;
+        //    }
+        //}
     }
-    void OnTriggerExit(Collider player)
+
+    void OnTriggerStay(Collider player)
     {
-        if (player.gameObject.tag == "CheckoutCounter")
+        if (player.gameObject.tag == "Employee")
         {
-            if (checkoutCounterCanvasShowing)
+            askForHelpMenuCanvas.GetComponent<Canvas>().enabled = true;
+            
+
+        }
+
+    }
+        void OnTriggerExit(Collider player)
+        {
+            if (player.gameObject.tag == "Employee")
             {
-                checkoutCounterCanvasShowing = false;
-                checkoutCounterCanvasHidden = true;
+                askForHelpMenuCanvas.GetComponent<Canvas>().enabled = false;
             }
+            //if (player.gameObject.tag == "CheckoutCounter")
+            //{
+            //    if (checkoutCounterCanvasShowing)
+            //    {
+            //        checkoutCounterCanvasShowing = false;
+            //        checkoutCounterCanvasHidden = true;
+            //    }
+            //}
         }
     }
-}

@@ -47,7 +47,7 @@ public class PlayerColliderScriptV2 : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        //playerHand = GameObject.FindWithTag("PlayerGrabLocation").transform;
+        playerHand = GameObject.FindWithTag("PlayerGrabLocation").transform;
         playerMoneyTextBox = GameObject.FindWithTag("PlayerMoneyText");
         playerMoneyCheckoutTextBox = GameObject.FindWithTag("PlayerMoneyCheckoutText");
         totalMoneyTextBox = GameObject.FindWithTag("TotalMoneyText");

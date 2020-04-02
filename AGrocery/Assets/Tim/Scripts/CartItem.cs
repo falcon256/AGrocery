@@ -58,7 +58,7 @@ public class CartItem : MonoBehaviour
 
     if(otherGameObject != null)
     {
-      if (otherGameObject.GetComponent<ShoppingCart>().isGrabbed == false && otherGameObject.GetComponent<ShoppingCart>().isDisabled == true)
+      if (otherGameObject.GetComponent<ShoppingCart>().isGrabbed == false && otherGameObject.GetComponent<ShoppingCart>().enabled == false)
       {
         rb.constraints = RigidbodyConstraints.None;
         gameObject.transform.parent = null;

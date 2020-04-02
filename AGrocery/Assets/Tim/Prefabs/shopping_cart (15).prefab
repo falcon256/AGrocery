@@ -823,8 +823,8 @@ GameObject:
   - component: {fileID: 7069462400312220043}
   - component: {fileID: 7069462400312220040}
   - component: {fileID: 7069462400312220041}
-  - component: {fileID: 2711378668428902840}
   - component: {fileID: 8166925643538242976}
+  - component: {fileID: 6892992595925536305}
   m_Layer: 11
   m_Name: shopping_cart (15)
   m_TagString: ShoppingCart
@@ -1036,23 +1036,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.045928996, y: 0.32997775, z: 0.57625246}
   m_Center: {x: -0.18, y: 0.43488723, z: 0.08316264}
---- !u!114 &2711378668428902840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7069462400312220151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cc8a5dbefa803d4da62559e687469dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftHand: {fileID: 0}
-  rightHand: {fileID: 0}
-  distanceToPlayer: 0
-  isGrabbed: 0
-  isDisabled: 0
 --- !u!65 &8166925643538242976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1066,6 +1049,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3563744, y: 0.49602857, z: 0.58775526}
   m_Center: {x: -0.004332443, y: 0.48246363, z: 0.08723543}
+--- !u!114 &6892992595925536305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7069462400312220151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71be81d2802cb5a4692814037dee53e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
+  distanceToPlayer: 0
+  isGrabbed: 0
 --- !u!1 &7124577400542498255
 GameObject:
   m_ObjectHideFlags: 0
