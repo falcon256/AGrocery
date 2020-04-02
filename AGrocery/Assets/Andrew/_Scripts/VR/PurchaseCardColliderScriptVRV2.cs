@@ -135,7 +135,7 @@ public class PurchaseCardColliderScriptVRV2 : MonoBehaviour
                 scannable = false;
                 scanTimer = 0;
 
-                if (currentOffer >= total && scanner.GetComponent<ScannerColliderScriptVRV2>().numItemsScanned > 0)
+                if (currentOffer >= total)
                 {
                     costReached = true;
                     payScreen.outputTotalText.text = "You paid with card. No change for you." + outputTotalText.ToString();

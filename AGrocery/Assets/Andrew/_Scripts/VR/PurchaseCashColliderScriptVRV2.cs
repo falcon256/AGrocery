@@ -149,7 +149,7 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
                     scanTimer = 0;
 
                     Destroy(currentMoney);
-                    if (currentOffer >= total & scanner.GetComponent<ScannerColliderScriptVRV2>().numItemsScanned > 0)
+                    if (currentOffer >= total)
                     {                       
                         costReached = true;
                         change = currentOffer - total;

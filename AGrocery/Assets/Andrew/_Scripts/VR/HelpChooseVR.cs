@@ -84,19 +84,21 @@ public class HelpChooseVR : MonoBehaviour
 
         askForHelpMenuCanvas = GameObject.FindWithTag("AskMenuCanvas");
 
-        //eventSystem = GameObject.FindWithTag("EventSystem");
+        eventSystem = GameObject.FindWithTag("EventSystem");
 
-        //beveragesButton = GameObject.FindWithTag("BeveragesButton");
+        beveragesButton = GameObject.FindWithTag("BeveragesButton");
+
+        //Time.timeScale = 0;
 
         startPos = employee.transform.position;
     }
 
     void Update()
     {
-        //if (Input.GetButtonDown("Oculus_CrossPlatform_Button4"))
-        //{
-        //    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(beveragesButton);
-        //}
+        if (Input.GetButtonDown("Oculus_CrossPlatform_Button4"))
+        {
+            eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(beveragesButton);
+        }
         if (moveToBeverages  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
@@ -275,7 +277,6 @@ public class HelpChooseVR : MonoBehaviour
         moveToSnacks = false;
         moveToWine = false;
         movingToLocation = false;
-        Time.timeScale = 1;
     }
     public void checkDistance()
     {
@@ -283,8 +284,7 @@ public class HelpChooseVR : MonoBehaviour
         if (employee.transform.position == movePoint1.transform.position || employee.transform.position == movePoint2.transform.position || employee.transform.position == movePoint3.transform.position || employee.transform.position == movePoint4.transform.position || employee.transform.position == movePoint5.transform.position || employee.transform.position == movePoint6.transform.position || employee.transform.position == movePoint7.transform.position || employee.transform.position == movePoint8.transform.position || employee.transform.position == movePoint9.transform.position)
         {
             resetMoveToPoints();            
-        }
-        Time.timeScale = 1;
+        }            
     }
 
     public void MoveToBeverages()
@@ -372,7 +372,7 @@ public class HelpChooseVR : MonoBehaviour
 
     public void closeAskMenu()
     {
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         askForHelpMenuCanvas.GetComponent<Canvas>().enabled = false;
     }
 
