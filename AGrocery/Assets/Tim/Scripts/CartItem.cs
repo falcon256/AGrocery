@@ -10,8 +10,9 @@ public class CartItem : MonoBehaviour
   bool isCartItem;
   CharacterController characterController;
   GameObject otherGameObject;
- 
- 
+
+  float time = 2;
+  float timer;
 
   private void Start()
   {
@@ -32,15 +33,34 @@ public class CartItem : MonoBehaviour
 
       if (isCartItem == true)
       {
+
+        timer += Time.deltaTime;
+        gameObject.transform.parent = other.transform;
         if (characterController.isGrounded == true && characterController.velocity.magnitude > .02f && other.GetComponent<ShoppingCart>().isGrabbed == true)
         {
        
           rb.constraints = RigidbodyConstraints.FreezeAll;
-          gameObject.transform.parent = other.transform;
+        
         }
 
       }
+    
 
+    }
+  }
+
+  private void OnTriggerStay(Collider other)
+  {
+
+    isCartItem = true;
+    if (isCartItem && timer >= time )
+    {
+      rb.Sleep();
+      rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+      rb.drag = 5;
+     
+    
+      // transform.localPosition = new Vector3(0, 0, 0);
     }
   }
 
@@ -49,7 +69,7 @@ public class CartItem : MonoBehaviour
     if (other.gameObject.tag == "ShoppingCart")
     {
       isCartItem = false;
-
+      timer = 0;
     }
   }
 
