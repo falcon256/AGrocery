@@ -91,11 +91,13 @@ public class HelpChooseVR : MonoBehaviour
         //Time.timeScale = 0;
 
         startPos = employee.transform.position;
+
+        noHelpChosen = true;
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Oculus_CrossPlatform_Button4"))
+        if (Input.GetButtonDown("Oculus_CrossPlatform_Button4") && noHelpChosen == true)
         {
             eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(beveragesButton);
         }
@@ -284,7 +286,8 @@ public class HelpChooseVR : MonoBehaviour
         if (employee.transform.position == movePoint1.transform.position || employee.transform.position == movePoint2.transform.position || employee.transform.position == movePoint3.transform.position || employee.transform.position == movePoint4.transform.position || employee.transform.position == movePoint5.transform.position || employee.transform.position == movePoint6.transform.position || employee.transform.position == movePoint7.transform.position || employee.transform.position == movePoint8.transform.position || employee.transform.position == movePoint9.transform.position)
         {
             resetMoveToPoints();            
-        }            
+        }
+        noHelpChosen = false;
     }
 
     public void MoveToBeverages()

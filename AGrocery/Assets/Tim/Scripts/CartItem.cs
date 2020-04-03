@@ -6,92 +6,89 @@ public class CartItem : MonoBehaviour
 {
 
 
-  Rigidbody rb;
-  bool isCartItem;
-  CharacterController characterController;
-  GameObject otherGameObject;
+    Rigidbody rb;
+    bool isCartItem;
+    CharacterController characterController;
+    GameObject otherGameObject;
 
-  float time = 2;
-  float timer;
+    float time = 2;
+    float timer;
 
-  private void Start()
-  {
-
-    rb = gameObject.GetComponent<Rigidbody>();
-    characterController = GameObject.Find("OVRPlayerController").GetComponent<CharacterController>();
-
-  }
-  private void OnTriggerEnter(Collider other)
-  {
-
-   
-    if (other.gameObject.tag == "ShoppingCart")
+    private void Start()
     {
-      otherGameObject = other.gameObject;
-      isCartItem = true;
+
+        rb = gameObject.GetComponent<Rigidbody>();
+        characterController = GameObject.Find("OVRPlayerController").GetComponent<CharacterController>();
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
 
 
-      if (isCartItem == true)
-      {
-
-        timer += Time.deltaTime;
-        gameObject.transform.parent = other.transform;
-        if (characterController.isGrounded == true && characterController.velocity.magnitude > .02f && other.GetComponent<ShoppingCart>().isGrabbed == true)
+        if (other.gameObject.tag == "ShoppingCart")
         {
-       
-          rb.constraints = RigidbodyConstraints.FreezeAll;
-        
+            otherGameObject = other.gameObject;
+            isCartItem = true;
+
+
+            if (isCartItem == true)
+            {
+
+                timer += Time.deltaTime;
+                gameObject.transform.parent = other.transform;
+                if (characterController.isGrounded == true && characterController.velocity.magnitude > .02f && other.GetComponent<ShoppingCart>().isGrabbed == true)
+                {
+
+                    rb.constraints = RigidbodyConstraints.FreezeAll;
+
+                }
+
+            }
+
+
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+
+        isCartItem = true;
+        if (isCartItem && timer >= time)
+        {
+            rb.Sleep();
+            rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+            rb.drag = 5;
+
+
+            // transform.localPosition = new Vector3(0, 0, 0);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "ShoppingCart")
+        {
+            isCartItem = false;
+            timer = 0;
+        }
+    }
+
+    void Update()
+    {
+
+        if (otherGameObject != null)
+        {
+            if (otherGameObject.GetComponent<ShoppingCart>().isGrabbed == false && otherGameObject.GetComponent<ShoppingCart>().isDisabled == true)
+            {
+                rb.constraints = RigidbodyConstraints.None;
+                gameObject.transform.parent = null;
+            }
         }
 
-      }
-    
-
+        if (gameObject.GetComponent<OVRGrabbable>().isGrabbed == true && isCartItem == true)
+        {
+            gameObject.transform.parent = null;
+        }
     }
-  }
-
-  private void OnTriggerStay(Collider other)
-  {
-
-    isCartItem = true;
-    if (isCartItem && timer >= time )
-    {
-      rb.Sleep();
-      rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
-      rb.drag = 5;
-     
-    
-      // transform.localPosition = new Vector3(0, 0, 0);
-    }
-  }
-
-  private void OnTriggerExit(Collider other)
-  {
-    if (other.gameObject.tag == "ShoppingCart")
-    {
-      isCartItem = false;
-      timer = 0;
-    }
-  }
-
-  void Update()
-  {
-
-    if(otherGameObject != null)
-    {
-      if (otherGameObject.GetComponent<ShoppingCart>().isGrabbed == false && otherGameObject.GetComponent<ShoppingCart>().isDisabled == true)
-      {
-        rb.constraints = RigidbodyConstraints.None;
-        gameObject.transform.parent = null;
-      }
-    }
-
-    if(gameObject.GetComponent<OVRGrabbable>().isGrabbed == true && isCartItem == true)
-    {
-      gameObject.transform.parent = null;
-    }
-
-
-
-
-  }
 }
+

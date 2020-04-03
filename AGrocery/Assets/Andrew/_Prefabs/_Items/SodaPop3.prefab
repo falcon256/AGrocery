@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -3906981850649283653}
   - component: {fileID: 5962077851518554074}
   - component: {fileID: 4932025064019803973}
+  - component: {fileID: -3427587095502866172}
   m_Layer: 10
   m_Name: SodaPop3
   m_TagString: Product
@@ -193,6 +194,18 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &-3427587095502866172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423742677858258144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &389455811221493225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,26 +213,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3238072539526600568}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 9e584e15ea976294fbe960235f747041,
-        type: 3}
-      propertyPath: m_Name
-      value: soda_pop (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 9e584e15ea976294fbe960235f747041,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -12412063382954115, guid: 9e584e15ea976294fbe960235f747041,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -8658163957154831213, guid: 9e584e15ea976294fbe960235f747041,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9e584e15ea976294fbe960235f747041,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -289,6 +282,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9e584e15ea976294fbe960235f747041,
+        type: 3}
+      propertyPath: m_Name
+      value: soda_pop (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9e584e15ea976294fbe960235f747041,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8658163957154831213, guid: 9e584e15ea976294fbe960235f747041,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -12412063382954115, guid: 9e584e15ea976294fbe960235f747041,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7435551800186991515, guid: 9e584e15ea976294fbe960235f747041,
         type: 3}

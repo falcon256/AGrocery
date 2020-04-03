@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 131213680901713789}
   - component: {fileID: -430823954517736868}
   - component: {fileID: 7940902675426526299}
+  - component: {fileID: 2013433710728343668}
   m_Layer: 10
   m_Name: JuiceCarton2
   m_TagString: Product
@@ -193,6 +194,18 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2013433710728343668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7628075523893157283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8019242503922223684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,26 +213,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3342123476159666618}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
-        type: 3}
-      propertyPath: m_Name
-      value: juice_container (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -5102530947620581811, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5232488858435980449, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -289,6 +282,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
+        type: 3}
+      propertyPath: m_Name
+      value: juice_container (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -5102530947620581811, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232488858435980449, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7087200961041043365, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
         type: 3}

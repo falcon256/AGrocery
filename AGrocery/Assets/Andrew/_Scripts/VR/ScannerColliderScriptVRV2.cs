@@ -70,6 +70,8 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
   public float total;
   public float newTotal;
 
+  public int numItemsScanned = 0;
+
   // Start is called before the first frame update
  
   void Start()
@@ -86,8 +88,11 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
     product = GameObject.FindGameObjectWithTag("Product");
     products = GameObject.FindGameObjectsWithTag("Product");
 
-    //shoppingListTextObject = GameObject.FindWithTag("shoppingListText");
-    //shoppingListText = shoppingListTextObject.GetComponent<TMPro.TextMeshProUGUI>();
+    shoppingListTextObject = GameObject.FindWithTag("shoppingListText");
+        if (shoppingListTextObject != null)
+        {
+            shoppingListText = shoppingListTextObject.GetComponent<TMPro.TextMeshProUGUI>();
+        }
 
     itemizedText = new StringBuilder();
     outputTotalText = new StringBuilder();
@@ -150,6 +155,8 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
                 scannable = false;
                 scanTimer = 0;
                 total += productCost;
+
+                numItemsScanned = numItemsScanned + 1;
             }
 
             //if(collidedProduct == difficultyChooseVR.GetComponent<DifficultyChooseVR>().currentProduct && shoppingListText != null && shoppingListTextObject != null)
