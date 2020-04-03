@@ -823,9 +823,8 @@ GameObject:
   - component: {fileID: 7069462400312220043}
   - component: {fileID: 7069462400312220040}
   - component: {fileID: 7069462400312220041}
+  - component: {fileID: 2711378668428902840}
   - component: {fileID: 8166925643538242976}
-  - component: {fileID: 2092678512382318423}
-  - component: {fileID: 4563308215497021201}
   m_Layer: 11
   m_Name: shopping_cart (15)
   m_TagString: ShoppingCart
@@ -840,9 +839,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7069462400312220151}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 2.6535683, y: -2.503092, z: -24.086899}
-  m_LocalScale: {x: 1.8750036, y: 1.75, z: 1.8750036}
+  m_LocalScale: {x: 1.8750026, y: 1.75, z: 1.8750026}
   m_Children:
   - {fileID: 5265400928017517338}
   - {fileID: 6567019497869274788}
@@ -1037,6 +1036,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.045928996, y: 0.32997775, z: 0.57625246}
   m_Center: {x: -0.18, y: 0.43488723, z: 0.08316264}
+--- !u!114 &2711378668428902840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7069462400312220151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc8a5dbefa803d4da62559e687469dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
+  distanceToPlayer: 0
+  isGrabbed: 0
+  isDisabled: 0
 --- !u!65 &8166925643538242976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1048,41 +1064,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3563744, y: 0.62714905, z: 0.60101795}
-  m_Center: {x: -0.004332439, y: 0.41690418, z: 0.093866765}
---- !u!114 &2092678512382318423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7069462400312220151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71be81d2802cb5a4692814037dee53e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftHand: {fileID: 0}
-  rightHand: {fileID: 0}
-  distanceToPlayer: 0
-  isGrabbed: 0
---- !u!114 &4563308215497021201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7069462400312220151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
+  m_Size: {x: 0.3563744, y: 0.49602857, z: 0.58775526}
+  m_Center: {x: -0.004332443, y: 0.48246363, z: 0.08723543}
 --- !u!1 &7124577400542498255
 GameObject:
   m_ObjectHideFlags: 0
