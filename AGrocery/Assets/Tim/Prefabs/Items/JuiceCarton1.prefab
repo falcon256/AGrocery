@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 3401606303208720402}
   - component: {fileID: 3823014036525153742}
   - component: {fileID: -15441701243861561}
-  - component: {fileID: 8477866171016510122}
   - component: {fileID: 609904483}
   - component: {fileID: 7415008838317124092}
   - component: {fileID: 5298457791183400784}
   - component: {fileID: 7694223916735133904}
-  - component: {fileID: -2901898961357416547}
-  m_Layer: 9
+  - component: {fileID: -2923553518119998873}
+  - component: {fileID: 4018909141923673062}
+  m_Layer: 10
   m_Name: JuiceCarton1
   m_TagString: Product
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 533470993969070085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 44.8, y: -1.251, z: 0.20000076}
-  m_LocalScale: {x: 0.35783878, y: 0.41236252, z: 0.18080859}
+  m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_Children:
   - {fileID: 8786023778589238990}
   m_Father: {fileID: 0}
@@ -50,8 +50,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.29745385, y: 0.74022776, z: 0.6884748}
-  m_Center: {x: -0.03422913, y: -0.13207951, z: 0.036032725}
+  m_Size: {x: 1.1, y: 1.1, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &-15441701243861561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63,22 +63,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.31923294, y: 0.7355177, z: 0.73758036}
-  m_Center: {x: -0.011373344, y: -0.13224128, z: 0.016965419}
---- !u!114 &8477866171016510122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533470993969070085}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbc2fefdfeb072f40ab77f8b054816c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerHand: {fileID: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &609904483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +134,67 @@ MonoBehaviour:
   price: 2.48
   density: 1
   hasBeenScanned: 0
---- !u!114 &-2901898961357416547
+--- !u!108 &-2923553518119998873
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533470993969070085}
+  m_Enabled: 0
+  serializedVersion: 9
+  m_Type: 2
+  m_Color: {r: 1, g: 0.9071804, b: 0, a: 1}
+  m_Intensity: 1
+  m_Range: 20
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &4018909141923673062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,17 +291,17 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -5102530947620581811, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5232488858435980449, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7087200961041043365, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
         type: 3}

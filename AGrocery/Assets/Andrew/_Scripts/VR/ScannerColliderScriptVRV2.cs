@@ -86,8 +86,8 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
     product = GameObject.FindGameObjectWithTag("Product");
     products = GameObject.FindGameObjectsWithTag("Product");
 
-   // shoppingListTextObject = GameObject.FindWithTag("shoppingListText");
-   // shoppingListText = shoppingListTextObject.GetComponent<TMPro.TextMeshProUGUI>();
+    //shoppingListTextObject = GameObject.FindWithTag("shoppingListText");
+    //shoppingListText = shoppingListTextObject.GetComponent<TMPro.TextMeshProUGUI>();
 
     itemizedText = new StringBuilder();
     outputTotalText = new StringBuilder();

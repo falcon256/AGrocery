@@ -18,7 +18,7 @@ public class ShoppingCart : MonoBehaviour
  
   public float distanceToPlayer;
   float footstepTimer;
-  public bool isGrabbed = false;
+  public bool isGrabbed;
   public bool isDisabled;
 
   float disabledTimer;
@@ -36,8 +36,10 @@ public class ShoppingCart : MonoBehaviour
 
     cartHand1.SetActive(false);
     cartHand2.SetActive(false);
-
     avatar = GameObject.Find("LocalAvatar").GetComponent<OvrAvatar>();
+
+  
+   
 
   }
 
@@ -77,53 +79,71 @@ public class ShoppingCart : MonoBehaviour
   {
 
     distanceToPlayer = Vector3.Distance(gameObject.transform.position, player.transform.position);
-    
+
     GameObject rotateAnchor = GameObject.Find("TrackerAnchor");
 
     if (OVRInput.GetDown(OVRInput.RawButton.A) == true)
     {
 
-        isDisabled = !isDisabled;
-        
-      
-    
-    }
+      DisableCart();
 
-    if(isDisabled != true)
+    }
+    
+
+    if (isDisabled != true)
     {
       if (distanceToPlayer <= 2.2 && (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > 0 || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0))
       {
-        isGrabbed = true;
-
-        if (isGrabbed)
-        {
-          avatar.ShowFirstPerson = false;
-          cartHand1.SetActive(true);
-          cartHand2.SetActive(true);
-
-
-          gameObject.transform.parent = rotateAnchor.transform;
-        }
+        ActivatePushHands(rotateAnchor);
 
       }
       else
       {
-        isGrabbed = false;
-
-        gameObject.transform.parent = null;
-        avatar.ShowFirstPerson = true;
-        cartHand1.SetActive(false);
-        cartHand2.SetActive(false);
-        //GetComponent<Rigidbody>().mass
+        DeactivatePushHands();
+        
       }
     }
     else
     {
       return;
     }
-  
-  
+
+
 
   }
 
+  private void DeactivatePushHands()
+  {
+    isGrabbed = false;
+
+    gameObject.transform.parent = null;
+    if (avatar != null)
+    {
+      avatar.ShowFirstPerson = true;
+    }
+
+    cartHand1.SetActive(false);
+    cartHand2.SetActive(false);
+  }
+
+  private void ActivatePushHands(GameObject rotateAnchor)
+  {
+    isGrabbed = true;
+
+    if (isGrabbed)
+    {
+      avatar.ShowFirstPerson = false;
+      cartHand1.SetActive(true);
+      cartHand2.SetActive(true);
+
+
+      gameObject.transform.parent = rotateAnchor.transform;
+    }
+  }
+
+  private void DisableCart()
+  {
+      isDisabled = !isDisabled;
+
+  }
 }

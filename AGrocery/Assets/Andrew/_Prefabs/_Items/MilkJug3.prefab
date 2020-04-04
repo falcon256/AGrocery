@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1330090345757320804}
   - component: {fileID: 588325249588388066}
   - component: {fileID: -8843692141511506657}
+  - component: {fileID: 5617562916505640878}
   m_Layer: 10
   m_Name: MilkJug3
   m_TagString: Product
@@ -193,6 +194,18 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &5617562916505640878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4516278730137976927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6587412033285801020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,26 +213,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3057298252652414533}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 98d532e1e7466e049a2a0b3743ca3565,
-        type: 3}
-      propertyPath: m_Name
-      value: milk_jug (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 98d532e1e7466e049a2a0b3743ca3565,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9101430577481724397, guid: 98d532e1e7466e049a2a0b3743ca3565,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -8626751840527039810, guid: 98d532e1e7466e049a2a0b3743ca3565,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 98d532e1e7466e049a2a0b3743ca3565,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -289,6 +282,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 98d532e1e7466e049a2a0b3743ca3565,
+        type: 3}
+      propertyPath: m_Name
+      value: milk_jug (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 98d532e1e7466e049a2a0b3743ca3565,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101430577481724397, guid: 98d532e1e7466e049a2a0b3743ca3565,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8626751840527039810, guid: 98d532e1e7466e049a2a0b3743ca3565,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5902419001559106108, guid: 98d532e1e7466e049a2a0b3743ca3565,
         type: 3}
