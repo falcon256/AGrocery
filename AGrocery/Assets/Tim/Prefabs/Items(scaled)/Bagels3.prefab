@@ -9,14 +9,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4643831266393704214}
-  - component: {fileID: 3885306697092609248}
-  - component: {fileID: 8941681964062815291}
   - component: {fileID: 1454156069760242924}
   - component: {fileID: 1448365317}
   - component: {fileID: -4887014840539977415}
   - component: {fileID: 8766107510409482348}
   - component: {fileID: -7598832601096385575}
   - component: {fileID: 886175279282151575}
+  - component: {fileID: 5404523559029711881}
+  - component: {fileID: 2781960238941496293}
+  - component: {fileID: 6848054740957642898}
   m_Layer: 0
   m_Name: Bagels3
   m_TagString: Product
@@ -39,32 +40,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3885306697092609248
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3110581700450207806}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5461739, y: 0.5029336, z: 2.1028676}
-  m_Center: {x: -0.02177625, y: -0.22553343, z: -0.05143369}
---- !u!65 &8941681964062815291
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3110581700450207806}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.55177975, y: 0.5597622, z: 1.59485}
-  m_Center: {x: -0.009630408, y: -0.22011887, z: -0.2974249}
 --- !u!114 &1454156069760242924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +135,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5404523559029711881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110581700450207806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cb9f476fa11147b0bbfb9293002cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &2781960238941496293
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110581700450207806}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.27024874
+  m_Height: 2.4611323
+  m_Direction: 2
+  m_Center: {x: -0.009186158, y: -0.25466627, z: 0.02907858}
+--- !u!136 &6848054740957642898
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110581700450207806}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.27024874
+  m_Height: 2.4611323
+  m_Direction: 2
+  m_Center: {x: -0.009186158, y: -0.25466627, z: 0.02907858}
 --- !u!1001 &551261372515958721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -167,6 +182,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4643831266393704214}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: a53eee5101c4db44e943dc7ba8b0ede3,
+        type: 3}
+      propertyPath: m_Name
+      value: bagels (2)
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a53eee5101c4db44e943dc7ba8b0ede3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -236,11 +256,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: a53eee5101c4db44e943dc7ba8b0ede3,
-        type: 3}
-      propertyPath: m_Name
-      value: bagels (2)
       objectReference: {fileID: 0}
     - target: {fileID: -3701727588016112575, guid: a53eee5101c4db44e943dc7ba8b0ede3,
         type: 3}

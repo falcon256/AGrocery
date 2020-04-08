@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6927818257213422269}
   - component: {fileID: 8104140502323929250}
   - component: {fileID: 1828483110562235569}
+  - component: {fileID: -8294141738285723282}
   m_Layer: 9
   m_Name: Chips5
   m_TagString: Product
@@ -160,6 +161,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8294141738285723282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837559565918924043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cb9f476fa11147b0bbfb9293002cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &445473315004004650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -167,6 +180,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8442835971303199233}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 1b59981e7bed00144aff975e7d25d84e,
+        type: 3}
+      propertyPath: m_Name
+      value: chips
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1b59981e7bed00144aff975e7d25d84e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8052994932809076077, guid: 1b59981e7bed00144aff975e7d25d84e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -6734363572309329371, guid: 1b59981e7bed00144aff975e7d25d84e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1b59981e7bed00144aff975e7d25d84e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -236,26 +269,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 1b59981e7bed00144aff975e7d25d84e,
-        type: 3}
-      propertyPath: m_Name
-      value: chips
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 1b59981e7bed00144aff975e7d25d84e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -8052994932809076077, guid: 1b59981e7bed00144aff975e7d25d84e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -6734363572309329371, guid: 1b59981e7bed00144aff975e7d25d84e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 856365191234717131, guid: 1b59981e7bed00144aff975e7d25d84e,
         type: 3}

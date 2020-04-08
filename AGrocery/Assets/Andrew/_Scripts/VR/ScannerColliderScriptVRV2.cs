@@ -22,38 +22,38 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
   public int timeSinceScanned;
   public float currentProductPrice;
 
-    public GameObject playerMoneyTextBox;
-    public Text playerMoneyText;
+  public GameObject playerMoneyTextBox;
+  public Text playerMoneyText;
 
-    public GameObject playerMoneyCheckoutTextBox;
-    public Text playerMoneyCheckoutText;
+  public GameObject playerMoneyCheckoutTextBox;
+  public Text playerMoneyCheckoutText;
 
-    public GameObject currentOfferCheckoutTextBox;
-    public Text currentOfferCheckoutText;
+  public GameObject currentOfferCheckoutTextBox;
+  public Text currentOfferCheckoutText;
 
-    public GameObject totalMoneyTextBox;
-    public Text totalMoneyText;
+  public GameObject totalMoneyTextBox;
+  public Text totalMoneyText;
 
-    public GameObject totalMoneyCheckoutTextBox;
-    public Text totalMoneyCheckoutText;
+  public GameObject totalMoneyCheckoutTextBox;
+  public Text totalMoneyCheckoutText;
 
-    public GameObject notificationTextBox;
-    public Text notificationText;
+  public GameObject notificationTextBox;
+  public Text notificationText;
 
-    public static GameObject product1CountTextBox;
-    public static Text product1CountText;
+  public static GameObject product1CountTextBox;
+  public static Text product1CountText;
 
-    public static GameObject currentOfferTextBox;
-    public static Text currentOfferText;
+  public static GameObject currentOfferTextBox;
+  public static Text currentOfferText;
 
-    public GameObject shoppingListTextObject;
-    public TextMeshProUGUI shoppingListText;
+  public GameObject shoppingListTextObject;
+  public TextMeshProUGUI shoppingListText;
 
-    public StringBuilder listText;
+  public StringBuilder listText;
 
-    public bool scanningProduct = false;
+  public bool scanningProduct = false;
 
- // public TextMeshProUGUI outputTotalText;
+  // public TextMeshProUGUI outputTotalText;
 
   public StringBuilder outputTotalText;
   public StringBuilder itemizedText;
@@ -66,12 +66,12 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
   float scanTime = .5f;
   float scanTimer = 0;
   bool scannable = true;
-  
+
   public float total;
   public float newTotal;
 
   // Start is called before the first frame update
- 
+
   void Start()
   {
     player = GameObject.FindWithTag("Player");
@@ -95,7 +95,7 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
     listText = new StringBuilder();
 
 
-    }
+  }
 
   // Update is called once per frame
   void Update()
@@ -110,12 +110,13 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
     }
 
     scanTimer += Time.deltaTime;
-     
-    if(scanTimer > scanTime)
+
+    if (scanTimer > scanTime)
     {
       scannable = true;
-    }
     
+    }
+
 
   }
   void OnTriggerExit(Collider collidedProduct)
@@ -124,41 +125,41 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
     {
       return;
     }
-        if (collidedProduct.gameObject.tag == "Product")
-        {
-            if (collidedProduct.GetComponent<ProductData>().hasBeenScanned == false)
-            {
-                payScreen = GetComponentInParent<PayScreen>();
+    if (collidedProduct.gameObject.tag == "Product")
+    {
+      if (collidedProduct.GetComponent<ProductData>().hasBeenScanned == false)
+      {
+        payScreen = GetComponentInParent<PayScreen>();
 
-                scanningProduct = true;
-                collidedProduct.GetComponent<ProductData>().hasBeenScanned = true;
+        scanningProduct = true;
+        collidedProduct.GetComponent<ProductData>().hasBeenScanned = true;
 
-                productData = collidedProduct.GetComponent<ProductData>();
-                productCost = productData.price;
-                productName = collidedProduct.name.Replace("(Clone)", " ");
+        productData = collidedProduct.GetComponent<ProductData>();
+        productCost = productData.price;
+        productName = collidedProduct.name.Replace("(Clone)", " ");
 
-                itemizedText.Append($"{productName} {productCost.ToString("c")} \n");
-                payScreen.itemizedText.text = itemizedText.ToString();
+        itemizedText.Append($"{productName} {productCost.ToString("c")} \n");
+        payScreen.itemizedText.text = itemizedText.ToString();
 
-                newTotal = total + productCost;
+        newTotal = total + productCost;
 
-                outputTotalText.Clear();
-                outputTotalText.Append(newTotal.ToString("c"));
-                payScreen.outputTotalText.text = outputTotalText.ToString();
+        outputTotalText.Clear();
+        outputTotalText.Append(newTotal.ToString("c"));
+        payScreen.outputTotalText.text = outputTotalText.ToString();
 
+        SoundManager.Instance.PlayOneShot(SoundManager.Instance.scanObjectBeep);
+        scannable = false;
+        scanTimer = 0;
+        total += productCost;
+      }
 
-                scannable = false;
-                scanTimer = 0;
-                total += productCost;
-            }
+      //if(collidedProduct == difficultyChooseVR.GetComponent<DifficultyChooseVR>().currentProduct && shoppingListText != null && shoppingListTextObject != null)
+      //{
+      //    listText.Remove(currentProduct.name.Length, currentProduct.name.Length);
+      //    shoppingListText.text = listText.ToString();
+      //}
 
-            //if(collidedProduct == difficultyChooseVR.GetComponent<DifficultyChooseVR>().currentProduct && shoppingListText != null && shoppingListTextObject != null)
-            //{
-            //    listText.Remove(currentProduct.name.Length, currentProduct.name.Length);
-            //    shoppingListText.text = listText.ToString();
-            //}
-
-        }
+    }
   }
 
   void OnTriggerStay(Collider collidedProduct)
