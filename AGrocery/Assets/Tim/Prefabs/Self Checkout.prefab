@@ -1588,6 +1588,7 @@ MonoBehaviour:
   productName: 
   total: 0
   newTotal: 0
+  numItemsScanned: 0
 --- !u!82 &2043524233415192161
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2000,12 +2001,13 @@ MonoBehaviour:
   shoppingListTextObject: {fileID: 0}
   shoppingListText: {fileID: 0}
   scanningProduct: 0
-  payScreen: {fileID: 0}
+  payScreen: {fileID: 7913804269778659694}
   productTotal: 0
   productCost: 0
   productName: 
   total: 0
   newTotal: 0
+  numItemsScanned: 0
 --- !u!1 &3320948859643418891
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,7 +2299,7 @@ MonoBehaviour:
   moneyData: {fileID: 0}
   player: {fileID: 0}
   playerHand: {fileID: 0}
-  scanner: {fileID: 0}
+  scanner: {fileID: 2863749621040226088}
   timeoutCounter: 0
   currentMoneyValue: 0
   playerMoneyTextBox: {fileID: 0}
@@ -2314,7 +2316,7 @@ MonoBehaviour:
   notificationText: {fileID: 0}
   usingCard: 0
   costReached: 0
-  payScreen: {fileID: 0}
+  payScreen: {fileID: 7913804269778659694}
   productTotal: 0
   moneyValue: 0
   currencyType: 
@@ -3357,7 +3359,7 @@ MonoBehaviour:
   moneyData: {fileID: 0}
   player: {fileID: 0}
   playerHand: {fileID: 0}
-  scanner: {fileID: 0}
+  scanner: {fileID: 2863749621040226088}
   money: {fileID: 0}
   allMoney: []
   currentMoney: {fileID: 0}
@@ -3377,7 +3379,7 @@ MonoBehaviour:
   notificationText: {fileID: 0}
   usingCash: 0
   costReached: 0
-  payScreen: {fileID: 0}
+  payScreen: {fileID: 7913804269778659694}
   productTotal: 0
   moneyValue: 0
   currencyType: 
