@@ -40,7 +40,7 @@ public class ShoppingCart : MonoBehaviour
 
   
    
-
+    
   }
 
   IEnumerator StopSound()
@@ -82,17 +82,20 @@ public class ShoppingCart : MonoBehaviour
 
     GameObject rotateAnchor = GameObject.Find("TrackerAnchor");
 
-    if (OVRInput.GetDown(OVRInput.RawButton.A) == true)
+    if (OVRInput.GetDown(OVRInput.Button.SecondaryThumbstick) == true)
     {
 
-      DisableCart();
+      toggleDisableCart();
 
     }
-    
+
+ 
+
+
 
     if (isDisabled != true)
     {
-      if (distanceToPlayer <= 2.2 && (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > 0 || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0))
+      if (distanceToPlayer <= 1.2f && OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > 0 || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0)
       {
         ActivatePushHands(rotateAnchor);
 
@@ -103,11 +106,7 @@ public class ShoppingCart : MonoBehaviour
         
       }
     }
-    else
-    {
-      return;
-    }
-
+   
 
 
   }
@@ -141,7 +140,7 @@ public class ShoppingCart : MonoBehaviour
     }
   }
 
-  private void DisableCart()
+  private void toggleDisableCart()
   {
       isDisabled = !isDisabled;
 
