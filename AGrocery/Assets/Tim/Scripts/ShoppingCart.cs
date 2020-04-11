@@ -140,7 +140,7 @@ public class ShoppingCart : MonoBehaviour
       cartHand1.SetActive(true);
       cartHand2.SetActive(true);
 
-      gameObject.transform.position = new Vector3(rotateAnchor.transform.position.x, transform.position.y, rotateAnchor.transform.position.z);
+      //gameObject.transform.position = new Vector3(player.transform.position.x + 1, transform.position.y, player.transform.position.z);
       gameObject.transform.parent = rotateAnchor.transform;
       
     }
