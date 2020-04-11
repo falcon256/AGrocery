@@ -82,8 +82,7 @@ public class ShoppingCart : MonoBehaviour
 
     GameObject rotateAnchor = GameObject.Find("TrackerAnchor");
 
-    var leftGrabber = leftHand.GetComponent<OVRGrabber>();
-    var rightGrabber = rightHand.GetComponent<OVRGrabber>();
+ 
 
 
     if (OVRInput.GetDown(OVRInput.Button.SecondaryThumbstick) == true)
@@ -93,11 +92,12 @@ public class ShoppingCart : MonoBehaviour
 
     }
 
-
+    var leftGrabber = leftHand.GetComponent<OVRGrabber>();
+    var rightGrabber = rightHand.GetComponent<OVRGrabber>();
 
     if (isDisabled != true && (leftGrabber.grabbedObject == null && rightGrabber.grabbedObject == null))
     {
-      if (distanceToPlayer <= 2.2f && (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > 0 || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0))
+      if (distanceToPlayer <= 1.8f && (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > 0 || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0))
       {
         ActivatePushHands(rotateAnchor);
 
