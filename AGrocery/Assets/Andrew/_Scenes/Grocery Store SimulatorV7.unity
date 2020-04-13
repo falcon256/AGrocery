@@ -14652,29 +14652,6 @@ PrefabInstance:
       propertyPath: m_FirstSelected
       value: 
       objectReference: {fileID: 1132852534}
-    - target: {fileID: 2170024111154419684, guid: d5bb8e5c457944d48b421fa9a1fe6830,
-        type: 3}
-      propertyPath: m_ForceModuleActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170024111154419684, guid: d5bb8e5c457944d48b421fa9a1fe6830,
-        type: 3}
-      propertyPath: m_SubmitButton
-      value: Oculus_CrossPlatform_Button1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170024111154419684, guid: d5bb8e5c457944d48b421fa9a1fe6830,
-        type: 3}
-      propertyPath: m_CancelButton
-      value: Oculus_CrossPlatform_Button3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1814883331, guid: d5bb8e5c457944d48b421fa9a1fe6830, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1814883331, guid: d5bb8e5c457944d48b421fa9a1fe6830, type: 3}
-      propertyPath: m_ForceModuleActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5bb8e5c457944d48b421fa9a1fe6830, type: 3}
 --- !u!1001 &591570104
@@ -56101,6 +56078,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OVRPlayerController
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298763744851160480, guid: 81105ac1b3dc5d2478d67c245954b9af,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4298763744851160488, guid: 81105ac1b3dc5d2478d67c245954b9af,
         type: 3}
