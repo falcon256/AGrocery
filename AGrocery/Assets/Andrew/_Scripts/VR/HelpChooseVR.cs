@@ -23,18 +23,18 @@ public class HelpChooseVR : MonoBehaviour
 
     public GameObject beveragesButton;
 
-    public Transform movePoint1;
-    public Transform movePoint2;
-    public Transform movePoint3;
-    public Transform movePoint4;
-    public Transform movePoint5;
-    public Transform movePoint6;
-    public Transform movePoint7;
-    public Transform movePoint8;
-    public Transform movePoint9;
-    public Transform movePoint10;
-    public Transform movePoint11;
-    public Transform movePoint12;
+    public Transform[] movePoints;
+    //public Transform movePoint2;
+   // public Transform movePoint3;
+    //public Transform movePoint4;
+   // public Transform movePoint5;
+    //public Transform movePoint6;
+    //public Transform movePoint7;
+    //public Transform movePoint8;
+    //public Transform movePoint9;
+    //public Transform movePoint10;
+   // public Transform movePoint11;
+   // public Transform movePoint12;
 
     public int walkSpeed = 5;
 
@@ -86,7 +86,7 @@ public class HelpChooseVR : MonoBehaviour
 
         eventSystem = GameObject.FindWithTag("EventSystem");
 
-        beveragesButton = GameObject.FindWithTag("BeveragesButton");
+       // beveragesButton = GameObject.FindWithTag("BeveragesButton");
 
         //Time.timeScale = 0;
 
@@ -102,9 +102,9 @@ public class HelpChooseVR : MonoBehaviour
         if (moveToBeverages  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
-            movePoint7.transform.position, Time.deltaTime * walkSpeed);
-            Vector3 rotateTowardmovePoint = new Vector3(movePoint7.transform.position.x,
-            employee.transform.position.y, movePoint7.transform.position.z);
+            movePoints[6].transform.position, Time.deltaTime * walkSpeed);
+            Vector3 rotateTowardmovePoint = new Vector3(movePoints[6].transform.position.x,
+            employee.transform.position.y, movePoints[6].transform.position.z);
             employee.transform.LookAt(rotateTowardmovePoint);
             checkDistance();
         }
@@ -112,9 +112,9 @@ public class HelpChooseVR : MonoBehaviour
             if (moveToBoxDinners  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
-            movePoint4.transform.position, Time.deltaTime * walkSpeed);
-            Vector3 rotateTowardmovePoint = new Vector3(movePoint4.transform.position.x,
-            employee.transform.position.y, movePoint4.transform.position.z);
+             movePoints[3].transform.position, Time.deltaTime * walkSpeed);
+            Vector3 rotateTowardmovePoint = new Vector3(movePoints[3].transform.position.x,
+            employee.transform.position.y, movePoints[3].transform.position.z);
             employee.transform.LookAt(rotateTowardmovePoint);
             checkDistance();
         }
@@ -122,9 +122,9 @@ public class HelpChooseVR : MonoBehaviour
         if (moveToBread  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
-            movePoint1.transform.position, Time.deltaTime * walkSpeed);
-            Vector3 rotateTowardmovePoint = new Vector3(movePoint1.transform.position.x,
-            employee.transform.position.y, movePoint1.transform.position.z);
+             movePoints[0].transform.position, Time.deltaTime * walkSpeed);
+            Vector3 rotateTowardmovePoint = new Vector3(movePoints[0].transform.position.x,
+            employee.transform.position.y, movePoints[0].transform.position.z);
             employee.transform.LookAt(rotateTowardmovePoint);
             checkDistance();
         }
@@ -132,9 +132,9 @@ public class HelpChooseVR : MonoBehaviour
         if (moveToCannedFood  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
-            movePoint6.transform.position, Time.deltaTime * walkSpeed);
-            Vector3 rotateTowardmovePoint = new Vector3(movePoint6.transform.position.x,
-            employee.transform.position.y, movePoint6.transform.position.z);
+             movePoints[5].transform.position, Time.deltaTime * walkSpeed);
+            Vector3 rotateTowardmovePoint = new Vector3(movePoints[5].transform.position.x,
+            employee.transform.position.y, movePoints[5].transform.position.z);
             employee.transform.LookAt(rotateTowardmovePoint);
             checkDistance();
         }
@@ -142,9 +142,9 @@ public class HelpChooseVR : MonoBehaviour
         if (moveToCereal  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
-            movePoint2.transform.position, Time.deltaTime * walkSpeed);
-            Vector3 rotateTowardmovePoint = new Vector3(movePoint2.transform.position.x,
-            employee.transform.position.y, movePoint2.transform.position.z);
+             movePoints[1].transform.position, Time.deltaTime * walkSpeed);
+            Vector3 rotateTowardmovePoint = new Vector3(movePoints[1].transform.position.x,
+            employee.transform.position.y, movePoints[1].transform.position.z);
             employee.transform.LookAt(rotateTowardmovePoint);
             checkDistance();
         }
@@ -152,9 +152,9 @@ public class HelpChooseVR : MonoBehaviour
         if (moveToDairy  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
-            movePoint5.transform.position, Time.deltaTime * walkSpeed);
-            Vector3 rotateTowardmovePoint = new Vector3(movePoint5.transform.position.x,
-            employee.transform.position.y, movePoint5.transform.position.z);
+             movePoints[5].transform.position, Time.deltaTime * walkSpeed);
+            Vector3 rotateTowardmovePoint = new Vector3(movePoints[5].transform.position.x,
+            employee.transform.position.y, movePoints[5].transform.position.z);
             employee.transform.LookAt(rotateTowardmovePoint);
             checkDistance();
         }
@@ -162,9 +162,9 @@ public class HelpChooseVR : MonoBehaviour
             if (moveToFrozenFood  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
-            movePoint5.transform.position, Time.deltaTime * walkSpeed);
-            Vector3 rotateTowardmovePoint = new Vector3(movePoint5.transform.position.x,
-            employee.transform.position.y, movePoint5.transform.position.z);
+            movePoints[4].transform.position, Time.deltaTime * walkSpeed);
+            Vector3 rotateTowardmovePoint = new Vector3(movePoints[4].transform.position.x,
+            employee.transform.position.y, movePoints[4].transform.position.z);
             employee.transform.LookAt(rotateTowardmovePoint);
             checkDistance();
         }
@@ -172,9 +172,9 @@ public class HelpChooseVR : MonoBehaviour
         if (moveToFrozenTreats  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
-            movePoint5.transform.position, Time.deltaTime * walkSpeed);
-            Vector3 rotateTowardmovePoint = new Vector3(movePoint5.transform.position.x,
-            employee.transform.position.y, movePoint5.transform.position.z);
+            movePoints[4].transform.position, Time.deltaTime * walkSpeed);
+            Vector3 rotateTowardmovePoint = new Vector3(movePoints[4].transform.position.x,
+            employee.transform.position.y, movePoints[4].transform.position.z);
             employee.transform.LookAt(rotateTowardmovePoint);
             checkDistance();
         }
@@ -182,9 +182,9 @@ public class HelpChooseVR : MonoBehaviour
         if (moveToMeat  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
-            movePoint3.transform.position, Time.deltaTime * walkSpeed);
-            Vector3 rotateTowardmovePoint = new Vector3(movePoint3.transform.position.x,
-            employee.transform.position.y, movePoint3.transform.position.z);
+            movePoints[2].transform.position, Time.deltaTime * walkSpeed);
+            Vector3 rotateTowardmovePoint = new Vector3(movePoints[2].transform.position.x,
+            employee.transform.position.y, movePoints[2].transform.position.z);
             employee.transform.LookAt(rotateTowardmovePoint);
             checkDistance();
         }
@@ -209,9 +209,9 @@ public class HelpChooseVR : MonoBehaviour
             if (moveToPaperProducts  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
-            movePoint8.transform.position, Time.deltaTime * walkSpeed);
-            Vector3 rotateTowardmovePoint = new Vector3(movePoint8.transform.position.x,
-            employee.transform.position.y, movePoint8.transform.position.z);
+            movePoints[7].transform.position, Time.deltaTime * walkSpeed);
+            Vector3 rotateTowardmovePoint = new Vector3(movePoints[7].transform.position.x,
+            employee.transform.position.y, movePoints[7].transform.position.z);
             employee.transform.LookAt(rotateTowardmovePoint);
             checkDistance();
         }
@@ -219,9 +219,9 @@ public class HelpChooseVR : MonoBehaviour
         if (moveToPersonalCare  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
-            movePoint7.transform.position, Time.deltaTime * walkSpeed);
-            Vector3 rotateTowardmovePoint = new Vector3(movePoint7.transform.position.x,
-            employee.transform.position.y, movePoint7.transform.position.z);
+            movePoints[6].transform.position, Time.deltaTime * walkSpeed);
+            Vector3 rotateTowardmovePoint = new Vector3(movePoints[6].transform.position.x,
+            employee.transform.position.y, movePoints[6].transform.position.z);
             employee.transform.LookAt(rotateTowardmovePoint);
             checkDistance();
         }
@@ -229,9 +229,9 @@ public class HelpChooseVR : MonoBehaviour
         if (moveToProduce  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
-            movePoint9.transform.position, Time.deltaTime * walkSpeed);
-            Vector3 rotateTowardmovePoint = new Vector3(movePoint9.transform.position.x,
-            employee.transform.position.y, movePoint9.transform.position.z);
+            movePoints[8].transform.position, Time.deltaTime * walkSpeed);
+            Vector3 rotateTowardmovePoint = new Vector3(movePoints[8].transform.position.x,
+            employee.transform.position.y, movePoints[8].transform.position.z);
             employee.transform.LookAt(rotateTowardmovePoint);
             checkDistance();
         }
@@ -239,9 +239,9 @@ public class HelpChooseVR : MonoBehaviour
         if (moveToSnacks  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
-            movePoint3.transform.position, Time.deltaTime * walkSpeed);
-            Vector3 rotateTowardmovePoint = new Vector3(movePoint3.transform.position.x,
-            employee.transform.position.y, movePoint3.transform.position.z);
+            movePoints[2].transform.position, Time.deltaTime * walkSpeed);
+            Vector3 rotateTowardmovePoint = new Vector3(movePoints[2].transform.position.x,
+            employee.transform.position.y, movePoints[2].transform.position.z);
             employee.transform.LookAt(rotateTowardmovePoint);
             checkDistance();
         }
@@ -249,9 +249,9 @@ public class HelpChooseVR : MonoBehaviour
         if (moveToWine  )
         {
             employee.transform.position = Vector3.MoveTowards(employee.transform.position,
-            movePoint9.transform.position, Time.deltaTime * walkSpeed);
-            Vector3 rotateTowardmovePoint = new Vector3(movePoint9.transform.position.x,
-            employee.transform.position.y, movePoint9.transform.position.z);
+            movePoints[8].transform.position, Time.deltaTime * walkSpeed);
+            Vector3 rotateTowardmovePoint = new Vector3(movePoints[8].transform.position.x,
+            employee.transform.position.y, movePoints[8].transform.position.z);
             employee.transform.LookAt(rotateTowardmovePoint);
             checkDistance();
         }    
@@ -281,7 +281,7 @@ public class HelpChooseVR : MonoBehaviour
     public void checkDistance()
     {
         askForHelpMenuCanvas.GetComponent<Canvas>().enabled = false;
-        if (employee.transform.position == movePoint1.transform.position || employee.transform.position == movePoint2.transform.position || employee.transform.position == movePoint3.transform.position || employee.transform.position == movePoint4.transform.position || employee.transform.position == movePoint5.transform.position || employee.transform.position == movePoint6.transform.position || employee.transform.position == movePoint7.transform.position || employee.transform.position == movePoint8.transform.position || employee.transform.position == movePoint9.transform.position)
+        if (employee.transform.position == movePoints[0].transform.position || employee.transform.position == movePoints[1].transform.position || employee.transform.position == movePoints[4].transform.position || employee.transform.position == movePoints[3].transform.position || employee.transform.position == movePoints[4].transform.position || employee.transform.position == movePoints[5].transform.position || employee.transform.position == movePoints[6].transform.position || employee.transform.position == movePoints[7].transform.position || employee.transform.position == movePoints[8].transform.position)
         {
             resetMoveToPoints();            
         }            

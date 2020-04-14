@@ -30,6 +30,7 @@ public class DoorColliderScriptVR : MonoBehaviour
         {
             doorAnims.SetBool("isOpening", true);
             doorAnims.SetBool("isClosing", false);
+      SoundManager.Instance.GetComponent<AudioSource>().volume = .05f;
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.storeDoors);
         }
     }
@@ -40,7 +41,8 @@ public class DoorColliderScriptVR : MonoBehaviour
         {
             doorAnims.SetBool("isClosing", true);
             doorAnims.SetBool("isOpening", false);
-            SoundManager.Instance.PlayOneShot(SoundManager.Instance.storeDoors);
+      SoundManager.Instance.GetComponent<AudioSource>().volume = .05f;
+      SoundManager.Instance.PlayOneShot(SoundManager.Instance.storeDoors);
         }
     }   
 }
