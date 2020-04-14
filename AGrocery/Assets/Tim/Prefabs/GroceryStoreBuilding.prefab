@@ -43,11 +43,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: grocery_store
       objectReference: {fileID: 0}
-    - target: {fileID: -6279818442978755445, guid: cffc69a68e4374047aeb227dea85aeb2,
+    - target: {fileID: 6272672020130699606, guid: cffc69a68e4374047aeb227dea85aeb2,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3ee7e6c4f930ba747ac9222937c6c4ba, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: cffc69a68e4374047aeb227dea85aeb2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -118,21 +118,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.98
       objectReference: {fileID: 0}
-    - target: {fileID: -2934038021751287899, guid: cffc69a68e4374047aeb227dea85aeb2,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 309ba1d8f82810c4f9951ab34fccfb41, type: 2}
-    - target: {fileID: -2109116299165636620, guid: cffc69a68e4374047aeb227dea85aeb2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: -1764009564159929328, guid: cffc69a68e4374047aeb227dea85aeb2,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 00302cf9f9678c84ab5958edcaacfde0, type: 2}
     - target: {fileID: 1460105051286850776, guid: cffc69a68e4374047aeb227dea85aeb2,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -148,26 +133,41 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.3
       objectReference: {fileID: 0}
+    - target: {fileID: -2109116299165636620, guid: cffc69a68e4374047aeb227dea85aeb2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: -6279818442978755445, guid: cffc69a68e4374047aeb227dea85aeb2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b0f064f6f8bd5b34486a660e416e4888, type: 2}
     - target: {fileID: 2472011643201217439, guid: cffc69a68e4374047aeb227dea85aeb2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 309ba1d8f82810c4f9951ab34fccfb41, type: 2}
-    - target: {fileID: 6272672020130699606, guid: cffc69a68e4374047aeb227dea85aeb2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: ca8232959eeb19344b686e58bbc4c8d2, type: 2}
     - target: {fileID: 6413124529112950567, guid: cffc69a68e4374047aeb227dea85aeb2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f1515b9af3ab14849a7770e4c3d5ed42, type: 2}
+      objectReference: {fileID: 2100000, guid: 6105ed6f2e54f4e41b89a283fd2c6075, type: 2}
+    - target: {fileID: -2934038021751287899, guid: cffc69a68e4374047aeb227dea85aeb2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca8232959eeb19344b686e58bbc4c8d2, type: 2}
     - target: {fileID: 8698471835266130721, guid: cffc69a68e4374047aeb227dea85aeb2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 77b34e7a65cce454bb434b13bbe4f030, type: 2}
+      objectReference: {fileID: 2100000, guid: 5c3f4df5712f88047ae321846ebe0c8c, type: 2}
+    - target: {fileID: -1764009564159929328, guid: cffc69a68e4374047aeb227dea85aeb2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d8de3b17c7146074f84da57091130e87, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cffc69a68e4374047aeb227dea85aeb2, type: 3}
 --- !u!4 &6865714876439148183 stripped
