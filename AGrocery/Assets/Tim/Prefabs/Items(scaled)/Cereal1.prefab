@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: -8707271421867313333}
   - component: {fileID: -690140317778797995}
   - component: {fileID: 2846828027466411652}
-  - component: {fileID: 5083836284850684289}
-  - component: {fileID: 7986028074576320298}
+  - component: {fileID: -9153470860048054518}
   m_Layer: 10
-  m_Name: Cereal4
+  m_Name: Cereal1
   m_TagString: Product
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,9 +29,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3928976881644232750}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 44.8, y: -1.251, z: 0.20000076}
-  m_LocalScale: {x: 1, y: 1, z: 0.5}
+  m_LocalScale: {x: 0.37, y: 0.37, z: 0.185}
   m_Children:
   - {fileID: 2806002363744902093}
   m_Father: {fileID: 0}
@@ -115,7 +114,7 @@ MonoBehaviour:
   price: 1.98
   density: 1
   hasBeenScanned: 0
---- !u!108 &5083836284850684289
+--- !u!108 &-9153470860048054518
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,18 +174,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &7986028074576320298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3928976881644232750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &9190787997919806002
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +231,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ef5f3b87b8cd3fa429b69159e58d57df, type: 2}
+  - {fileID: 2100000, guid: 679f7648b6a1687449edc304ae3cdeec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
