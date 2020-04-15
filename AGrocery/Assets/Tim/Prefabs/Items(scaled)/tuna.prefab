@@ -167,11 +167,12 @@ GameObject:
   - component: {fileID: 7350734415003045448}
   - component: {fileID: 3476332213557861486}
   - component: {fileID: 4188765577818956519}
-  - component: {fileID: -2500996155946435442}
   - component: {fileID: 8159500720043149145}
   - component: {fileID: 2067250220391309504}
   - component: {fileID: 4389195117776390898}
   - component: {fileID: 1298380445690986073}
+  - component: {fileID: 123130670882766907}
+  - component: {fileID: -4769393788200399067}
   m_Layer: 0
   m_Name: tuna
   m_TagString: Untagged
@@ -268,20 +269,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToPlayer: 0
---- !u!136 &-2500996155946435442
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5789473913791069275}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8159500720043149145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,3 +326,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &123130670882766907
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5789473913791069275}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19903705, y: 0.07353601, z: 0.19903705}
+  m_Center: {x: 0, y: 0.216031, z: -0.26654956}
+--- !u!114 &-4769393788200399067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5789473913791069275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
