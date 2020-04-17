@@ -19,6 +19,8 @@ public class PayScreen : MonoBehaviour
   public TextMeshProUGUI outputTotalText;
   public GameObject itemizedTextObject;
   public TextMeshProUGUI itemizedText;
+  public GameObject changeTextObject;
+  public TextMeshProUGUI changeText;
   public GameObject mainTextObject;
   public TextMeshProUGUI mainText;
   public StringBuilder _mainText;
@@ -51,15 +53,17 @@ public class PayScreen : MonoBehaviour
     itemizedTextObject = new List<GameObject>(GameObject.FindGameObjectsWithTag("PayScreenItemizedText")).Find(g => g.transform.IsChildOf(this.transform));
     outputTotalTextObject = new List<GameObject>(GameObject.FindGameObjectsWithTag("PayScreenOutputText")).Find(g => g.transform.IsChildOf(this.transform));
     mainTextObject = new List<GameObject>(GameObject.FindGameObjectsWithTag("SelfCheckMainText")).Find(g => g.transform.IsChildOf(this.transform));
+    changeTextObject = new List<GameObject>(GameObject.FindGameObjectsWithTag("ChangeText")).Find(g => g.transform.IsChildOf(this.transform));
 
     itemizedText = itemizedTextObject.GetComponent<TMPro.TextMeshProUGUI>();
     outputTotalText = outputTotalTextObject.GetComponent<TMPro.TextMeshProUGUI>();
     mainText = mainTextObject.GetComponent<TMPro.TextMeshProUGUI>();
+    changeText = changeTextObject.GetComponent<TMPro.TextMeshProUGUI>();
     insertProcessScript = cardInsert.GetComponent<CreditCardProcessor>();
     audioSource2 = gameObject.GetComponent<AudioSource>();
     audioSource1 = insertProcessScript.audioSource1;
-    
-
+    mainText.text = "Tisfoisafhoasifh";
+   
     creditButton.SetActive(false);
     cashButton.SetActive(false);
     cardSwipe.SetActive(false);

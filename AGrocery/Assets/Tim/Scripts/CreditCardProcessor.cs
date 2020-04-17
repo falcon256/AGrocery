@@ -8,7 +8,8 @@ using TMPro;
 public class CreditCardProcessor : MonoBehaviour
 {
   public GameObject payScreen;
-  PayScreen payScreenScript;
+  public PayScreen payScreenScript;
+  public GameObject creditCard;
   public GameObject outputTotalTextObject;
   public TextMeshProUGUI outputTotalText;
   public GameObject itemizedTextObject;
@@ -25,15 +26,25 @@ public class CreditCardProcessor : MonoBehaviour
   public AudioSource audioSourceOther;
 
   //ScannerColliderScriptVR scanScript;
-  void Start()
+
+  private void Awake()
   {
-    payScreen = new List<GameObject>(GameObject.FindGameObjectsWithTag("Payscreen")).Find(g => g.transform.parent.gameObject);
-    payScreenScript = payScreen.GetComponent<PayScreen>();
+    
+    payScreenScript = GetComponentInParent<PayScreen>();
     audioSource1 = gameObject.GetComponent<AudioSource>();
     audioSourceOther = payScreenScript.audioSource2;
+  }
+  void Start()
+  {
+    //payScreen = new List<GameObject>(GameObject.FindGameObjectsWithTag("Payscreen")).Find(g => g.transform.parent.gameObject);
+    //payScreenScript = payScreen.GetComponent<PayScreen>();
+    //audioSource1 = gameObject.GetComponent<AudioSource>();
+    //audioSourceOther = payScreenScript.audioSource2;
+    
     _mainText = new StringBuilder();
-
-
+    creditCard = GameObject.FindGameObjectWithTag("CreditCard");
+    
+    
 
 
   }
@@ -51,6 +62,8 @@ public class CreditCardProcessor : MonoBehaviour
 
     if (other.gameObject.tag == "CreditCard")
     {
+     creditCard.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+     
       ProcessCreditPayment();
     }
   }
@@ -79,12 +92,13 @@ public class CreditCardProcessor : MonoBehaviour
   IEnumerator PaymentConfirmation()
   {
     yield return new WaitForSeconds(clip5.length + 5f);
-
+    creditCard.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
     audioSource1.PlayOneShot(clip6);
     payScreenScript.outputTotalText.text = $"{0:c}";
     payScreenScript.itemizedText.text = String.Empty;
     _mainText.Clear();
     _mainText.Append("Thank You! \n Have a nice day!");
+    payScreenScript.changeText.text = "CHANGE: " + $"{0:c}";
     payScreenScript.mainText.text = _mainText.ToString();
     payScreenScript.cashButton.SetActive(false);
     payScreenScript.creditButton.SetActive(false);
@@ -96,6 +110,7 @@ public class CreditCardProcessor : MonoBehaviour
 
     yield return new WaitForSeconds(clip6.length + 2f);
     payScreenScript.mainText.text = String.Empty;
+    payScreenScript.changeText.text = String.Empty;
     audioSource1.PlayOneShot(clip7);
 
     payScreenScript.okButton.SetActive(true);

@@ -99,7 +99,7 @@ public class PurchaseCardColliderScriptVRV2 : MonoBehaviour
     }
     void OnTriggerEnter(Collider collidedMoney)
     {
-        if (collidedMoney.gameObject.tag == "Card")
+        if (collidedMoney.gameObject.tag == "CreditCard")
         {
             if (!costReached)
             {
