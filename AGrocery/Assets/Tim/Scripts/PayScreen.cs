@@ -62,7 +62,7 @@ public class PayScreen : MonoBehaviour
     insertProcessScript = cardInsert.GetComponent<CreditCardProcessor>();
     audioSource2 = gameObject.GetComponent<AudioSource>();
     audioSource1 = insertProcessScript.audioSource1;
-    mainText.text = "Tisfoisafhoasifh";
+  
    
     creditButton.SetActive(false);
     cashButton.SetActive(false);
