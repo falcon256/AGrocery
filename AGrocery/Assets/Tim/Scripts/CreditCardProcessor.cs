@@ -25,6 +25,10 @@ public class CreditCardProcessor : MonoBehaviour
   public AudioSource audioSource1;
   public AudioSource audioSourceOther;
 
+  public float processTime = 3f;
+  public float processTimer;
+  public bool isProcessing;
+
   //ScannerColliderScriptVR scanScript;
 
   private void Awake()
@@ -52,19 +56,34 @@ public class CreditCardProcessor : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+    if (isProcessing)
+      processTimer += Time.deltaTime;
 
+    if(processTimer >= processTime)
+    {
+      isProcessing = false;
+    }
   }
 
   private void OnTriggerEnter(Collider other)
   {
     //payScreen = GetComponentInParent<PayScreen>();
-
+    
 
     if (other.gameObject.tag == "CreditCard")
     {
-     creditCard.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
      
-      ProcessCreditPayment();
+
+
+      if (payScreenScript.isCredit && isProcessing == false)
+      {
+        isProcessing = true;
+        creditCard.transform.rotation = Quaternion.Euler(0, 0, 0);
+        creditCard.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+        ProcessCreditPayment();
+      }
+ 
     }
   }
 
@@ -80,7 +99,7 @@ public class CreditCardProcessor : MonoBehaviour
     audioSource1.PlayOneShot(clip5);
     StartCoroutine("PaymentConfirmation");
 
-
+    
 
 
 
@@ -109,11 +128,8 @@ public class CreditCardProcessor : MonoBehaviour
   {
 
     yield return new WaitForSeconds(clip6.length + 2f);
-    payScreenScript.mainText.text = String.Empty;
-    payScreenScript.changeText.text = String.Empty;
-    audioSource1.PlayOneShot(clip7);
-
-    payScreenScript.okButton.SetActive(true);
+   
+    payScreenScript.Reset();
   }
 
 }

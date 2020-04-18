@@ -67,8 +67,9 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
   float scanTimer = 0;
   bool scannable = true;
 
-  public float total;
-  public float newTotal;
+  public decimal total;
+  public decimal newTotal;
+  //public decimal originalTotal;
 
   public int numItemsScanned = 0;
 
@@ -118,7 +119,7 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
       scannable = true;
     
     }
-
+     
 
   }
   void OnTriggerExit(Collider collidedProduct)
@@ -132,7 +133,7 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
       if (collidedProduct.GetComponent<ProductData>().hasBeenScanned == false)
       {
         payScreen = GetComponentInParent<PayScreen>();
-
+        payScreen.mainText.text = String.Empty;
         scanningProduct = true;
         collidedProduct.GetComponent<ProductData>().hasBeenScanned = true;
 
@@ -143,7 +144,7 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
         itemizedText.Append($"{productName} {productCost.ToString("c")} \n");
         payScreen.itemizedText.text = itemizedText.ToString();
 
-        newTotal = total + productCost;
+        newTotal = total + Convert.ToDecimal(productCost);
 
         outputTotalText.Clear();
         outputTotalText.Append(newTotal.ToString("c"));
@@ -152,7 +153,7 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
         SoundManager.Instance.PlayOneShot(SoundManager.Instance.scanObjectBeep);
         scannable = false;
         scanTimer = 0;
-        total += productCost;
+        total += Convert.ToDecimal(productCost);
 
         numItemsScanned = numItemsScanned + 1;
       }

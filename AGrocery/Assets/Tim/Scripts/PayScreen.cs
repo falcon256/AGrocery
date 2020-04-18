@@ -12,7 +12,7 @@ public class PayScreen : MonoBehaviour
   public GameObject creditButton;
   public GameObject cardInsert;
   public GameObject cardSwipe;
-
+  public GameObject scanner;
   public CreditCardProcessor insertProcessScript;
   public Canvas payScreenCanvas;
   public GameObject outputTotalTextObject;
@@ -36,9 +36,12 @@ public class PayScreen : MonoBehaviour
   public AudioClip clip7;
   public AudioClip clip8;
 
+  public decimal originalTotal;
+
 
 
   public bool isCredit;
+  public bool isCash;
 
 
   private void Start()
@@ -71,36 +74,67 @@ public class PayScreen : MonoBehaviour
 
   }
 
+  IEnumerator RemoveMainText()
+  {
+    yield return new WaitForSeconds(5f);
+    mainText.text = String.Empty;
+  }
   public void OnClickOK()
   {
-    okButton.SetActive(false);
-    creditButton.SetActive(true);
-    cashButton.SetActive(true);
+    if (itemizedText.text != String.Empty)
+    {
+     
+      originalTotal = scanner.GetComponent<ScannerColliderScriptVRV2>().newTotal;
+      okButton.SetActive(false);
+      creditButton.SetActive(true);
+      cashButton.SetActive(true);
 
-    audioSource2.PlayOneShot(clip3);
+      audioSource2.PlayOneShot(clip3);
+    }
+    else
+    {
+      mainText.text = "No Items";
+      StartCoroutine("RemoveMainText");
+    }
+ 
+
+ 
   }
   public void OnClickCash()
   {
-    Debug.Log("You have chosen the cash payment method");
-
+    
+    isCash = true;
+    creditButton.SetActive(false);
 
 
   }
 
   public void OnClickCredit()
   {
-    Debug.Log("You have chosen the credit payment method");
-
+   
+    isCredit = true;
+    cashButton.SetActive(false);
     cardSwipe.SetActive(true);
     cardInsert.SetActive(true);
+
     audioSource2.PlayOneShot(clip4);
 
   }
 
-  //public void ProcessCreditPayment()
-  //{
-  //  outputTotalText.text = $"{0:c}";
-  //  itemizedText.text = String.Empty;
-  //}
+  public void Reset()
+  {
+
+    mainText.text = String.Empty;
+    itemizedText.text = String.Empty;
+    changeText.text = String.Empty;
+    audioSource2.PlayOneShot(clip7);
+    okButton.SetActive(true);
+    creditButton.SetActive(false);
+    cashButton.SetActive(false);
+    cardSwipe.SetActive(false);
+    cardInsert.SetActive(false);
+  }
+
+ 
 
 }

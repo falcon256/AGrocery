@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Text;
+using System;
 
 public class PurchaseCardColliderScriptVRV2 : MonoBehaviour
 {
@@ -56,10 +57,10 @@ public class PurchaseCardColliderScriptVRV2 : MonoBehaviour
     float scanTimer = 0;
     bool scannable = true;
 
-    float total;
-    float newTotal;
+    decimal total;
+    decimal newTotal;
 
-    float currentOffer;
+    decimal currentOffer;
 
     // Start is called before the first frame update
     void Start()
@@ -121,9 +122,9 @@ public class PurchaseCardColliderScriptVRV2 : MonoBehaviour
 
                 newTotal = total - total;
 
-                currentOffer = currentOffer + moneyValue;
+                currentOffer += Convert.ToDecimal(moneyValue);
 
-                PlayerMoneyHandler.PlayerMoney = PlayerMoneyHandler.PlayerMoney - total;
+                PlayerMoneyHandler.PlayerMoney = PlayerMoneyHandler.PlayerMoney - Convert.ToSingle( total);
 
                 //playerMoneyText = playerMoneyTextBox.GetComponent<Text>();
                 //playerMoneyText.text = "Player Money: " + PlayerMoneyHandler.PlayerMoney.ToString("c");
