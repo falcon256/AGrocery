@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4506183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4506184}
+  m_Layer: 0
+  m_Name: ChangeSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4506184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4506183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6964531766341583700}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &105298353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1079,7 @@ MonoBehaviour:
   creditButton: {fileID: 0}
   cardInsert: {fileID: 0}
   cardSwipe: {fileID: 0}
+  scanner: {fileID: 2863749621040226088}
   insertProcessScript: {fileID: 0}
   payScreenCanvas: {fileID: 0}
   outputTotalTextObject: {fileID: 0}
@@ -1744,8 +1775,6 @@ MonoBehaviour:
   productTotal: 0
   productCost: 0
   productName: 
-  total: 0
-  newTotal: 0
   numItemsScanned: 0
 --- !u!82 &2043524233415192161
 AudioSource:
@@ -2164,8 +2193,6 @@ MonoBehaviour:
   productTotal: 0
   productCost: 0
   productName: 
-  total: 0
-  newTotal: 0
   numItemsScanned: 0
 --- !u!1 &3320948859643418891
 GameObject:
@@ -3195,6 +3222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6964531766341583700}
+  - component: {fileID: 7023910413032967971}
   m_Layer: 0
   m_Name: ChangeDispenser
   m_TagString: Untagged
@@ -3210,12 +3238,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5691468350699630414}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -28.565987, y: 4.9270806, z: -14.794679}
+  m_LocalPosition: {x: -0.61, y: 1.989, z: -0.388}
   m_LocalScale: {x: 1, y: 1.4285713, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4506184}
   m_Father: {fileID: 4062330329747776622}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7023910413032967971
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5691468350699630414}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38950348, y: 0.037707824, z: 0.1589117}
+  m_Center: {x: -0.0043144226, y: 0.004847296, z: -0.021353245}
 --- !u!1 &5945505415013874830
 GameObject:
   m_ObjectHideFlags: 0
@@ -3584,11 +3626,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf104fc375738934aab4c13645c13849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oneDollar: {fileID: 0}
-  fiveDollar: {fileID: 0}
-  tenDollar: {fileID: 0}
-  twentyDollar: {fileID: 0}
-  fiftyDollar: {fileID: 0}
+  oneDollar: {fileID: 1873497969233460491, guid: 6fa1761568e33e84eb05287643ecc9ea,
+    type: 3}
+  fiveDollar: {fileID: 2568470230763150162, guid: e4c7f7f562d0ed34481837c896a1ee70,
+    type: 3}
+  tenDollar: {fileID: 8957419694435249564, guid: fe0b6c049d73c024a8fed8593e664e44,
+    type: 3}
+  twentyDollar: {fileID: 5479893015168346257, guid: 939f9c4fee5dd5846ac3742494b1eb0e,
+    type: 3}
+  fiftyDollar: {fileID: 4291710641846697247, guid: 84b6b4aae8b29924393fa1a019c10b7b,
+    type: 3}
+  changeSpawner: {fileID: 4506183}
   moneyData: {fileID: 0}
   thisObject: {fileID: 0}
   player: {fileID: 0}
