@@ -17,11 +17,11 @@ GameObject:
   - component: {fileID: 6392857377312611269}
   - component: {fileID: 5744205090827796571}
   - component: {fileID: 3604240701233877192}
-  - component: {fileID: 2957594963878374542}
   - component: {fileID: 7637545620916248638}
   - component: {fileID: 7824107713322917582}
+  - component: {fileID: 4611833424105488603}
   m_Layer: 9
-  m_Name: OJ Regular
+  m_Name: Orange Juice
   m_TagString: Product
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,19 +203,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &2957594963878374542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555877625614928328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &7637545620916248638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +236,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4611833424105488603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555877625614928328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8428290345690805278
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,6 +741,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 981477896531297034}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
+        type: 3}
+      propertyPath: m_Name
+      value: juice_container (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -5102530947620581811, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232488858435980449, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -811,26 +830,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
-        type: 3}
-      propertyPath: m_Name
-      value: juice_container (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -5102530947620581811, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5232488858435980449, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7087200961041043365, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
         type: 3}

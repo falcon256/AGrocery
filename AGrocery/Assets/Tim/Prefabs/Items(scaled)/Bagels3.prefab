@@ -17,9 +17,9 @@ GameObject:
   - component: {fileID: 2781960238941496293}
   - component: {fileID: 6848054740957642898}
   - component: {fileID: 2676235796480589491}
-  - component: {fileID: 7564040326800248942}
   - component: {fileID: -2338179930554740822}
   - component: {fileID: 4272591919630411425}
+  - component: {fileID: -866604772570838554}
   m_Layer: 0
   m_Name: Bagels3
   m_TagString: Product
@@ -204,19 +204,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &7564040326800248942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3110581700450207806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &-2338179930554740822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +237,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-866604772570838554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110581700450207806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &551261372515958721
 PrefabInstance:
   m_ObjectHideFlags: 0

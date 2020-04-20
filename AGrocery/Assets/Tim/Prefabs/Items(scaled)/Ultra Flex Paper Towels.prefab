@@ -661,9 +661,9 @@ GameObject:
   - component: {fileID: 232904996953461983}
   - component: {fileID: 115314357817649711}
   - component: {fileID: 9169338422633193772}
-  - component: {fileID: -4697978775358988211}
   - component: {fileID: -7987355158830525095}
   - component: {fileID: -6663701809624626265}
+  - component: {fileID: -336368414998261030}
   m_Layer: 9
   m_Name: Ultra Flex Paper Towels
   m_TagString: Product
@@ -850,19 +850,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &-4697978775358988211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4314288052234421041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &-7987355158830525095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,6 +883,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-336368414998261030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4314288052234421041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4648933319517011865
 GameObject:
   m_ObjectHideFlags: 0

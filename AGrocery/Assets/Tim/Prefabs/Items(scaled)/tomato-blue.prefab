@@ -10,14 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2437104099531266894}
   - component: {fileID: 2226073866517812867}
-  - component: {fileID: 3363537217491973823}
   - component: {fileID: 6493346931323877496}
   - component: {fileID: -4209620645894928608}
   - component: {fileID: 2441491278111115611}
   - component: {fileID: 1053636179967292595}
   - component: {fileID: 2100527623230507921}
+  - component: {fileID: -8712026815012927768}
   m_Layer: 0
-  m_Name: tomato-blue
+  m_Name: Tomato-blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,19 +99,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &3363537217491973823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695900602235840861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &6493346931323877496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +169,18 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!114 &-8712026815012927768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695900602235840861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5196512571035060524
 GameObject:
   m_ObjectHideFlags: 0

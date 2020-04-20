@@ -12,16 +12,16 @@ GameObject:
   - component: {fileID: 6259963802375276323}
   - component: {fileID: -440049533628165211}
   - component: {fileID: 7841144464266484709}
-  - component: {fileID: 1483124607799354725}
-  - component: {fileID: -4324077653627803562}
-  - component: {fileID: -3501964188737496464}
-  - component: {fileID: -1774472931049108636}
-  - component: {fileID: -8876672974324332390}
-  - component: {fileID: -8187519137525438766}
-  - component: {fileID: -3484741810657300172}
-  - component: {fileID: -5025102973977799662}
+  - component: {fileID: 6927818257213422269}
+  - component: {fileID: 8104140502323929250}
+  - component: {fileID: 1828483110562235569}
+  - component: {fileID: -8294141738285723282}
+  - component: {fileID: 5109069249478505381}
+  - component: {fileID: 2671099496553253970}
+  - component: {fileID: 2536095534996446872}
+  - component: {fileID: -5276299313887447597}
   m_Layer: 9
-  m_Name: Chips2
+  m_Name: BBQ Chips
   m_TagString: Product
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   playerHand: {fileID: 0}
---- !u!114 &1483124607799354725
+--- !u!114 &6927818257213422269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
   m_materialColorField: _OutlineColor
---- !u!114 &-4324077653627803562
+--- !u!114 &8104140502323929250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,10 +115,10 @@ MonoBehaviour:
   dimensions: {x: 0, y: 0, z: 0}
   positioningOffset: {x: 0, y: 0.5, z: 0}
   category: 0
-  price: 0.98
+  price: 1.98
   density: 1
   hasBeenScanned: 0
---- !u!114 &-3501964188737496464
+--- !u!114 &1828483110562235569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-1774472931049108636
+--- !u!114 &-8294141738285723282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 906cb9f476fa11147b0bbfb9293002cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!108 &-8876672974324332390
+--- !u!108 &5109069249478505381
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,20 +202,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &-8187519137525438766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3837559565918924043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
---- !u!114 &-3484741810657300172
+--- !u!114 &2671099496553253970
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,7 +219,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
---- !u!54 &-5025102973977799662
+--- !u!54 &2536095534996446872
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,6 +235,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-5276299313887447597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837559565918924043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &445473315004004650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -255,6 +254,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8442835971303199233}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 1b59981e7bed00144aff975e7d25d84e,
+        type: 3}
+      propertyPath: m_Name
+      value: chips
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1b59981e7bed00144aff975e7d25d84e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8052994932809076077, guid: 1b59981e7bed00144aff975e7d25d84e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -6734363572309329371, guid: 1b59981e7bed00144aff975e7d25d84e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1b59981e7bed00144aff975e7d25d84e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -325,31 +344,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 200
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 1b59981e7bed00144aff975e7d25d84e,
-        type: 3}
-      propertyPath: m_Name
-      value: chips
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 1b59981e7bed00144aff975e7d25d84e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -8052994932809076077, guid: 1b59981e7bed00144aff975e7d25d84e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -6734363572309329371, guid: 1b59981e7bed00144aff975e7d25d84e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 856365191234717131, guid: 1b59981e7bed00144aff975e7d25d84e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5d88c880a7f3b6b43bd0201c29d5897e, type: 2}
+      objectReference: {fileID: 2100000, guid: 57ff8b809aaa4544995c046ba196e81a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b59981e7bed00144aff975e7d25d84e, type: 3}
 --- !u!4 &4851528331623076400 stripped

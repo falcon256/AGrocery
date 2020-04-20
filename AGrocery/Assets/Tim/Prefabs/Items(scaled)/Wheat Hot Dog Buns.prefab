@@ -1001,11 +1001,11 @@ GameObject:
   - component: {fileID: 5231909635757711050}
   - component: {fileID: 492183332863789819}
   - component: {fileID: 2524931372377869768}
-  - component: {fileID: 7143363314765043170}
   - component: {fileID: 2749611063055597934}
   - component: {fileID: 9150874334483689782}
+  - component: {fileID: -5150811617606119094}
   m_Layer: 9
-  m_Name: Plain Hot Dog Buns
+  m_Name: Wheat Hot Dog Buns
   m_TagString: Product
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1190,19 +1190,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &7143363314765043170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5266410480306227954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &2749611063055597934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,6 +1223,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-5150811617606119094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5266410480306227954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5668207561524326416
 GameObject:
   m_ObjectHideFlags: 0

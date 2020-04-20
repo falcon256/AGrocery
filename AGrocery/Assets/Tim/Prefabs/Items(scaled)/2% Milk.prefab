@@ -17,11 +17,11 @@ GameObject:
   - component: {fileID: 7875711221598630978}
   - component: {fileID: 3460798442401363392}
   - component: {fileID: 7851393808769243979}
-  - component: {fileID: 768279259097183480}
   - component: {fileID: 4844385239267545476}
   - component: {fileID: 2210808841253738782}
+  - component: {fileID: 3732157518054790433}
   m_Layer: 9
-  m_Name: 2%Milk
+  m_Name: 2% Milk
   m_TagString: Product
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,19 +203,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &768279259097183480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2440719904733573501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &4844385239267545476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +236,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3732157518054790433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2440719904733573501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3934094469730211041
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,6 +741,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6251995404918235550}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 98d532e1e7466e049a2a0b3743ca3565,
+        type: 3}
+      propertyPath: m_Name
+      value: milk_jug
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 98d532e1e7466e049a2a0b3743ca3565,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101430577481724397, guid: 98d532e1e7466e049a2a0b3743ca3565,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101430577481724397, guid: 98d532e1e7466e049a2a0b3743ca3565,
+        type: 3}
+      propertyPath: m_Name
+      value: milk_container
+      objectReference: {fileID: 0}
+    - target: {fileID: -8626751840527039810, guid: 98d532e1e7466e049a2a0b3743ca3565,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8626751840527039810, guid: 98d532e1e7466e049a2a0b3743ca3565,
+        type: 3}
+      propertyPath: m_Name
+      value: milk_cap1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 98d532e1e7466e049a2a0b3743ca3565,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -811,36 +840,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 98d532e1e7466e049a2a0b3743ca3565,
-        type: 3}
-      propertyPath: m_Name
-      value: milk_jug
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 98d532e1e7466e049a2a0b3743ca3565,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 9101430577481724397, guid: 98d532e1e7466e049a2a0b3743ca3565,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 9101430577481724397, guid: 98d532e1e7466e049a2a0b3743ca3565,
-        type: 3}
-      propertyPath: m_Name
-      value: milk_container
-      objectReference: {fileID: 0}
-    - target: {fileID: -8626751840527039810, guid: 98d532e1e7466e049a2a0b3743ca3565,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -8626751840527039810, guid: 98d532e1e7466e049a2a0b3743ca3565,
-        type: 3}
-      propertyPath: m_Name
-      value: milk_cap1
       objectReference: {fileID: 0}
     - target: {fileID: 6954650326550281834, guid: 98d532e1e7466e049a2a0b3743ca3565,
         type: 3}

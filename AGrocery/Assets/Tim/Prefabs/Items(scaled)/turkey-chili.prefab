@@ -10,14 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 921024291972952349}
   - component: {fileID: -6495465458653891412}
-  - component: {fileID: 6756607893881735870}
   - component: {fileID: -9085825692498541508}
   - component: {fileID: 1936768873482499637}
   - component: {fileID: 5612505695378179865}
   - component: {fileID: 1835277041946641435}
   - component: {fileID: -7510342984203575552}
+  - component: {fileID: 2722698547864605604}
   m_Layer: 0
-  m_Name: turkey-chili
+  m_Name: Turkey-chili
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,19 +99,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &6756607893881735870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4220852989614310158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &-9085825692498541508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +169,18 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!114 &2722698547864605604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220852989614310158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6693421138366386105
 GameObject:
   m_ObjectHideFlags: 0

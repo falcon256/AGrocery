@@ -166,14 +166,14 @@ GameObject:
   m_Component:
   - component: {fileID: 6552399099829519608}
   - component: {fileID: 7586460301681634170}
-  - component: {fileID: 974714404614452265}
   - component: {fileID: 47453534780408641}
   - component: {fileID: 4994010853936614145}
   - component: {fileID: -7497459816383273477}
   - component: {fileID: 1009507384610258881}
   - component: {fileID: -1811289293383006910}
+  - component: {fileID: 13225098912023953}
   m_Layer: 0
-  m_Name: corn-chowder
+  m_Name: Corn Chowder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,19 +255,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &974714404614452265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7833331620042733291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &47453534780408641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,3 +325,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!114 &13225098912023953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7833331620042733291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

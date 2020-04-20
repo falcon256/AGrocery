@@ -830,9 +830,9 @@ GameObject:
   - component: {fileID: 5318409471759111408}
   - component: {fileID: 4376403912761665230}
   - component: {fileID: 3788023255706451570}
-  - component: {fileID: 3300226737033423505}
   - component: {fileID: 6768209216067604811}
   - component: {fileID: 5857810864877310764}
+  - component: {fileID: 3369794173639849330}
   m_Layer: 9
   m_Name: Plain Burger Buns
   m_TagString: Product
@@ -868,8 +868,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.8398269, y: 0.46641645, z: 1.6195073}
+  m_Center: {x: -0.010212405, y: -0.27267107, z: 0.0005665947}
 --- !u!65 &5694977315869431638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -881,8 +881,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.8398269, y: 0.46641645, z: 1.6195073}
+  m_Center: {x: -0.010212405, y: -0.27267107, z: 0.0005665947}
 --- !u!114 &3307723215613847328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1017,19 +1017,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &3300226737033423505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2968054232758243390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &6768209216067604811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1063,6 +1050,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3369794173639849330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2968054232758243390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4877060429746855101
 GameObject:
   m_ObjectHideFlags: 0

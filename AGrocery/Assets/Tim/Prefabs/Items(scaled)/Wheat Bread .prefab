@@ -2992,9 +2992,9 @@ GameObject:
   - component: {fileID: 4032567606917079746}
   - component: {fileID: 8103086609539222998}
   - component: {fileID: 7119249031347209711}
-  - component: {fileID: 2589621893234059057}
   - component: {fileID: 4556237619244182028}
   - component: {fileID: 2736990714820015852}
+  - component: {fileID: -5291348642865775228}
   m_Layer: 9
   m_Name: 'Wheat Bread '
   m_TagString: Product
@@ -3180,19 +3180,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &2589621893234059057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5221861121812244499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &4556237619244182028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3226,6 +3213,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-5291348642865775228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5221861121812244499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5318085949378076554
 GameObject:
   m_ObjectHideFlags: 0

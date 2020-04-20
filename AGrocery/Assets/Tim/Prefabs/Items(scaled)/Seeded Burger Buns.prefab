@@ -2001,11 +2001,11 @@ GameObject:
   - component: {fileID: 8091605262788658003}
   - component: {fileID: 4365537006135405120}
   - component: {fileID: 271203663203175023}
-  - component: {fileID: 2994466399831236765}
   - component: {fileID: 452441296004457210}
   - component: {fileID: 8057781458333941301}
+  - component: {fileID: 249418776712654821}
   m_Layer: 9
-  m_Name: Seeded Burger Buns 1
+  m_Name: Seeded Burger Buns
   m_TagString: Product
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2039,8 +2039,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.8398269, y: 0.46641645, z: 1.6195073}
+  m_Center: {x: -0.010212405, y: -0.27267107, z: 0.0005665947}
 --- !u!65 &4726620522519329606
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2052,8 +2052,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.8398269, y: 0.46641645, z: 1.6195073}
+  m_Center: {x: -0.010212405, y: -0.27267107, z: 0.0005665947}
 --- !u!114 &6910552113196346397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2188,19 +2188,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &2994466399831236765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7523055888923128208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &452441296004457210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2234,6 +2221,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &249418776712654821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523055888923128208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7695986219504691223
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,14 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1807813611531989240}
   - component: {fileID: -6484657098517530517}
-  - component: {fileID: -2954190180101432485}
   - component: {fileID: -7370095671000234912}
   - component: {fileID: -1098628652578276884}
   - component: {fileID: 8883726456241813352}
   - component: {fileID: 2003805197765669531}
   - component: {fileID: -6746749969566294773}
+  - component: {fileID: -3357681076637411984}
   m_Layer: 0
-  m_Name: chili
+  m_Name: Chili
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,19 +99,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &-2954190180101432485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3408658936405689067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &-7370095671000234912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +169,18 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!114 &-3357681076637411984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3408658936405689067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5277455013329505884
 GameObject:
   m_ObjectHideFlags: 0

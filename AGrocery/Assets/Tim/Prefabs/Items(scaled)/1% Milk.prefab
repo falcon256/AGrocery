@@ -17,9 +17,9 @@ GameObject:
   - component: {fileID: 6197207003568596517}
   - component: {fileID: 4608301525621474997}
   - component: {fileID: 3688221020285993807}
-  - component: {fileID: 6313137455998200954}
   - component: {fileID: 5740352486427394968}
   - component: {fileID: 4143173574029469177}
+  - component: {fileID: 3541362446547970677}
   m_Layer: 9
   m_Name: 1% Milk
   m_TagString: Product
@@ -203,19 +203,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &6313137455998200954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2367728241739057246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &5740352486427394968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +236,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3541362446547970677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367728241739057246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3908010228799477044
 GameObject:
   m_ObjectHideFlags: 0

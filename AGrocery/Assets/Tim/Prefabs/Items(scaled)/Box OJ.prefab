@@ -503,11 +503,11 @@ GameObject:
   - component: {fileID: 5923258245266209336}
   - component: {fileID: 5569902562762407726}
   - component: {fileID: 1523518705404226315}
-  - component: {fileID: 8908676913071533409}
   - component: {fileID: 3511620019581913367}
   - component: {fileID: 5137236907333716905}
+  - component: {fileID: -1610371246314013850}
   m_Layer: 9
-  m_Name: OJBox_Reg
+  m_Name: Box OJ
   m_TagString: Product
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -689,19 +689,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &8908676913071533409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2952417616960466684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &3511620019581913367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,6 +722,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1610371246314013850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952417616960466684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4470950493191309192
 PrefabInstance:
   m_ObjectHideFlags: 0

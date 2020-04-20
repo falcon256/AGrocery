@@ -166,14 +166,14 @@ GameObject:
   m_Component:
   - component: {fileID: 5277008835886450833}
   - component: {fileID: -6297299102039734669}
-  - component: {fileID: -511813091754915549}
   - component: {fileID: 5038966502053324164}
   - component: {fileID: 494516349044193100}
   - component: {fileID: -3224121217536995047}
   - component: {fileID: 7907465450343991994}
   - component: {fileID: 7215946150382352398}
+  - component: {fileID: 6558690184002320001}
   m_Layer: 0
-  m_Name: beef-veg-soup
+  m_Name: Beef & Veg Soup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,19 +255,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &-511813091754915549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9178593649431870082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &5038966502053324164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,3 +325,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!114 &6558690184002320001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9178593649431870082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

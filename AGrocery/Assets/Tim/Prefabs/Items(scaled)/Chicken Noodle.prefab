@@ -10,14 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2607242731899474328}
   - component: {fileID: 416543147966935411}
-  - component: {fileID: 8026981524716384643}
   - component: {fileID: -7452127744267036305}
   - component: {fileID: 2081384055247148462}
   - component: {fileID: -4317894441523457868}
   - component: {fileID: 5195513370467285115}
   - component: {fileID: -4951414256897422610}
+  - component: {fileID: 7020915037498120589}
   m_Layer: 0
-  m_Name: chicken-noodle-soup
+  m_Name: Chicken Noodle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,19 +99,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &8026981524716384643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330128331244348299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &-7452127744267036305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +169,18 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!114 &7020915037498120589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330128331244348299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5611806819631907834
 GameObject:
   m_ObjectHideFlags: 0

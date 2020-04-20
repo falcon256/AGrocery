@@ -37,6 +37,9 @@ public class OVRGrabbable : MonoBehaviour
     protected Collider m_grabbedCollider = null;
     protected OVRGrabber m_grabbedBy = null;
 
+    //Dan's modification
+    protected PhysicsCollisionTrigger myPCT = null;
+
 	/// <summary>
 	/// If true, the object can currently be grabbed.
 	/// </summary>
@@ -116,6 +119,11 @@ public class OVRGrabbable : MonoBehaviour
     {
         m_grabbedBy = hand;
         m_grabbedCollider = grabPoint;
+        //gameObject.GetComponent<Rigidbody>().isKinematic = true;
+
+        //Dan's modification
+          if (!gameObject.GetComponent<Rigidbody>() && myPCT)
+            myPCT.setupRB();
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
     }
 
@@ -124,6 +132,10 @@ public class OVRGrabbable : MonoBehaviour
 	/// </summary>
 	virtual public void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
+        //Dan's modification
+         if (!gameObject.GetComponent<Rigidbody>() && myPCT)
+            myPCT.setupRB();
+
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
         rb.isKinematic = m_grabbedKinematic;
         rb.velocity = linearVelocity;
@@ -150,6 +162,9 @@ public class OVRGrabbable : MonoBehaviour
 
     protected virtual void Start()
     {
+        //Dan's modification
+         myPCT = this.gameObject.GetComponent<PhysicsCollisionTrigger>();
+
         m_grabbedKinematic = GetComponent<Rigidbody>().isKinematic;
     }
 

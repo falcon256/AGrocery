@@ -166,14 +166,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7248726849166506293}
   - component: {fileID: -7854883191780310129}
-  - component: {fileID: -582907006571852049}
   - component: {fileID: 5677132532995258203}
   - component: {fileID: 2174583695074308275}
   - component: {fileID: 2193122462163928501}
   - component: {fileID: 7367520770805045232}
   - component: {fileID: -378781646622308428}
+  - component: {fileID: -2623633652210544851}
   m_Layer: 0
-  m_Name: baked-potato
+  m_Name: Baked Potato Soup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,19 +255,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &-582907006571852049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5963891192800283430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &5677132532995258203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,3 +325,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!114 &-2623633652210544851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5963891192800283430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

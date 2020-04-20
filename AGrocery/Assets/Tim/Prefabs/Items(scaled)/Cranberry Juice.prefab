@@ -502,11 +502,11 @@ GameObject:
   - component: {fileID: -3242896973761707457}
   - component: {fileID: -5952138679008296873}
   - component: {fileID: -8275738013332314084}
-  - component: {fileID: 4084860390267391442}
   - component: {fileID: -7908417604807150447}
   - component: {fileID: 3434219615083138627}
+  - component: {fileID: 2713180558792553658}
   m_Layer: 10
-  m_Name: CranberryJuice
+  m_Name: Cranberry Juice
   m_TagString: Product
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -683,18 +683,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &4084860390267391442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7016849146375535850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-7908417604807150447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,6 +707,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 906cb9f476fa11147b0bbfb9293002cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2713180558792553658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7016849146375535850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7491262593327848987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -726,6 +726,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8748705824627734056}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
+        type: 3}
+      propertyPath: m_Name
+      value: juice_container (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -5102530947620581811, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232488858435980449, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -795,26 +815,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
-        type: 3}
-      propertyPath: m_Name
-      value: juice_container (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -5102530947620581811, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5232488858435980449, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7087200961041043365, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
         type: 3}
