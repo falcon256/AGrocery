@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoneyData : MonoBehaviour
 {
-    public enum CATEGORY {ONEDOLLAR, FIVEDOLLAR, TENDOLLAR, TWENTYDOLLAR, PENNY, NICKEL, DIME, QUARTER, MONEY}
+    public enum CATEGORY {ONEDOLLAR, FIVEDOLLAR, TENDOLLAR, TWENTYDOLLAR, FIFTYDOLLAR, PENNY, NICKEL, DIME, QUARTER, MONEY}
     public Vector3 dimensions = Vector3.zero;
     public Vector3 positioningOffset = new Vector3(0, 0.5f, 0);
     public CATEGORY category = CATEGORY.MONEY;

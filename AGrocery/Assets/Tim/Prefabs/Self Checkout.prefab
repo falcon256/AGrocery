@@ -3579,6 +3579,7 @@ GameObject:
   - component: {fileID: 4091948267199564872}
   - component: {fileID: 1183261214603791165}
   - component: {fileID: 4675733956900456922}
+  - component: {fileID: 7023910413032967970}
   m_Layer: 0
   m_Name: MoneySlot (1)
   m_TagString: Untagged
@@ -3626,6 +3627,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf104fc375738934aab4c13645c13849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  penny: {fileID: 3748192555734678994, guid: 17eff6c39acfb8f4b93059015007ed3a, type: 3}
+  nickel: {fileID: 7908019957697281359, guid: 461f0b0b23f541443bd20c58e090aa22, type: 3}
+  dime: {fileID: 3677323382327000900, guid: 2f7b8a21a60e46a46b56d43b387d86b1, type: 3}
+  quarter: {fileID: 7078984797162921951, guid: e62c78ae328308c4da3e360ea37dbf50, type: 3}
   oneDollar: {fileID: 1873497969233460491, guid: 6fa1761568e33e84eb05287643ecc9ea,
     type: 3}
   fiveDollar: {fileID: 2568470230763150162, guid: e4c7f7f562d0ed34481837c896a1ee70,
@@ -3666,6 +3671,32 @@ MonoBehaviour:
   productTotal: 0
   moneyValue: 0
   currencyType: 
+--- !u!114 &7023910413032967970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7049550105491637205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8643553cbd8315749929f897fe869083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  penny: {fileID: 3748192555734678994, guid: 17eff6c39acfb8f4b93059015007ed3a, type: 3}
+  nickel: {fileID: 7908019957697281359, guid: 461f0b0b23f541443bd20c58e090aa22, type: 3}
+  dime: {fileID: 3677323382327000900, guid: 2f7b8a21a60e46a46b56d43b387d86b1, type: 3}
+  quarter: {fileID: 7078984797162921951, guid: e62c78ae328308c4da3e360ea37dbf50, type: 3}
+  oneDollar: {fileID: 1873497969233460491, guid: 6fa1761568e33e84eb05287643ecc9ea,
+    type: 3}
+  fiveDollar: {fileID: 2568470230763150162, guid: e4c7f7f562d0ed34481837c896a1ee70,
+    type: 3}
+  tenDollar: {fileID: 8957419694435249564, guid: fe0b6c049d73c024a8fed8593e664e44,
+    type: 3}
+  twentyDollar: {fileID: 5479893015168346257, guid: 939f9c4fee5dd5846ac3742494b1eb0e,
+    type: 3}
+  fiftyDollar: {fileID: 4291710641846697247, guid: 84b6b4aae8b29924393fa1a019c10b7b,
+    type: 3}
 --- !u!1 &7649307207491915491
 GameObject:
   m_ObjectHideFlags: 0

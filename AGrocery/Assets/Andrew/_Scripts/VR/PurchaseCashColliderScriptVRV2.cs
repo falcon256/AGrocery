@@ -8,14 +8,19 @@ using System;
 
 public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
 {
-
+  public GameObject penny;
+  public GameObject nickel;
+  public GameObject dime;
+  public GameObject quarter;
   public GameObject oneDollar;
   public GameObject fiveDollar;
   public GameObject tenDollar;
   public GameObject twentyDollar;
   public GameObject fiftyDollar;
   public GameObject changeSpawner;
+  private ChangeCalculator changeCalculator;
 
+  
   private GameObject change;
 
   public MoneyData moneyData;
@@ -100,6 +105,7 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
     product1CountTextBox = GameObject.FindWithTag("Product1CountText");
     money = GameObject.FindWithTag("Money");
     allMoney = GameObject.FindGameObjectsWithTag("Money");
+    changeCalculator = new ChangeCalculator();
    
   }
 
@@ -126,10 +132,11 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
   IEnumerator PaymentReceived()
   {
     yield return new WaitForSeconds(5f);
-
+ 
     payScreenScript.mainText.text = ("Thank You! \n Have a nice day!");
     payScreenScript.itemizedText.text = String.Empty;
     payScreenScript.audioSource2.PlayOneShot(payScreenScript.clip6);
+  
     StartCoroutine("ReturnToMain");
    
   }
@@ -137,6 +144,7 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
   IEnumerator ReturnToMain()
   {
     yield return new WaitForSeconds(payScreenScript.clip6.length + 2f);
+   
     payScreenScript.Reset();
   }
 
@@ -219,11 +227,50 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
             changeAmount = Convert.ToDecimal(moneyValue) - total;
             payScreenScript.outputTotalText.text = $"{0:c}";
             payScreenScript.changeText.text = "CHANGE: " + $"{changeAmount:c}";
-            change = Instantiate(oneDollar);
-            change.transform.position = changeSpawner.transform.position;
+           
+            var expectedChange = changeCalculator.MakeChange(changeAmount);
+      
 
-            StartCoroutine("PaymentReceived");
+            foreach (var amt in expectedChange)
+            {
+              switch (amt)
+              {
+                case 50:
+                  Instantiate(fiftyDollar, changeSpawner.transform.position,Quaternion.identity);
+                  break;
+                case 20:
+                  Instantiate(twentyDollar, changeSpawner.transform.position, Quaternion.identity);
+                  break;
+                case 10:
+                  Instantiate(tenDollar, changeSpawner.transform.position, Quaternion.identity);
+                  break;
+                case 5:
+                  Instantiate(fiveDollar, changeSpawner.transform.position, Quaternion.identity);
+                  break;
+                case 1:
+                  Instantiate(oneDollar, changeSpawner.transform.position, Quaternion.identity);
+                  break;
+                case .25m:
+                  Instantiate(quarter, changeSpawner.transform.position, Quaternion.identity);
+                  break;
+                case .10m:
+                  Instantiate(dime, changeSpawner.transform.position, Quaternion.identity);
+                  break;
+                case .05m:
+                  Instantiate(nickel, changeSpawner.transform.position, Quaternion.identity);
+                  break;
+                case .01m:
+                  Instantiate(penny, changeSpawner.transform.position, Quaternion.identity);
+                  break;
+                default:
+                  break;
+              }
+            }
+              StartCoroutine("PaymentReceived");
           }
+
+        
+         
         }
     
       
