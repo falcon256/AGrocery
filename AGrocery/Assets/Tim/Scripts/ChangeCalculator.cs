@@ -21,10 +21,10 @@ public class ChangeCalculator : MonoBehaviour
       {
 
 
-        if (totalChange - values[i] > 0)
+        if (totalChange - values[i] >= 0)
         {
 
-          while (totalChange - values[i] > 0)
+          while (totalChange - values[i] >= 0)
           {
             totalChange -= values[i];
             actualChange.Add(values[i]);
