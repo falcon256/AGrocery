@@ -89,7 +89,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5d88c880a7f3b6b43bd0201c29d5897e, type: 2}
+  - {fileID: 2100000, guid: 6e676b0c1d7d4704dba89c5d61397787, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,7 +127,6 @@ GameObject:
   - component: {fileID: -8011992644943844398}
   - component: {fileID: 8068074464621900875}
   - component: {fileID: 3207023975805067538}
-  - component: {fileID: 8299494074776009813}
   - component: {fileID: -3563889456266079664}
   - component: {fileID: -5061786052705475175}
   m_Layer: 9
@@ -312,19 +311,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &8299494074776009813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4455014884189817783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &-3563889456266079664
 MonoBehaviour:
   m_ObjectHideFlags: 0

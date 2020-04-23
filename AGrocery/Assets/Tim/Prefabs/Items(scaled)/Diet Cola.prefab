@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 2751023549753874303}
   - component: {fileID: 2051079959201501245}
   - component: {fileID: 6343286332950946731}
-  - component: {fileID: 5711752985707867752}
   - component: {fileID: 4205304509629942306}
   - component: {fileID: 1604658695735640463}
   m_Layer: 9
@@ -202,19 +201,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &5711752985707867752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6195775100415224485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &4205304509629942306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,17 +337,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3191843991455854740, guid: 96d1f595a77898f488c6e555e4ff4cf3,
         type: 3}
-    - target: {fileID: 7435551800186991515, guid: 9e584e15ea976294fbe960235f747041,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9d3676695ffae11498ef8128c8b5dcd8, type: 2}
     - target: {fileID: 8093292015617663650, guid: 9e584e15ea976294fbe960235f747041,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -2721331549007201028, guid: 96d1f595a77898f488c6e555e4ff4cf3,
         type: 3}
+    - target: {fileID: 7435551800186991515, guid: 9e584e15ea976294fbe960235f747041,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d3676695ffae11498ef8128c8b5dcd8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e584e15ea976294fbe960235f747041, type: 3}
 --- !u!4 &8712324693799409788 stripped

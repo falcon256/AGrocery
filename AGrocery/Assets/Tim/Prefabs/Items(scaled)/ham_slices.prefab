@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2096781951559125700}
   - component: {fileID: 1722870574046760222}
   - component: {fileID: 4023978833400580689}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: polySurface2_polySurface2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 6785296314318094768}
   - component: {fileID: 4634472765330564450}
   - component: {fileID: 1345062001779716436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCylinder51_pCylinder51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 3191752852900475717}
   - component: {fileID: 300910389106377920}
   - component: {fileID: 7952405054578304443}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCube3_pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,11 +246,11 @@ GameObject:
   - component: {fileID: 2498097389344362299}
   - component: {fileID: 6627997904555286256}
   - component: {fileID: -281224830234675807}
-  - component: {fileID: 8750984057803537297}
   - component: {fileID: 4536858459447708499}
   - component: {fileID: -6431590669618000944}
-  m_Layer: 0
-  m_Name: ham_slices
+  - component: {fileID: 8589594033003780499}
+  m_Layer: 9
+  m_Name: Ham_slices
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,19 +358,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &8750984057803537297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5875767329341853980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &4536858459447708499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,3 +391,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8589594033003780499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5875767329341853980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

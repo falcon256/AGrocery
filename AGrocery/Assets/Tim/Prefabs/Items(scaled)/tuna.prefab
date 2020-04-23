@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1932459335263610589}
   - component: {fileID: 1854042080498745226}
   - component: {fileID: 1467795000487320449}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCylinder9_pCylinder9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 5887050764391889218}
   - component: {fileID: 5092404325409815291}
   - component: {fileID: 6446174289206144557}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCylinder10_pCylinder10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,15 +166,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7350734415003045448}
   - component: {fileID: 3476332213557861486}
-  - component: {fileID: 4188765577818956519}
   - component: {fileID: 8159500720043149145}
   - component: {fileID: 2067250220391309504}
   - component: {fileID: 4389195117776390898}
   - component: {fileID: 1298380445690986073}
   - component: {fileID: 123130670882766907}
-  - component: {fileID: -4769393788200399067}
-  m_Layer: 0
-  m_Name: tuna
+  m_Layer: 9
+  m_Name: Tuna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,19 +254,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &4188765577818956519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5789473913791069275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
 --- !u!114 &8159500720043149145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,20 +324,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.19903705, y: 0.07353601, z: 0.19903705}
   m_Center: {x: 0, y: 0.216031, z: -0.26654956}
---- !u!114 &-4769393788200399067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5789473913791069275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []

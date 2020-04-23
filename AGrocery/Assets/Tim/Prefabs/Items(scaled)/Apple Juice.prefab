@@ -18,8 +18,7 @@ GameObject:
   - component: {fileID: -2923553518119998873}
   - component: {fileID: 8057422469560652629}
   - component: {fileID: -128115220878239215}
-  - component: {fileID: -5551837788898319354}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Apple Juice
   m_TagString: Product
   m_Icon: {fileID: 0}
@@ -53,8 +52,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 1.1, z: 1.1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.29278728, y: 0.7471685, z: 0.68484056}
+  m_Center: {x: -0.01603854, y: -0.13084756, z: 0.01728976}
 --- !u!65 &-15441701243861561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66,8 +65,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.29278728, y: 0.7471685, z: 0.68484056}
+  m_Center: {x: -0.01603854, y: -0.13084756, z: 0.01728976}
 --- !u!114 &609904483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,18 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 906cb9f476fa11147b0bbfb9293002cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-5551837788898319354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533470993969070085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf13e0720970dc479f9e847fc04b65d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &681356664230644396
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +231,7 @@ GameObject:
   - component: {fileID: 5456914039082376611}
   - component: {fileID: 4130473570602552120}
   - component: {fileID: 1446634003983833874}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +312,7 @@ GameObject:
   - component: {fileID: 169249811881362223}
   - component: {fileID: 3467797416629968124}
   - component: {fileID: 6588821705359865556}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,17 +517,17 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -5102530947620581811, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5232488858435980449, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4c186e49a1f3f924a9a0f78d116f1ade,
         type: 3}
