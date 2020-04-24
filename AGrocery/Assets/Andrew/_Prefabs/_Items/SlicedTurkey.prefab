@@ -94,7 +94,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &3607423269825652206
 MonoBehaviour:
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dimensions: {x: 0, y: 0, z: 0}
   positioningOffset: {x: 0, y: 0.5, z: 0}
-  category: 4
+  category: 5
   price: 1.98
   density: 1
   hasBeenScanned: 0
@@ -256,21 +256,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: -3677303357541569106, guid: 2ce39fefb289a334ab3b6c5a50ad78b7,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 92912f3730a545343851459e93eaddee, type: 2}
-    - target: {fileID: 1545593644084576836, guid: 2ce39fefb289a334ab3b6c5a50ad78b7,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 07f971b199304654297e8a68c900f3ce, type: 2}
     - target: {fileID: 3459213752614762817, guid: 2ce39fefb289a334ab3b6c5a50ad78b7,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9fafd9e538af3af4bb452e0003d0e48b, type: 2}
+    - target: {fileID: 1545593644084576836, guid: 2ce39fefb289a334ab3b6c5a50ad78b7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 07f971b199304654297e8a68c900f3ce, type: 2}
+    - target: {fileID: -3677303357541569106, guid: 2ce39fefb289a334ab3b6c5a50ad78b7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 92912f3730a545343851459e93eaddee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ce39fefb289a334ab3b6c5a50ad78b7, type: 3}
 --- !u!4 &8176827841951499523 stripped

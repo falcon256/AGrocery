@@ -11,9 +11,13 @@ public class CameraControlVR : MonoBehaviour
 
     public GameObject askForHelpMenuCanvas;
 
+    public GameObject difficultyMenuCanvas;
+
     public GameObject eventSystem;
 
     public GameObject beveragesButton;
+
+    public GameObject easyButton;
 
     //public GameObject moneyCanvas;
     //public GameObject checkoutCounterCam;
@@ -29,11 +33,13 @@ public class CameraControlVR : MonoBehaviour
 
         employee = GameObject.FindWithTag("Employee");
 
-        askForHelpMenuCanvas = GameObject.FindWithTag("AskMenuCanvas");
+        //askForHelpMenuCanvas = GameObject.FindWithTag("AskMenuCanvas");
 
         eventSystem = GameObject.FindWithTag("EventSystem");
 
-        beveragesButton = GameObject.FindWithTag("BeveragesButton");
+        //beveragesButton = GameObject.FindWithTag("BeveragesButton");
+
+        //easyButton = GameObject.FindWithTag("EasyButton");
 
         //moneyCanvas = GameObject.FindWithTag("MoneyCanvas");
 
@@ -42,10 +48,10 @@ public class CameraControlVR : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Oculus_CrossPlatform_Button3"))
-        {
-            eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(beveragesButton);
-        }
+        //if (Input.GetButtonDown("Oculus_CrossPlatform_Button3"))
+        //{
+        //    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(beveragesButton);
+        //}
 
         //if (checkoutCounterCanvasHidden)
         //{
@@ -61,7 +67,15 @@ public class CameraControlVR : MonoBehaviour
     {
         if (player.gameObject.tag == "Employee")
         {
+            askForHelpMenuCanvas.SetActive(true);
             askForHelpMenuCanvas.GetComponent<Canvas>().enabled = true;
+            eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(beveragesButton);
+        }
+
+        if (player.gameObject.tag == "ShoppingList" && difficultyMenuCanvas != null)
+        {
+            difficultyMenuCanvas.SetActive(true);
+            eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(easyButton);
         }
 
         //if (player.gameObject.tag == "CheckoutCounter")
@@ -73,11 +87,20 @@ public class CameraControlVR : MonoBehaviour
         //    }
         //}
     }
+
+    //void OnTriggerStay(Collider player)
+    //{
+    //    if (player.gameObject.tag == "Employee")
+    //    {
+    //        askForHelpMenuCanvas.GetComponent<Canvas>().enabled = false;
+    //    }
+    //}
+
     void OnTriggerExit(Collider player)
     {
         if (player.gameObject.tag == "Employee")
         {
-            askForHelpMenuCanvas.GetComponent<Canvas>().enabled = false;
+            askForHelpMenuCanvas.SetActive(false);
         }
 
         //if (player.gameObject.tag == "CheckoutCounter")

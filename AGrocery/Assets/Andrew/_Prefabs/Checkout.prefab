@@ -2532,6 +2532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14bc68a820704ce439c61c4ce972aa13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  difficultyChooseVR: {fileID: 0}
   productData: {fileID: 0}
   player: {fileID: 0}
   playerHand: {fileID: 0}
@@ -2552,6 +2553,8 @@ MonoBehaviour:
   totalMoneyCheckoutText: {fileID: 0}
   notificationTextBox: {fileID: 0}
   notificationText: {fileID: 0}
+  shoppingListTextObject: {fileID: 0}
+  shoppingListText: {fileID: 0}
   scanningProduct: 0
   payScreen: {fileID: 8679170890503236282}
   productTotal: 0
@@ -2559,6 +2562,7 @@ MonoBehaviour:
   productName: 
   total: 0
   newTotal: 0
+  numItemsScanned: 0
 --- !u!1 &7226745141895281723
 GameObject:
   m_ObjectHideFlags: 0

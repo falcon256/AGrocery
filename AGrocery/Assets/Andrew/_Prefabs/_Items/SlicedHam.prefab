@@ -94,7 +94,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &7534687873561370561
 MonoBehaviour:
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dimensions: {x: 0, y: 0, z: 0}
   positioningOffset: {x: 0, y: 0.5, z: 0}
-  category: 4
+  category: 5
   price: 1.98
   density: 1
   hasBeenScanned: 0
@@ -261,16 +261,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 92912f3730a545343851459e93eaddee, type: 2}
-    - target: {fileID: 1545593644084576836, guid: 5d1be415a0e99aa4c8ec7fb75fa22afb,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5cddb36b0ba0d1349abbe2f9c3a838d3, type: 2}
     - target: {fileID: 3459213752614762817, guid: 5d1be415a0e99aa4c8ec7fb75fa22afb,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ab31e3403cc34b348b65897831a97846, type: 2}
+    - target: {fileID: 1545593644084576836, guid: 5d1be415a0e99aa4c8ec7fb75fa22afb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5cddb36b0ba0d1349abbe2f9c3a838d3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d1be415a0e99aa4c8ec7fb75fa22afb, type: 3}
 --- !u!4 &2352102831741140266 stripped

@@ -82,11 +82,11 @@ public class HelpChooseVR : MonoBehaviour
 
         employee = GameObject.FindWithTag("Employee");
 
-        askForHelpMenuCanvas = GameObject.FindWithTag("AskMenuCanvas");
+        //askForHelpMenuCanvas = GameObject.FindWithTag("AskMenuCanvas");
 
         eventSystem = GameObject.FindWithTag("EventSystem");
 
-        beveragesButton = GameObject.FindWithTag("BeveragesButton");
+        //beveragesButton = GameObject.FindWithTag("BeveragesButton");
 
         //Time.timeScale = 0;
 
@@ -282,10 +282,11 @@ public class HelpChooseVR : MonoBehaviour
     }
     public void checkDistance()
     {
-        askForHelpMenuCanvas.GetComponent<Canvas>().enabled = false;
+        askForHelpMenuCanvas.GetComponent<Canvas>().enabled = false;  
         if (employee.transform.position == movePoint1.transform.position || employee.transform.position == movePoint2.transform.position || employee.transform.position == movePoint3.transform.position || employee.transform.position == movePoint4.transform.position || employee.transform.position == movePoint5.transform.position || employee.transform.position == movePoint6.transform.position || employee.transform.position == movePoint7.transform.position || employee.transform.position == movePoint8.transform.position || employee.transform.position == movePoint9.transform.position)
         {
-            resetMoveToPoints();            
+            resetMoveToPoints();
+                      
         }
         noHelpChosen = false;
     }
@@ -376,7 +377,7 @@ public class HelpChooseVR : MonoBehaviour
     public void closeAskMenu()
     {
         //Time.timeScale = 1;
-        askForHelpMenuCanvas.GetComponent<Canvas>().enabled = false;
+        askForHelpMenuCanvas.SetActive(false);
     }
 
 }

@@ -1,5 +1,56 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7307327107128810399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2872003894651574741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bf6e1c4e5b40854ba02b5b01b16d0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAnims: {fileID: 0}
+  player: {fileID: 0}
+  employee: {fileID: 0}
+  askForHelpMenuCanvas: {fileID: 0}
+  mainScreenCanvas: {fileID: 0}
+  eventSystem: {fileID: 0}
+  beveragesButton: {fileID: 0}
+  movePoint1: {fileID: 0}
+  movePoint2: {fileID: 0}
+  movePoint3: {fileID: 0}
+  movePoint4: {fileID: 0}
+  movePoint5: {fileID: 0}
+  movePoint6: {fileID: 0}
+  movePoint7: {fileID: 0}
+  movePoint8: {fileID: 0}
+  movePoint9: {fileID: 0}
+  movePoint10: {fileID: 0}
+  movePoint11: {fileID: 0}
+  movePoint12: {fileID: 0}
+  walkSpeed: 5
+  noHelpChosen: 0
+  moveToBeverages: 0
+  moveToBeverages2: 0
+  moveToBoxDinners: 0
+  moveToBread: 0
+  moveToCannedFood: 0
+  moveToCereal: 0
+  moveToDairy: 0
+  moveToDairy2: 0
+  moveToFrozenFood: 0
+  moveToFrozenTreats: 0
+  moveToMeat: 0
+  moveToMeat2: 0
+  moveToPaperProducts: 0
+  moveToPersonalCare: 0
+  moveToProduce: 0
+  moveToSnacks: 0
+  moveToWine: 0
+  movingToLocation: 0
 --- !u!1 &7696343717452525980
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,57 +201,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7307327107128810399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2872003894651574741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bf6e1c4e5b40854ba02b5b01b16d0e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerAnims: {fileID: 0}
-  player: {fileID: 0}
-  employee: {fileID: 0}
-  askForHelpMenuCanvas: {fileID: 0}
-  mainScreenCanvas: {fileID: 0}
-  eventSystem: {fileID: 0}
-  beveragesButton: {fileID: 0}
-  movePoint1: {fileID: 0}
-  movePoint2: {fileID: 0}
-  movePoint3: {fileID: 0}
-  movePoint4: {fileID: 0}
-  movePoint5: {fileID: 0}
-  movePoint6: {fileID: 0}
-  movePoint7: {fileID: 0}
-  movePoint8: {fileID: 0}
-  movePoint9: {fileID: 0}
-  movePoint10: {fileID: 0}
-  movePoint11: {fileID: 0}
-  movePoint12: {fileID: 0}
-  walkSpeed: 5
-  noHelpChosen: 0
-  moveToBeverages: 0
-  moveToBeverages2: 0
-  moveToBoxDinners: 0
-  moveToBread: 0
-  moveToCannedFood: 0
-  moveToCereal: 0
-  moveToDairy: 0
-  moveToDairy2: 0
-  moveToFrozenFood: 0
-  moveToFrozenTreats: 0
-  moveToMeat: 0
-  moveToMeat2: 0
-  moveToPaperProducts: 0
-  moveToPersonalCare: 0
-  moveToProduce: 0
-  moveToSnacks: 0
-  moveToWine: 0
-  movingToLocation: 0
 --- !u!1 &7696343719506565720
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,6 +499,16 @@ PrefabInstance:
       propertyPath: movePoint12
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7699758670774560350, guid: 2e96a929e17e74e4287910679a560703,
+        type: 3}
+      propertyPath: askForHelpMenuCanvas
+      value: 
+      objectReference: {fileID: 7696343719506565720}
+    - target: {fileID: 7699758670774560350, guid: 2e96a929e17e74e4287910679a560703,
+        type: 3}
+      propertyPath: beveragesButton
+      value: 
+      objectReference: {fileID: 7696343717756923144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e96a929e17e74e4287910679a560703, type: 3}
 --- !u!224 &7696343718465671565 stripped
@@ -689,11 +699,27 @@ PrefabInstance:
       propertyPath: movePoint12
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7707171954825034318, guid: 2d8b5bef7aa322847a0cfc68e5723ed2,
+        type: 3}
+      propertyPath: askForHelpMenuCanvas
+      value: 
+      objectReference: {fileID: 7696343719506565720}
+    - target: {fileID: 7707171954825034318, guid: 2d8b5bef7aa322847a0cfc68e5723ed2,
+        type: 3}
+      propertyPath: beveragesButton
+      value: 
+      objectReference: {fileID: 7696343717756923144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8b5bef7aa322847a0cfc68e5723ed2, type: 3}
 --- !u!224 &7696343717756923145 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7707171954825034306, guid: 2d8b5bef7aa322847a0cfc68e5723ed2,
+    type: 3}
+  m_PrefabInstance: {fileID: 16756400038811467}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7696343717756923144 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7707171954825034307, guid: 2d8b5bef7aa322847a0cfc68e5723ed2,
     type: 3}
   m_PrefabInstance: {fileID: 16756400038811467}
   m_PrefabAsset: {fileID: 0}
@@ -879,6 +905,16 @@ PrefabInstance:
       propertyPath: movePoint12
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7689358843601776903, guid: 3a8d06703c0b7a1459a4d1fa10693d7c,
+        type: 3}
+      propertyPath: askForHelpMenuCanvas
+      value: 
+      objectReference: {fileID: 7696343719506565720}
+    - target: {fileID: 7689358843601776903, guid: 3a8d06703c0b7a1459a4d1fa10693d7c,
+        type: 3}
+      propertyPath: beveragesButton
+      value: 
+      objectReference: {fileID: 7696343717756923144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a8d06703c0b7a1459a4d1fa10693d7c, type: 3}
 --- !u!224 &7696343718233591254 stripped
@@ -1069,6 +1105,16 @@ PrefabInstance:
       propertyPath: movePoint12
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2450923561091243428, guid: 0cdf66e61a1f3bb4ea718c8b5af24059,
+        type: 3}
+      propertyPath: askForHelpMenuCanvas
+      value: 
+      objectReference: {fileID: 7696343719506565720}
+    - target: {fileID: 2450923561091243428, guid: 0cdf66e61a1f3bb4ea718c8b5af24059,
+        type: 3}
+      propertyPath: beveragesButton
+      value: 
+      objectReference: {fileID: 7696343717756923144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cdf66e61a1f3bb4ea718c8b5af24059, type: 3}
 --- !u!224 &2648788193314363532 stripped
@@ -1259,6 +1305,16 @@ PrefabInstance:
       propertyPath: movePoint12
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7488836393904048701, guid: 5e3fca027a8ac8e4494094076b431dec,
+        type: 3}
+      propertyPath: askForHelpMenuCanvas
+      value: 
+      objectReference: {fileID: 7696343719506565720}
+    - target: {fileID: 7488836393904048701, guid: 5e3fca027a8ac8e4494094076b431dec,
+        type: 3}
+      propertyPath: beveragesButton
+      value: 
+      objectReference: {fileID: 7696343717756923144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e3fca027a8ac8e4494094076b431dec, type: 3}
 --- !u!224 &7696343719024909514 stripped
@@ -1449,6 +1505,16 @@ PrefabInstance:
       propertyPath: movePoint12
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2024571509543941515, guid: b293433c950ac264dbec6aeee44c6c0b,
+        type: 3}
+      propertyPath: askForHelpMenuCanvas
+      value: 
+      objectReference: {fileID: 7696343719506565720}
+    - target: {fileID: 2024571509543941515, guid: b293433c950ac264dbec6aeee44c6c0b,
+        type: 3}
+      propertyPath: beveragesButton
+      value: 
+      objectReference: {fileID: 7696343717756923144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b293433c950ac264dbec6aeee44c6c0b, type: 3}
 --- !u!224 &3427210618371826496 stripped
@@ -1639,6 +1705,16 @@ PrefabInstance:
       propertyPath: movePoint12
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3036221357705037706, guid: 5fe06cbac49e0674f89d62b5e2a81587,
+        type: 3}
+      propertyPath: askForHelpMenuCanvas
+      value: 
+      objectReference: {fileID: 7696343719506565720}
+    - target: {fileID: 3036221357705037706, guid: 5fe06cbac49e0674f89d62b5e2a81587,
+        type: 3}
+      propertyPath: beveragesButton
+      value: 
+      objectReference: {fileID: 7696343717756923144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fe06cbac49e0674f89d62b5e2a81587, type: 3}
 --- !u!224 &7696343718059149173 stripped
@@ -1829,6 +1905,16 @@ PrefabInstance:
       propertyPath: movePoint12
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3001331864533954161, guid: c159ff6724454b2439a219af695b6bf5,
+        type: 3}
+      propertyPath: askForHelpMenuCanvas
+      value: 
+      objectReference: {fileID: 7696343719506565720}
+    - target: {fileID: 3001331864533954161, guid: c159ff6724454b2439a219af695b6bf5,
+        type: 3}
+      propertyPath: beveragesButton
+      value: 
+      objectReference: {fileID: 7696343717756923144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c159ff6724454b2439a219af695b6bf5, type: 3}
 --- !u!224 &7696343718814520679 stripped
@@ -2019,6 +2105,16 @@ PrefabInstance:
       propertyPath: movePoint12
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8773972622131036597, guid: f7783cf347f72c64d8e59b5e52dc4058,
+        type: 3}
+      propertyPath: askForHelpMenuCanvas
+      value: 
+      objectReference: {fileID: 7696343719506565720}
+    - target: {fileID: 8773972622131036597, guid: f7783cf347f72c64d8e59b5e52dc4058,
+        type: 3}
+      propertyPath: beveragesButton
+      value: 
+      objectReference: {fileID: 7696343717756923144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7783cf347f72c64d8e59b5e52dc4058, type: 3}
 --- !u!224 &4330077398578100791 stripped
@@ -2209,6 +2305,16 @@ PrefabInstance:
       propertyPath: movePoint12
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3562328535813990021, guid: fd4de7cb88b7a3d42a6515011136b26e,
+        type: 3}
+      propertyPath: askForHelpMenuCanvas
+      value: 
+      objectReference: {fileID: 7696343719506565720}
+    - target: {fileID: 3562328535813990021, guid: fd4de7cb88b7a3d42a6515011136b26e,
+        type: 3}
+      propertyPath: beveragesButton
+      value: 
+      objectReference: {fileID: 7696343717756923144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd4de7cb88b7a3d42a6515011136b26e, type: 3}
 --- !u!224 &7696343718400011372 stripped
@@ -2399,6 +2505,16 @@ PrefabInstance:
       propertyPath: movePoint12
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3803458684333921326, guid: f3002d1e5165e4049b9798ea017814b9,
+        type: 3}
+      propertyPath: askForHelpMenuCanvas
+      value: 
+      objectReference: {fileID: 7696343719506565720}
+    - target: {fileID: 3803458684333921326, guid: f3002d1e5165e4049b9798ea017814b9,
+        type: 3}
+      propertyPath: beveragesButton
+      value: 
+      objectReference: {fileID: 7696343717756923144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3002d1e5165e4049b9798ea017814b9, type: 3}
 --- !u!224 &7696343719456850497 stripped
@@ -2921,6 +3037,16 @@ PrefabInstance:
       propertyPath: movePoint12
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1293051763560476311, guid: 6cf1f92cf72aaaf42972031a698d2c34,
+        type: 3}
+      propertyPath: askForHelpMenuCanvas
+      value: 
+      objectReference: {fileID: 7696343719506565720}
+    - target: {fileID: 1293051763560476311, guid: 6cf1f92cf72aaaf42972031a698d2c34,
+        type: 3}
+      propertyPath: beveragesButton
+      value: 
+      objectReference: {fileID: 7696343717756923144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cf1f92cf72aaaf42972031a698d2c34, type: 3}
 --- !u!224 &7696343718728764974 stripped
@@ -3111,6 +3237,16 @@ PrefabInstance:
       propertyPath: movePoint12
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1695223474104959403, guid: 8720d58f50fd2e34790975d85dc39f35,
+        type: 3}
+      propertyPath: askForHelpMenuCanvas
+      value: 
+      objectReference: {fileID: 7696343719506565720}
+    - target: {fileID: 1695223474104959403, guid: 8720d58f50fd2e34790975d85dc39f35,
+        type: 3}
+      propertyPath: beveragesButton
+      value: 
+      objectReference: {fileID: 7696343717756923144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8720d58f50fd2e34790975d85dc39f35, type: 3}
 --- !u!224 &7696343717533047974 stripped
@@ -3301,6 +3437,16 @@ PrefabInstance:
       propertyPath: movePoint12
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1547851409035350539, guid: 1b911616f7c8f704caeb09a96dad6118,
+        type: 3}
+      propertyPath: askForHelpMenuCanvas
+      value: 
+      objectReference: {fileID: 7696343719506565720}
+    - target: {fileID: 1547851409035350539, guid: 1b911616f7c8f704caeb09a96dad6118,
+        type: 3}
+      propertyPath: beveragesButton
+      value: 
+      objectReference: {fileID: 7696343717756923144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b911616f7c8f704caeb09a96dad6118, type: 3}
 --- !u!224 &7696343717482562671 stripped
