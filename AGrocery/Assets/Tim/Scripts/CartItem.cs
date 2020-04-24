@@ -29,14 +29,14 @@ public class CartItem : MonoBehaviour
     {
       otherGameObject = other.gameObject;
       isCartItem = true;
-
+      gameObject.transform.parent = other.transform;
 
       if (isCartItem == true)
       {
 
         timer += Time.deltaTime;
-        gameObject.transform.parent = other.transform;
-        if (characterController.isGrounded == true && characterController.velocity.magnitude > .02f && other.GetComponent<ShoppingCart>().isGrabbed == true)
+        //gameObject.transform.parent = other.transform;
+        if (characterController.isGrounded == true && characterController.velocity.magnitude > .001f && other.GetComponent<ShoppingCart>().isGrabbed == true)
         {
        
           rb.constraints = RigidbodyConstraints.FreezeAll;
@@ -76,12 +76,26 @@ public class CartItem : MonoBehaviour
   void Update()
   {
 
+   
+   
+
     if(otherGameObject != null)
     {
       if (otherGameObject.GetComponent<ShoppingCart>().isGrabbed == false && otherGameObject.GetComponent<ShoppingCart>().isDisabled == true)
       {
         rb.constraints = RigidbodyConstraints.None;
         gameObject.transform.parent = null;
+      }
+
+      if (otherGameObject.GetComponent<ShoppingCart>().isDisabled != true && isCartItem == true)
+      {
+        Physics.IgnoreLayerCollision(10, 12, true);
+        Physics.IgnoreLayerCollision(10, 9, true);
+      }
+      else
+      {
+        Physics.IgnoreLayerCollision(10, 12, false);
+        Physics.IgnoreLayerCollision(10, 9, false);
       }
     }
 
