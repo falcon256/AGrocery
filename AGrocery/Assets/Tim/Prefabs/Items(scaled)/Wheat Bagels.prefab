@@ -9,15 +9,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8649039190949514980}
+  - component: {fileID: 6577145519890114439}
+  - component: {fileID: 4678854471457589838}
   - component: {fileID: 9183975392043810514}
-  - component: {fileID: -8397395564349888520}
-  - component: {fileID: 6399427382233960846}
   - component: {fileID: -544309080142510023}
   - component: {fileID: 6276881606795122758}
   - component: {fileID: -8758935355670940916}
+  - component: {fileID: -8397395564349888520}
+  - component: {fileID: 6399427382233960846}
   - component: {fileID: -2034741076933947233}
-  - component: {fileID: 4678854471457589838}
-  - component: {fileID: 6577145519890114439}
+  - component: {fileID: -1721242765837761845}
   m_Layer: 9
   m_Name: Wheat Bagels
   m_TagString: Untagged
@@ -40,6 +41,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6577145519890114439
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362793970698911091}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13544856, y: 0.14517178, z: 0.3289241}
+  m_Center: {x: -0.0037026987, y: 0.0016129066, z: 0.16390583}
+--- !u!65 &4678854471457589838
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362793970698911091}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13544856, y: 0.14517178, z: 0.3289241}
+  m_Center: {x: -0.0037026987, y: 0.0016129066, z: 0.16390583}
 --- !u!54 &9183975392043810514
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -56,30 +83,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-8397395564349888520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362793970698911091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6399427382233960846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362793970698911091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 906cb9f476fa11147b0bbfb9293002cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-544309080142510023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,10 +132,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dimensions: {x: 0, y: 0, z: 0}
   positioningOffset: {x: 0, y: 0.5, z: 0}
-  category: 10
-  price: 0
+  category: 8
+  price: 3.99
   density: 1
   hasBeenScanned: 0
+--- !u!114 &-8397395564349888520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362793970698911091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6399427382233960846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362793970698911091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cb9f476fa11147b0bbfb9293002cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!108 &-2034741076933947233
 Light:
   m_ObjectHideFlags: 0
@@ -193,32 +220,24 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!65 &4678854471457589838
-BoxCollider:
+--- !u!114 &-1721242765837761845
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8362793970698911091}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.13544856, y: 0.14517178, z: 0.3289241}
-  m_Center: {x: -0.0037026987, y: 0.0016129066, z: 0.16390583}
---- !u!65 &6577145519890114439
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362793970698911091}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.13544856, y: 0.14517178, z: 0.3289241}
-  m_Center: {x: -0.0037026987, y: 0.0016129066, z: 0.16390583}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6280a809688e2843a592f8f5ed50fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerHand: {fileID: 0}
+  totalMoneyTextBox: {fileID: 0}
+  totalMoneyText: {fileID: 0}
+  closeToProduct: 0
+  holdingProduct: 0
 --- !u!1001 &1458231759910742178
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,17 +11,16 @@ GameObject:
   - component: {fileID: 1106857461739125836}
   - component: {fileID: 6247151895416571860}
   - component: {fileID: 407300962423433067}
-  - component: {fileID: 4834893297963690395}
+  - component: {fileID: 6480608807713155538}
+  - component: {fileID: 1001557819013760695}
   - component: {fileID: 4562692733142147500}
   - component: {fileID: 921345951624254418}
   - component: {fileID: 4249500998398668426}
   - component: {fileID: 2218063911797123882}
   - component: {fileID: -6656787245066052547}
-  - component: {fileID: 8387285781385777172}
-  - component: {fileID: 1001557819013760695}
-  - component: {fileID: 6480608807713155538}
+  - component: {fileID: 8413854113970429463}
   m_Layer: 9
-  m_Name: WineBottle3
+  m_Name: Cabernet-Sauvignon
   m_TagString: Product
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,20 +67,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.48986623, y: 1.5426892, z: 0.6140658}
   m_Center: {x: -0.0514505, y: 0.117377765, z: -0.031696934}
---- !u!114 &4834893297963690395
+--- !u!54 &6480608807713155538
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5708139343930344262}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1001557819013760695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5708139343930344262}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbc2fefdfeb072f40ab77f8b054816c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerHand: {fileID: 0}
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!114 &4562692733142147500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +220,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &8387285781385777172
+--- !u!114 &8413854113970429463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,43 +229,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5708139343930344262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3e7b91b315d24481d8608ccf478ad, type: 3}
+  m_Script: {fileID: 11500000, guid: f6280a809688e2843a592f8f5ed50fcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToPlayer: 0
---- !u!114 &1001557819013760695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5708139343930344262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
---- !u!54 &6480608807713155538
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5708139343930344262}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  player: {fileID: 0}
+  playerHand: {fileID: 0}
+  totalMoneyTextBox: {fileID: 0}
+  totalMoneyText: {fileID: 0}
+  closeToProduct: 0
+  holdingProduct: 0
 --- !u!1001 &1272038766965041581
 PrefabInstance:
   m_ObjectHideFlags: 0

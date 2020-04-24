@@ -11,11 +11,14 @@ GameObject:
   - component: {fileID: 8569713658298720036}
   - component: {fileID: 8967809283664266255}
   - component: {fileID: 5461227091154569494}
-  - component: {fileID: -8707271421867313333}
   - component: {fileID: -690140317778797995}
+  - component: {fileID: -8707271421867313333}
+  - component: {fileID: 6701410715230794927}
   - component: {fileID: 2846828027466411652}
-  - component: {fileID: 5083836284850684289}
   - component: {fileID: 7986028074576320298}
+  - component: {fileID: 574806155582756076}
+  - component: {fileID: 5083836284850684289}
+  - component: {fileID: 3757279845765144375}
   m_Layer: 9
   m_Name: Cereal4
   m_TagString: Product
@@ -64,6 +67,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &-690140317778797995
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3928976881644232750}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!114 &-8707271421867313333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,22 +100,24 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
---- !u!54 &-690140317778797995
-Rigidbody:
+--- !u!114 &6701410715230794927
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3928976881644232750}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a7708e76601b4ea829921c33bc624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
+  m_materialColorField: 
 --- !u!114 &2846828027466411652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +136,30 @@ MonoBehaviour:
   price: 1.98
   density: 1
   hasBeenScanned: 0
+--- !u!114 &7986028074576320298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3928976881644232750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &574806155582756076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3928976881644232750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cb9f476fa11147b0bbfb9293002cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!108 &5083836284850684289
 Light:
   m_ObjectHideFlags: 0
@@ -175,7 +220,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &7986028074576320298
+--- !u!114 &3757279845765144375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,9 +229,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3928976881644232750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
+  m_Script: {fileID: 11500000, guid: f6280a809688e2843a592f8f5ed50fcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerHand: {fileID: 0}
+  totalMoneyTextBox: {fileID: 0}
+  totalMoneyText: {fileID: 0}
+  closeToProduct: 0
+  holdingProduct: 0
 --- !u!1 &9190787997919806002
 GameObject:
   m_ObjectHideFlags: 0

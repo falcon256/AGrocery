@@ -9,16 +9,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9215831679087216784}
-  - component: {fileID: 6249787107721402956}
-  - component: {fileID: 1956506836088462668}
-  - component: {fileID: 2500485776555676790}
   - component: {fileID: 162652606}
   - component: {fileID: 162652605}
+  - component: {fileID: 1380070752239393639}
+  - component: {fileID: 501882995159235756}
+  - component: {fileID: 3421116369554978607}
+  - component: {fileID: 2500485776555676790}
   - component: {fileID: -4806878467476566105}
   - component: {fileID: -5098623581194186240}
   - component: {fileID: -2304735617285617281}
-  - component: {fileID: 501882995159235756}
-  - component: {fileID: 1380070752239393639}
+  - component: {fileID: 423703859695189511}
   m_Layer: 9
   m_Name: Grapes
   m_TagString: Product
@@ -41,56 +41,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6249787107721402956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4579611714187442074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6280a809688e2843a592f8f5ed50fcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerHand: {fileID: 0}
-  totalMoneyTextBox: {fileID: 0}
-  totalMoneyText: {fileID: 0}
-  closeToProduct: 0
-  holdingProduct: 0
---- !u!114 &1956506836088462668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4579611714187442074}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbc2fefdfeb072f40ab77f8b054816c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerHand: {fileID: 0}
---- !u!114 &2500485776555676790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4579611714187442074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deaccf319afcf874199b6fa29acf4945, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dimensions: {x: 0, y: 0, z: 0}
-  positioningOffset: {x: 0, y: 0.5, z: 0}
-  category: 2
-  price: 2.48
-  density: 1
-  hasBeenScanned: 0
 --- !u!135 &162652606
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -117,6 +67,75 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.36651945
   m_Center: {x: -0.23, y: -0.31999996, z: 0.96}
+--- !u!54 &1380070752239393639
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579611714187442074}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &501882995159235756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579611714187442074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
+--- !u!114 &3421116369554978607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579611714187442074}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a7708e76601b4ea829921c33bc624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
+  m_materialColorField: 
+--- !u!114 &2500485776555676790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579611714187442074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deaccf319afcf874199b6fa29acf4945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dimensions: {x: 0, y: 0, z: 0}
+  positioningOffset: {x: 0, y: 0.5, z: 0}
+  category: 2
+  price: 2.48
+  density: 1
+  hasBeenScanned: 0
 --- !u!114 &-4806878467476566105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +220,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &501882995159235756
+--- !u!114 &423703859695189511
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,30 +229,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4579611714187442074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Script: {fileID: 11500000, guid: f6280a809688e2843a592f8f5ed50fcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
---- !u!54 &1380070752239393639
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4579611714187442074}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  player: {fileID: 0}
+  playerHand: {fileID: 0}
+  totalMoneyTextBox: {fileID: 0}
+  totalMoneyText: {fileID: 0}
+  closeToProduct: 0
+  holdingProduct: 0
 --- !u!1001 &7115419899540097174
 PrefabInstance:
   m_ObjectHideFlags: 0

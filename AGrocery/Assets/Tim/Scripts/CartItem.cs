@@ -89,8 +89,8 @@ public class CartItem : MonoBehaviour
 
       if (otherGameObject.GetComponent<ShoppingCart>().isDisabled != true && isCartItem == true)
       {
-        Physics.IgnoreLayerCollision(10, 12, true);
-        Physics.IgnoreLayerCollision(10, 9, true);
+        //Physics.IgnoreLayerCollision(10, 12, true);
+       // Physics.IgnoreLayerCollision(10, 9, true);
       }
       else
       {

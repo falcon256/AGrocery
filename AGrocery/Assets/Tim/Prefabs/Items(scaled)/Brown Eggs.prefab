@@ -294,14 +294,14 @@ GameObject:
   - component: {fileID: 508109648835230517}
   - component: {fileID: 2663890676022685207}
   - component: {fileID: 4302092773712386409}
-  - component: {fileID: 2231118848133739217}
+  - component: {fileID: 4019763081377595833}
+  - component: {fileID: 810673364422950138}
   - component: {fileID: 6269918112741570445}
   - component: {fileID: 3148718354130640504}
   - component: {fileID: 2536062969253300755}
   - component: {fileID: 4494616570940151872}
   - component: {fileID: 4914973104277056463}
-  - component: {fileID: 810673364422950138}
-  - component: {fileID: 4019763081377595833}
+  - component: {fileID: -788423426094589683}
   m_Layer: 9
   m_Name: Brown Eggs
   m_TagString: Product
@@ -351,20 +351,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.70815545, y: 0.32706112, z: 2.4928892}
   m_Center: {x: 0.009997319, y: -0.31487358, z: 0.039180398}
---- !u!114 &2231118848133739217
+--- !u!54 &4019763081377595833
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5144818909413671999}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &810673364422950138
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5144818909413671999}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbc2fefdfeb072f40ab77f8b054816c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerHand: {fileID: 0}
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!114 &6269918112741570445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,7 +504,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &810673364422950138
+--- !u!114 &-788423426094589683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -494,30 +513,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5144818909413671999}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Script: {fileID: 11500000, guid: f6280a809688e2843a592f8f5ed50fcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
---- !u!54 &4019763081377595833
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5144818909413671999}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  player: {fileID: 0}
+  playerHand: {fileID: 0}
+  totalMoneyTextBox: {fileID: 0}
+  totalMoneyText: {fileID: 0}
+  closeToProduct: 0
+  holdingProduct: 0
 --- !u!1 &5303377097315898720
 GameObject:
   m_ObjectHideFlags: 0

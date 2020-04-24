@@ -497,13 +497,14 @@ GameObject:
   - component: {fileID: 8748705824627734056}
   - component: {fileID: 3354095674307894569}
   - component: {fileID: -8078844622560470766}
-  - component: {fileID: 202926917}
   - component: {fileID: -8992185955601052417}
+  - component: {fileID: 202926917}
   - component: {fileID: -3242896973761707457}
   - component: {fileID: -5952138679008296873}
-  - component: {fileID: -8275738013332314084}
   - component: {fileID: -7908417604807150447}
   - component: {fileID: 3434219615083138627}
+  - component: {fileID: -8275738013332314084}
+  - component: {fileID: 1414601086550028716}
   m_Layer: 9
   m_Name: Cranberry Juice
   m_TagString: Product
@@ -553,6 +554,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.29278728, y: 0.7471685, z: 0.68484056}
   m_Center: {x: -0.01603854, y: -0.13084756, z: 0.01728976}
+--- !u!54 &-8992185955601052417
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7016849146375535850}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &202926917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,22 +587,6 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
---- !u!54 &-8992185955601052417
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7016849146375535850}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &-3242896973761707457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,6 +623,30 @@ MonoBehaviour:
   price: 2.98
   density: 1
   hasBeenScanned: 0
+--- !u!114 &-7908417604807150447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7016849146375535850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3434219615083138627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7016849146375535850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cb9f476fa11147b0bbfb9293002cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!108 &-8275738013332314084
 Light:
   m_ObjectHideFlags: 0
@@ -682,7 +707,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &-7908417604807150447
+--- !u!114 &1414601086550028716
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -691,21 +716,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7016849146375535850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
+  m_Script: {fileID: 11500000, guid: f6280a809688e2843a592f8f5ed50fcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3434219615083138627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7016849146375535850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 906cb9f476fa11147b0bbfb9293002cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerHand: {fileID: 0}
+  totalMoneyTextBox: {fileID: 0}
+  totalMoneyText: {fileID: 0}
+  closeToProduct: 0
+  holdingProduct: 0
 --- !u!1001 &7491262593327848987
 PrefabInstance:
   m_ObjectHideFlags: 0
