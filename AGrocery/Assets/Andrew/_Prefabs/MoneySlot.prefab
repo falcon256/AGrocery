@@ -105,7 +105,7 @@ Transform:
   m_GameObject: {fileID: 5259216999772128049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.272, y: 3.035, z: 0.219}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2.142941, z: 1.9999161}
   m_Children:
   - {fileID: 6836381929929205681}
   m_Father: {fileID: 0}
@@ -122,7 +122,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 750, y: 500, z: 500}
+  m_Size: {x: 500, y: 250, z: 250}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3382851889035654728
 MonoBehaviour:
@@ -136,6 +136,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf104fc375738934aab4c13645c13849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  penny: {fileID: 6164709852813259184, guid: 7eb7fa59bf1cabb4b9a4abe2fd5b1a4e, type: 3}
+  nickel: {fileID: 5732910260159238440, guid: 4f2a481dd56867b4a9d1d55fb25cbc22, type: 3}
+  dime: {fileID: 406100705349003668, guid: 8a53ed9d78ffd4e4992e407ec1f36d3f, type: 3}
+  quarter: {fileID: 1176226514703645860, guid: 7d17828139ad30e49a037e21487f5b56, type: 3}
+  oneDollar: {fileID: 7132830149974432204, guid: 33353c5fec098064b8b342f1c1f2655d,
+    type: 3}
+  fiveDollar: {fileID: 4091598238630425292, guid: 97fb5bd1cc6aa574dbfe36876b212338,
+    type: 3}
+  tenDollar: {fileID: 1649345933769284279, guid: f7a3074b203a3994bb88f9442c9f1823,
+    type: 3}
+  twentyDollar: {fileID: 6337017800905042341, guid: 588bec83ad3d80a42a5446ff5947b90c,
+    type: 3}
+  fiftyDollar: {fileID: 2612952531469034452, guid: 5888c2eec30189e498b32a7ae985e199,
+    type: 3}
+  changeSpawner: {fileID: 0}
   moneyData: {fileID: 0}
   player: {fileID: 0}
   playerHand: {fileID: 0}

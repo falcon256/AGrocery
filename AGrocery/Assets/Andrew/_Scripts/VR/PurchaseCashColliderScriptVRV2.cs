@@ -7,6 +7,17 @@ using System.Text;
 
 public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
 {
+    public GameObject penny;
+    public GameObject nickel;
+    public GameObject dime;
+    public GameObject quarter;
+    public GameObject oneDollar;
+    public GameObject fiveDollar;
+    public GameObject tenDollar;
+    public GameObject twentyDollar;
+    public GameObject fiftyDollar;
+    public GameObject changeSpawner;
+
     public MoneyData moneyData;
 
     public GameObject player;
@@ -48,6 +59,7 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
 
     public bool usingCash = false;
     public bool costReached = false;
+    public bool dispensingChange = false;
 
     public StringBuilder outputTotalText;
     public StringBuilder itemizedText;
@@ -65,7 +77,12 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
     float newTotal;
 
     float currentOffer;
-    float change;
+
+    float changeAmount;
+    float changeStartingAmount;
+    float changeCount;
+
+    float changeTextAmount;
 
     // Start is called before the first frame update
     void Start()
@@ -102,7 +119,68 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
         {
             scannable = true;
         }
-    }
+
+        if(dispensingChange)
+        {
+                if (changeAmount > 50)
+                {
+                    Instantiate(fiftyDollar, changeSpawner.transform.position, Quaternion.identity);
+                    changeAmount = changeAmount - 50;
+                    changeCount = changeCount + 50;
+                    
+                }
+                if (changeAmount > 20)
+                {
+                    Instantiate(twentyDollar, changeSpawner.transform.position, Quaternion.identity);
+                    changeAmount = changeAmount - 20;
+                    changeCount = changeCount + 20;
+
+            }
+                if (changeAmount > 10)
+                {
+                    Instantiate(tenDollar, changeSpawner.transform.position, Quaternion.identity);
+                    changeAmount = changeAmount - 10;
+                    changeCount = changeCount + 5;
+            }
+                if (changeAmount > 5)
+                {
+                    Instantiate(fiveDollar, changeSpawner.transform.position, Quaternion.identity);
+                    changeAmount = changeAmount - 5;
+                    changeCount = changeCount + 5;
+            }
+                if (changeAmount > 1)
+                {
+                    Instantiate(oneDollar, changeSpawner.transform.position, Quaternion.identity);
+                    changeAmount = changeAmount - 1;
+                    changeCount = changeCount + 1;
+            }
+                if (changeAmount > 0.25)
+                {
+                    Instantiate(quarter, changeSpawner.transform.position, Quaternion.identity);
+                    changeAmount = changeAmount - 0.25f;
+                    changeCount = changeCount + 0.25f;
+            }
+                if (changeAmount > 0.10)
+                {
+                    Instantiate(dime, changeSpawner.transform.position, Quaternion.identity);
+                    changeAmount = changeAmount - 0.10f;
+                    changeCount = changeCount + 0.10f;
+            }
+                if (changeAmount > 0.05)
+                {
+                    Instantiate(nickel, changeSpawner.transform.position, Quaternion.identity);
+                    changeAmount = changeAmount - 0.05f;
+                    changeCount = changeCount + 0.05f;
+            }
+                if (changeAmount > 0.01)
+                {
+                    Instantiate(penny, changeSpawner.transform.position, Quaternion.identity);
+                    changeAmount = changeAmount - 0.01f;
+                    changeCount = changeCount + 0.01f;
+            }
+            }
+        }
+
     void OnTriggerEnter(Collider collidedMoney)
     {
 
@@ -148,17 +226,29 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
                     scannable = false;
                     scanTimer = 0;
 
-                    Destroy(currentMoney);
+                    Destroy(collidedMoney.gameObject);
                     if (currentOffer >= total && scanner.GetComponent<ScannerColliderScriptVRV2>().numItemsScanned > 0)
                     {                       
                         costReached = true;
-                        change = currentOffer - total;
+                        changeTextAmount = currentOffer - total;
+                        changeStartingAmount = currentOffer - total;
+                        changeAmount = currentOffer - total;
                         outputTotalText.Clear();
-                        outputTotalText.Append(change.ToString("c"));
+                        outputTotalText.Append(changeTextAmount.ToString("c"));
                         payScreen.outputTotalText.text = "Your Change is " + outputTotalText.ToString();
+
+                        if(changeAmount > 0)
+                        {
+                            dispensingChange = true;
+                        }
+                        if (changeAmount <= 0 && changeCount == changeStartingAmount)
+                        {
+                            dispensingChange = false;
+                        }
+
+                          }     
+                        }
                     }
                 }
             }
-        }       
-    }        
-}
+        }      

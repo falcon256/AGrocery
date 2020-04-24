@@ -132,7 +132,7 @@ public class ScannerColliderScriptVRV2 : MonoBehaviour
         if (collidedProduct.gameObject.tag == "Product")
         {
             if (collidedProduct.GetComponent<ProductData>().hasBeenScanned == false)
-            {
+            {               
                 payScreen = GetComponentInParent<PayScreen>();
 
                 scanningProduct = true;
