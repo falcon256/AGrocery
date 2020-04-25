@@ -215,7 +215,7 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
             scanTimer = 0;
 
 
-
+            
 
 
            
@@ -229,38 +229,41 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
             payScreenScript.changeText.text = "CHANGE: " + $"{changeAmount:c}";
            
             var expectedChange = changeCalculator.MakeChange(changeAmount);
-      
+            
 
             foreach (var amt in expectedChange)
             {
+              float zPos = UnityEngine.Random.Range(changeSpawner.transform.position.z - .03f, changeSpawner.transform.position.z - .06f);
+              float yPos = UnityEngine.Random.Range(changeSpawner.transform.position.y + .001f, changeSpawner.transform.position.y + .022f);
+              Vector3 changePos = new Vector3(changeSpawner.transform.position.x, yPos, zPos);
               switch (amt)
               {
                 case 50:
-                  Instantiate(fiftyDollar, changeSpawner.transform.position,Quaternion.identity);
+                  Instantiate(fiftyDollar, changePos, Quaternion.identity);
                   break;
                 case 20:
-                  Instantiate(twentyDollar, changeSpawner.transform.position, Quaternion.identity);
+                  Instantiate(twentyDollar, changePos, Quaternion.identity);
                   break;
                 case 10:
-                  Instantiate(tenDollar, changeSpawner.transform.position, Quaternion.identity);
+                  Instantiate(tenDollar, changePos, Quaternion.identity);
                   break;
                 case 5:
-                  Instantiate(fiveDollar, changeSpawner.transform.position, Quaternion.identity);
+                  Instantiate(fiveDollar, changePos, Quaternion.identity);
                   break;
                 case 1:
-                  Instantiate(oneDollar, changeSpawner.transform.position, Quaternion.identity);
+                  Instantiate(oneDollar, changePos, Quaternion.identity);
                   break;
                 case .25m:
-                  Instantiate(quarter, changeSpawner.transform.position, Quaternion.identity);
+                  Instantiate(quarter, changePos, Quaternion.identity);
                   break;
                 case .10m:
-                  Instantiate(dime, changeSpawner.transform.position, Quaternion.identity);
+                  Instantiate(dime, changePos, Quaternion.identity);
                   break;
                 case .05m:
-                  Instantiate(nickel, changeSpawner.transform.position, Quaternion.identity);
+                  Instantiate(nickel, changePos, Quaternion.identity);
                   break;
                 case .01m:
-                  Instantiate(penny, changeSpawner.transform.position, Quaternion.identity);
+                  Instantiate(penny, changePos, Quaternion.identity);
                   break;
                 default:
                   break;

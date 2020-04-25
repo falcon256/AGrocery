@@ -7,6 +7,8 @@ public class CartItem : MonoBehaviour
 
 
   Rigidbody rb;
+
+
   bool isCartItem;
   CharacterController characterController;
   GameObject otherGameObject;
@@ -20,6 +22,9 @@ public class CartItem : MonoBehaviour
     rb = gameObject.GetComponent<Rigidbody>();
     characterController = GameObject.Find("OVRPlayerController").GetComponent<CharacterController>();
 
+
+
+
   }
   private void OnTriggerEnter(Collider other)
   {
@@ -30,7 +35,7 @@ public class CartItem : MonoBehaviour
       otherGameObject = other.gameObject;
       isCartItem = true;
       gameObject.transform.parent = other.transform;
-
+      gameObject.layer = 13;
       if (isCartItem == true)
       {
 
@@ -69,6 +74,7 @@ public class CartItem : MonoBehaviour
     if (other.gameObject.tag == "ShoppingCart")
     {
       isCartItem = false;
+      gameObject.layer = 9;
       timer = 0;
     }
   }
@@ -76,11 +82,14 @@ public class CartItem : MonoBehaviour
   void Update()
   {
 
-   
+    
    
 
     if(otherGameObject != null)
     {
+    
+
+
       if (otherGameObject.GetComponent<ShoppingCart>().isGrabbed == false && otherGameObject.GetComponent<ShoppingCart>().isDisabled == true)
       {
         rb.constraints = RigidbodyConstraints.None;
@@ -89,13 +98,14 @@ public class CartItem : MonoBehaviour
 
       if (otherGameObject.GetComponent<ShoppingCart>().isDisabled != true && isCartItem == true)
       {
-        //Physics.IgnoreLayerCollision(10, 12, true);
-       // Physics.IgnoreLayerCollision(10, 9, true);
+
+  
+        Physics.IgnoreLayerCollision(10, 13, true);
+        
       }
       else
       {
-        Physics.IgnoreLayerCollision(10, 12, false);
-        Physics.IgnoreLayerCollision(10, 9, false);
+        Physics.IgnoreLayerCollision(10, 13, false);
       }
     }
 
