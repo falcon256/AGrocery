@@ -17,13 +17,9 @@ public class DestroyOnCollisionMoney : MonoBehaviour
     }
     void OnTriggerEnter(Collider collidedProduct)
     {
-        if (collidedProduct.gameObject.tag == "Money")
+        if (collidedProduct.gameObject.tag == "MoneySlot")
         {
-            if (collidedProduct.GetComponent<ProductData>().hasBeenScanned == true)
-            {
-                Destroy(collidedProduct.gameObject);
-            }
-
+                Destroy(this.gameObject);
         }
     }
 }

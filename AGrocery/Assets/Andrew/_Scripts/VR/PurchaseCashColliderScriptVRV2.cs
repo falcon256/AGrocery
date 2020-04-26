@@ -17,6 +17,7 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
     public GameObject twentyDollar;
     public GameObject fiftyDollar;
     public GameObject changeSpawner;
+    public GameObject moneyZone;
 
     public MoneyData moneyData;
 
@@ -226,7 +227,6 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
                     scannable = false;
                     scanTimer = 0;
 
-                    Destroy(collidedMoney.gameObject);
                     if (currentOffer >= total && scanner.GetComponent<ScannerColliderScriptVRV2>().numItemsScanned > 0)
                     {                       
                         costReached = true;
@@ -249,6 +249,6 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
                           }     
                         }
                     }
-                }
+        }
             }
         }      

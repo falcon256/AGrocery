@@ -158,7 +158,7 @@ public class CustomHandV2 : MonoBehaviour
             }
         }
     }
-    
+
     public void UpdateLocation()
     {
         dollar.transform.localPosition = offset.position;
@@ -247,15 +247,15 @@ public class CustomHandV2 : MonoBehaviour
     {
         holdingDollar = true;
         dollar = Instantiate(quarter);
-        //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+        
     }
 
     private void DropMoney()
     {
         holdingDollar = false;
         dollar.transform.parent = null;
-        dollar.GetComponent<Rigidbody>().useGravity = true;
-        dollar.GetComponent<Rigidbody>().isKinematic = false;
-        dollar.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        //dollar.GetComponent<Rigidbody>().useGravity = true;
+        //dollar.GetComponent<Rigidbody>().isKinematic = false;
+        //dollar.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
     }
 }
