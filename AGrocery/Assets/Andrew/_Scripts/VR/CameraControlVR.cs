@@ -103,6 +103,11 @@ public class CameraControlVR : MonoBehaviour
             askForHelpMenuCanvas.SetActive(false);
         }
 
+        if (player.gameObject.tag == "ShoppingList" && difficultyMenuCanvas != null)
+        {
+            difficultyMenuCanvas.SetActive(false);
+        }
+
         //if (player.gameObject.tag == "CheckoutCounter")
         //{
         //    if (checkoutCounterCanvasShowing)

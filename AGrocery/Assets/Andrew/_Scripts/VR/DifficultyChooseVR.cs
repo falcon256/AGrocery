@@ -44,6 +44,8 @@ public class DifficultyChooseVR : MonoBehaviour
 
     public bool hardDifficulty = false;
 
+    public bool chooseItemsMode = false;
+
 
     //public GameObject moneySpawnButton;
 
@@ -162,6 +164,11 @@ public class DifficultyChooseVR : MonoBehaviour
     {
         resetDifficulty();
         hardDifficulty = true;
+    }
+
+    public void SetChooseItemsMode()
+    {
+        closeDifficultyMenu();
     }
 
     public void closeDifficultyMenu()

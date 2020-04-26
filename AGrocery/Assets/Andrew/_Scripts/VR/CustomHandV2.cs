@@ -10,6 +10,12 @@ public class CustomHandV2 : MonoBehaviour
     public GameObject tenDollar;
     public GameObject twentyDollar;
     public GameObject fiftyDollar;
+    public GameObject penny;
+    public GameObject nickel;
+    public GameObject dime;
+    public GameObject quarter;
+    public GameObject creditCard;
+
 
     public Text debug;
 
@@ -78,6 +84,56 @@ public class CustomHandV2 : MonoBehaviour
                     if (holdingDollar == false)
                     {
                         TakeMoneyFiftyDollar();
+                    }
+                }
+            }
+            if (other.name == "CreditCard")
+            {
+                if (RightIndexDown())
+                {
+                    if (holdingDollar == false)
+                    {
+                        TakeCreditCard();
+                    }
+                }
+            }
+            if (other.name == "Penny")
+            {
+                if (RightIndexDown())
+                {
+                    if (holdingDollar == false)
+                    {
+                        TakeMoneyPenny();
+                    }
+                }
+            }
+            if (other.name == "Nickel")
+            {
+                if (RightIndexDown())
+                {
+                    if (holdingDollar == false)
+                    {
+                        TakeMoneyNickel();
+                    }
+                }
+            }
+            if (other.name == "Dime")
+            {
+                if (RightIndexDown())
+                {
+                    if (holdingDollar == false)
+                    {
+                        TakeMoneyDime();
+                    }
+                }
+            }
+            if (other.name == "Quarter")
+            {
+                if (RightIndexDown())
+                {
+                    if (holdingDollar == false)
+                    {
+                        TakeMoneyQuarter();
                     }
                 }
             }
@@ -156,6 +212,41 @@ public class CustomHandV2 : MonoBehaviour
     {
         holdingDollar = true;
         dollar = Instantiate(fiftyDollar);
+        //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+    }
+
+    private void TakeCreditCard()
+    {
+        holdingDollar = true;
+        dollar = Instantiate(creditCard);
+        //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+    }
+
+    private void TakeMoneyPenny()
+    {
+        holdingDollar = true;
+        dollar = Instantiate(penny);
+        //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+    }
+
+    private void TakeMoneyNickel()
+    {
+        holdingDollar = true;
+        dollar = Instantiate(nickel);
+        //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+    }
+
+    private void TakeMoneyDime()
+    {
+        holdingDollar = true;
+        dollar = Instantiate(dime);
+        //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+    }
+
+    private void TakeMoneyQuarter()
+    {
+        holdingDollar = true;
+        dollar = Instantiate(quarter);
         //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
     }
 
