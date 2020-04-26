@@ -91,7 +91,7 @@ public class EditShoppingList : MonoBehaviour
             {
                 ProductData pd = product.GetComponent<ProductData>();
 
-                if (pd.category.ToString() == items[activeItemIndex])
+                if (pd.category.ToString() == items[activeItemIndex].ToString())
                 {
                     int productIndex = Random.Range(0, allProducts.Length);
                     currentProduct = allProducts[productIndex];
