@@ -58,6 +58,7 @@ public class CartItem : MonoBehaviour
   {
 
     isCartItem = true;
+   
     if (isCartItem && timer >= time )
     {
       rb.Sleep();

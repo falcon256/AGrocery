@@ -61,7 +61,7 @@ public class PlayerSound : MonoBehaviour
       if (footstepTimer > .5f)
       {
 
-        soundPlayer.volume = .1f;
+        soundPlayer.volume = .3f;
         soundPlayer.PlayOneShot(soundManager.footsteps);
 
 

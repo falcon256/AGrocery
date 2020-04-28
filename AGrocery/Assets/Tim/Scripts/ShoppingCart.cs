@@ -21,6 +21,7 @@ public class ShoppingCart : MonoBehaviour
   public bool isGrabbed;
   public bool isDisabled;
 
+
   float disabledTimer;
   float disabledTime = .0f;
 
@@ -55,21 +56,27 @@ public class ShoppingCart : MonoBehaviour
   {
     if (player.GetComponent<PlayerSound>().isMoving == true && isGrabbed == true)
     {
-
+     
       if (footstepTimer > .7f)
       {
-        soundPlayer.volume = .3f;
+        soundPlayer.volume = .5f;
         soundPlayer.PlayOneShot(soundManager.cartWheels);
 
 
 
         footstepTimer = 0;
       }
-
+    
 
 
 
     }
+    else
+    {
+      soundPlayer.Stop();
+    }
+
+  
    
 
     footstepTimer += Time.deltaTime;
@@ -82,9 +89,7 @@ public class ShoppingCart : MonoBehaviour
 
     GameObject rotateAnchor = GameObject.Find("TrackerAnchor");
 
- 
-
-
+   
     if (OVRInput.GetDown(OVRInput.Button.SecondaryThumbstick) == true)
     {
 
