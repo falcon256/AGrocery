@@ -477,7 +477,6 @@ GameObject:
   - component: {fileID: 4298763744851160485}
   - component: {fileID: 4298763744851160484}
   - component: {fileID: 4298763744851160486}
-  - component: {fileID: 4298763744851160489}
   - component: {fileID: 4298763744851160495}
   - component: {fileID: 4298763744851160494}
   m_Layer: 8
@@ -538,8 +537,8 @@ MonoBehaviour:
   BackAndSideDampen: 0.5
   JumpForce: 0.3
   RotationAmount: 1.5
-  RotationRatchet: 0
-  SnapRotation: 1
+  RotationRatchet: 15
+  SnapRotation: 0
   FixedSpeedSteps: 0
   HmdResetsY: 1
   HmdRotatesY: 0
@@ -595,23 +594,6 @@ MonoBehaviour:
   eventSystem: {fileID: 0}
   beveragesButton: {fileID: 0}
   easyButton: {fileID: 0}
---- !u!114 &4298763744851160489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4298763744851160480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b4cfee272ea4d941bb5029ddceba8f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerAnims: {fileID: 0}
-  walkSpeed: 5
-  runSpeed: 20
-  jumpHeight: 1
 --- !u!82 &4298763744851160495
 AudioSource:
   m_ObjectHideFlags: 0

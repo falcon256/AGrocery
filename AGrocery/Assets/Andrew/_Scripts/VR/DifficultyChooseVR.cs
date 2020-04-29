@@ -178,11 +178,4 @@ public class DifficultyChooseVR : MonoBehaviour
         //difficultyMenuCanvas.SetActive(false);
         noDifficultyChosen = false;
     }
-    public void closeDifficultyMenu2()
-    {
-        //Time.timeScale = 1;
-        Destroy(difficultyMenuCanvas);
-        //difficultyMenuCanvas.SetActive(false);
-        noDifficultyChosen = false;
-    }
 }

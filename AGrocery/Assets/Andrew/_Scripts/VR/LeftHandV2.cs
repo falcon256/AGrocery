@@ -34,6 +34,6 @@ public class LeftHandV2 : MonoBehaviour
 
     public bool LeftHandOpen()
     {
-        return OVRInput.Get(OVRInput.Button.PrimaryHandTrigger);
+        return OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger);
     }
 }
