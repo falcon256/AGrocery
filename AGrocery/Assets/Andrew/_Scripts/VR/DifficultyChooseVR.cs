@@ -94,12 +94,12 @@ public class DifficultyChooseVR : MonoBehaviour
     
     }
 
-    if (OVRInput.Get(OVRInput.RawButton.A) == true)
+   /* if (OVRInput.Get(OVRInput.RawButton.A) == true)
     {
 
       showShoppingList = !showShoppingList;
       ToggleShoppingList();
-    }
+    }*/
   
 
     if (easyDifficulty)
