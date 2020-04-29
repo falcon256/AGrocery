@@ -26,7 +26,7 @@ public class EditShoppingList : MonoBehaviour
         
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (OVRInput.GetDown(OVRInput.Button.Four))
         {
@@ -83,6 +83,7 @@ public class EditShoppingList : MonoBehaviour
     public void AddItem(int index)
     {
         GameObject[] allProducts = GameObject.FindGameObjectsWithTag("Product");
+        List<GameObject> products = new List<GameObject>();
         GameObject currentProduct;
 
         if (allProducts != null)
@@ -91,19 +92,22 @@ public class EditShoppingList : MonoBehaviour
             {
                 ProductData pd = product.GetComponent<ProductData>();
 
-                if (pd.category.ToString() == items[activeItemIndex].ToString())
+                if (pd.category.ToString() == items[index])
                 {
-                    int productIndex = Random.Range(0, allProducts.Length);
-                    currentProduct = allProducts[productIndex];
-
-                    listText.Clear();
-                    listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
-                    shoppingListText.text += listText.ToString();
-
-                    return;
+                    products.Add(product);
                 }
             }
         }
+
+        int rand = Random.Range(0, products.Count);
+
+        currentProduct = products[rand];
+
+        listText.Clear();
+        listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
+        shoppingListText.text += listText.ToString();
+
+        return;
     }
 
     public void SetActiveItem(int i)
