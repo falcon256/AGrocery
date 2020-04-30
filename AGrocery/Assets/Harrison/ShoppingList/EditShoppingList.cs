@@ -84,9 +84,10 @@ public class EditShoppingList : MonoBehaviour
     {
         GameObject[] allProducts = GameObject.FindGameObjectsWithTag("Product");
         GameObject currentProduct;
-
-        if (allProducts != null)
+       
+    if (allProducts != null)
         {
+            
             foreach (GameObject product in allProducts)
             {
                 ProductData pd = product.GetComponent<ProductData>();

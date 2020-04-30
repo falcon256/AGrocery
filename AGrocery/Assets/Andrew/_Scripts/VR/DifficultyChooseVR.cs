@@ -46,7 +46,9 @@ public class DifficultyChooseVR : MonoBehaviour
 
   public bool hardDifficulty = false;
 
-  public bool showShoppingList = false;
+  public bool showShoppingList;
+
+  public bool gameIsActive;
 
 
   //public GameObject moneySpawnButton;
@@ -66,12 +68,15 @@ public class DifficultyChooseVR : MonoBehaviour
     eventSystem = GameObject.FindWithTag("EventSystem");
     easyDifficultyButton = GameObject.FindWithTag("EasyModeButton");
 
+    if (showShoppingList == false)
+      shoppingList.SetActive(false);
+
     //product = productManager.GetComponent<ProductManager>().product;
     //products = productManager.GetComponent<ProductManager>().products;
 
     //shoppingListTextObject = GameObject.FindWithTag("shoppingListText");
     //shoppingListText = shoppingListTextObject.GetComponent<TMPro.TextMeshProUGUI>();
-    shoppingList.SetActive(false);
+    
 
 
     listText = new StringBuilder();
@@ -81,29 +86,61 @@ public class DifficultyChooseVR : MonoBehaviour
     noDifficultyChosen = true;
   }
 
+  private void FixedUpdate()
+  {
+   
+  
+     ToggleShoppingList();
+    
+    
+
+  }
+
+  private void ToggleShoppingList()
+  {
+    if (showShoppingList)
+    {
+
+      shoppingList.SetActive(true);
+
+
+    }
+    else
+    {
+
+      shoppingList.SetActive(false);
+
+    }
+  }
+
   void Update()
   {
-    //if (Input.GetButtonDown("Oculus_CrossPlatform_Button4") && noDifficultyChosen == true)
-    //{
-    //    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(easyDifficultyButton);
-    //}
+
+   
+   
 
     if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) == true && noDifficultyChosen == true)
     {
       eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(easyDifficultyButton);
+     
     
     }
 
-   /* if (OVRInput.Get(OVRInput.RawButton.A) == true)
-    {
 
-      showShoppingList = !showShoppingList;
-      ToggleShoppingList();
-    }*/
-  
+    if (OVRInput.GetDown(OVRInput.RawButton.B))
+    {
+      
+       showShoppingList = !showShoppingList;
+      
+     
+    
+    }
+
 
     if (easyDifficulty)
     {
+    
+      
       while (count < 3)
       {
         count++;
@@ -119,8 +156,11 @@ public class DifficultyChooseVR : MonoBehaviour
 
         listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
         shoppingListText.text = listText.ToString();
-        showShoppingList = false;
-        ToggleShoppingList();
+     
+     
+
+
+
 
 
       }
@@ -128,8 +168,10 @@ public class DifficultyChooseVR : MonoBehaviour
     }
     if (normalDifficulty)
     {
+     
       while (count < 6)
       {
+      
         count++;
         var objectsToFind = UnityEngine.Random.Range(0, products.Length);
 
@@ -143,14 +185,16 @@ public class DifficultyChooseVR : MonoBehaviour
 
         listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
         shoppingListText.text = listText.ToString();
-        showShoppingList = false;
-        ToggleShoppingList();
+   
+    
+
       }
       closeDifficultyMenu();
     }
 
     if (hardDifficulty)
     {
+      
       while (count < 9)
       {
         count++;
@@ -165,33 +209,15 @@ public class DifficultyChooseVR : MonoBehaviour
 
         listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
         shoppingListText.text = listText.ToString();
-        showShoppingList = false;
-        ToggleShoppingList();
+       
+   
+
       }
       closeDifficultyMenu();
     }
   }
 
-  private void ToggleShoppingList()
-  {
-    if(showShoppingList == false)
-    {
-  
-      shoppingList.SetActive(true);
-    
-    
-    }
-
-    if(showShoppingList == true)
-    {
-      
-      shoppingList.SetActive(false);
-    
-     
-    }
  
-
-  }
 
   public void resetDifficulty()
   {
@@ -228,6 +254,7 @@ public class DifficultyChooseVR : MonoBehaviour
   public void closeDifficultyMenu2()
   {
     //Time.timeScale = 1;
+   
     difficultyMenuCanvas.SetActive(false);
     noDifficultyChosen = false;
     SetNormalDifficulty();
