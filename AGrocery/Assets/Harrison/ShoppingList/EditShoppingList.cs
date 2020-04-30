@@ -15,6 +15,7 @@ public class EditShoppingList : MonoBehaviour
     private GameObject activeItem;
     private int activeItemIndex = 0;
     private StringBuilder listText;
+    private int shoppingListAmount = 0;
 
     private string[] items = new string[11] { "SNACKS", "DAIRY", "FRUITS", "VEGETABLES", "DRYGOODS", "MEAT", "FROZENGOODS", "HYGIENE", "BAKERY", "COFFEE", "OTHER" };
 
@@ -82,6 +83,11 @@ public class EditShoppingList : MonoBehaviour
 
     public void AddItem(int index)
     {
+        if (shoppingListAmount > 5)
+        {
+            return;
+        }
+
         GameObject[] allProducts = GameObject.FindGameObjectsWithTag("Product");
         List<GameObject> products = new List<GameObject>();
         GameObject currentProduct;
@@ -98,7 +104,7 @@ public class EditShoppingList : MonoBehaviour
                 }
             }
         }
-
+        
         int rand = Random.Range(0, products.Count);
 
         currentProduct = products[rand];
@@ -106,6 +112,7 @@ public class EditShoppingList : MonoBehaviour
         listText.Clear();
         listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
         shoppingListText.text += listText.ToString();
+        shoppingListAmount++;
 
         return;
     }
