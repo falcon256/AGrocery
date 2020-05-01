@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 1118886043971016281}
   - component: {fileID: 3660220880650914023}
   - component: {fileID: 3382851889035654728}
+  - component: {fileID: 8440239782954969938}
   m_Layer: 0
   m_Name: MoneySlot
   m_TagString: MoneySlot
@@ -151,6 +152,7 @@ MonoBehaviour:
   fiftyDollar: {fileID: 2612952531469034452, guid: 5888c2eec30189e498b32a7ae985e199,
     type: 3}
   changeSpawner: {fileID: 0}
+  moneyZone: {fileID: 0}
   moneyData: {fileID: 0}
   player: {fileID: 0}
   playerHand: {fileID: 0}
@@ -179,3 +181,15 @@ MonoBehaviour:
   productTotal: 0
   moneyValue: 0
   currencyType: 
+--- !u!114 &8440239782954969938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5259216999772128049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55990c15da0b10242be1a061ac0d3f66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

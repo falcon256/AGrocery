@@ -19,7 +19,7 @@ public class CreditCardValue : MonoBehaviour
     void Update()
     {
 
-        creditCardValue = PlayerMoneyHandler.PlayerMoney;
+        creditCardValue = PlayerMoneyHandlerVR.PlayerMoney;
 
         this.gameObject.GetComponent<MoneyData>().value = creditCardValue;
 

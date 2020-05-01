@@ -15,11 +15,14 @@ public class DestroyOnCollisionMoney : MonoBehaviour
     {
 
     }
-    void OnTriggerEnter(Collider collidedProduct)
+    void OnTriggerStay(Collider collidedMoney)
     {
-        if (collidedProduct.gameObject.tag == "MoneySlot")
+        if (collidedMoney.gameObject.tag == "Money")
         {
-                Destroy(this.gameObject);
+            if (collidedMoney.GetComponent<MoneyData>().hasBeenUsed == true)
+            {
+                collidedMoney.gameObject.SetActive(false);
+            }
         }
     }
 }

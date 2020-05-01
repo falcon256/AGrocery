@@ -519,7 +519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4059543813065475282
 Transform:
   m_ObjectHideFlags: 0
@@ -1515,7 +1515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7789328282964648501
 Transform:
   m_ObjectHideFlags: 0
@@ -3191,6 +3191,26 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2232341720417970531, guid: cda798dec48c82d4b9fb27d373023160,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232341720417970531, guid: cda798dec48c82d4b9fb27d373023160,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232341720417970531, guid: cda798dec48c82d4b9fb27d373023160,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232341720417970531, guid: cda798dec48c82d4b9fb27d373023160,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cda798dec48c82d4b9fb27d373023160, type: 3}
 --- !u!4 &4022795830821827739 stripped
@@ -3387,6 +3407,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoneySlot
       objectReference: {fileID: 0}
+    - target: {fileID: 5259216999772128049, guid: dfb0928f1956ea540b47cb8499f56302,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1118886043971016281, guid: dfb0928f1956ea540b47cb8499f56302,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3442,6 +3467,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 890384903158477365, guid: dfb0928f1956ea540b47cb8499f56302,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3382851889035654728, guid: dfb0928f1956ea540b47cb8499f56302,
         type: 3}
       propertyPath: scanner
@@ -3461,6 +3491,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186934901614777600, guid: dfb0928f1956ea540b47cb8499f56302,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186934901614777600, guid: dfb0928f1956ea540b47cb8499f56302,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186934901614777600, guid: dfb0928f1956ea540b47cb8499f56302,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186934901614777600, guid: dfb0928f1956ea540b47cb8499f56302,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfb0928f1956ea540b47cb8499f56302, type: 3}

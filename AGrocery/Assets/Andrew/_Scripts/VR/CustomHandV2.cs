@@ -16,6 +16,8 @@ public class CustomHandV2 : MonoBehaviour
     public GameObject quarter;
     public GameObject creditCard;
 
+    public GameObject playerMoneyTextBox;
+    public Text playerMoneyText;
 
     public Text debug;
 
@@ -25,13 +27,15 @@ public class CustomHandV2 : MonoBehaviour
 
     private void Start()
     {
+        playerMoneyTextBox = GameObject.FindWithTag("PlayerMoneyText");
+
         offset = GameObject.FindGameObjectWithTag("hand").transform;
         holdingDollar = false;
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "icon")
+        if (other.tag == "icon" && PlayerMoneyHandlerVR.PlayerMoney > 0)
         {
             if (other.name == "One")
             {
@@ -157,6 +161,10 @@ public class CustomHandV2 : MonoBehaviour
                 UpdateLocation();
             }
         }
+
+        playerMoneyText = playerMoneyTextBox.GetComponent<Text>();
+        playerMoneyText.text = "Player Money: " + PlayerMoneyHandlerVR.PlayerMoney.ToString("c");
+
     }
 
     public void UpdateLocation()
@@ -185,6 +193,8 @@ public class CustomHandV2 : MonoBehaviour
         holdingDollar = true;
         dollar = Instantiate(oneDollar);
         //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+        PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 1.00f;
     }
 
     private void TakeMoneyFiveDollar()
@@ -192,6 +202,8 @@ public class CustomHandV2 : MonoBehaviour
         holdingDollar = true;
         dollar = Instantiate(fiveDollar);
         //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+        
+        PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 5.00f;
     }
 
     private void TakeMoneyTenDollar()
@@ -199,6 +211,8 @@ public class CustomHandV2 : MonoBehaviour
         holdingDollar = true;
         dollar = Instantiate(tenDollar);
         //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+        PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 10.00f;
     }
 
     private void TakeMoneyTwentyDollar()
@@ -206,6 +220,8 @@ public class CustomHandV2 : MonoBehaviour
         holdingDollar = true;
         dollar = Instantiate(twentyDollar);
         //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+        PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 20.00f;
     }
 
     private void TakeMoneyFiftyDollar()
@@ -213,13 +229,15 @@ public class CustomHandV2 : MonoBehaviour
         holdingDollar = true;
         dollar = Instantiate(fiftyDollar);
         //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+        PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 50.00f;
     }
 
     private void TakeCreditCard()
     {
         holdingDollar = true;
         dollar = Instantiate(creditCard);
-        //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+        //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());        
     }
 
     private void TakeMoneyPenny()
@@ -227,6 +245,8 @@ public class CustomHandV2 : MonoBehaviour
         holdingDollar = true;
         dollar = Instantiate(penny);
         //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+        
+        PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 0.01f;
     }
 
     private void TakeMoneyNickel()
@@ -234,6 +254,8 @@ public class CustomHandV2 : MonoBehaviour
         holdingDollar = true;
         dollar = Instantiate(nickel);
         //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+        PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 0.05f;
     }
 
     private void TakeMoneyDime()
@@ -241,13 +263,17 @@ public class CustomHandV2 : MonoBehaviour
         holdingDollar = true;
         dollar = Instantiate(dime);
         //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+        PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 0.10f;
     }
 
     private void TakeMoneyQuarter()
     {
         holdingDollar = true;
         dollar = Instantiate(quarter);
-        
+        //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+        PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 0.25f;
     }
 
     private void DropMoney()

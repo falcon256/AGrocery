@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9138415713360833195}
   - component: {fileID: 6396857669804421289}
   - component: {fileID: 7613707793948630320}
-  - component: {fileID: 6486993739946205629}
+  - component: {fileID: -4663818124615193613}
   - component: {fileID: 8188225609939381999}
   m_Layer: 11
   m_Name: Dime
@@ -77,13 +77,13 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406100705349003668}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &6486993739946205629
-CapsuleCollider:
+--- !u!65 &-4663818124615193613
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,10 +92,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.05
-  m_Height: 0.01
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8188225609939381999
 MonoBehaviour:
   m_ObjectHideFlags: 0

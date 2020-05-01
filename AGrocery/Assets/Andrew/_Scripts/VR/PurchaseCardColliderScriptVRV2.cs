@@ -79,15 +79,18 @@ public class PurchaseCardColliderScriptVRV2 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {       
-        if (PlayerMoneyHandler.PlayerMoney >= 100)
+    {
+        if (PlayerMoneyHandlerVR.PlayerMoney >= 100)
         {
-            PlayerMoneyHandler.PlayerMoney = 100.00f;
+            PlayerMoneyHandlerVR.PlayerMoney = 100.00f;
         }
-        if (PlayerMoneyHandler.TotalCost <= 0.00f)
+        if (PlayerMoneyHandlerVR.PlayerMoney <= 0.00f)
         {
-            PlayerMoneyHandler.TotalCost = 0.00f;
+            PlayerMoneyHandlerVR.PlayerMoney = 0.00f;
         }
+
+        playerMoneyText = playerMoneyTextBox.GetComponent<Text>();
+        playerMoneyText.text = "Player Money: " + PlayerMoneyHandlerVR.PlayerMoney.ToString("c");
 
         scanTimer += Time.deltaTime;
 
@@ -101,7 +104,7 @@ public class PurchaseCardColliderScriptVRV2 : MonoBehaviour
     {
         if (collidedMoney.gameObject.tag == "Card")
         {
-            if (!costReached)
+            if (!costReached || costReached)
             {
                 payScreen = GetComponentInParent<PayScreen>();
                 scanner.GetComponent<ScannerColliderScriptVRV2>();
@@ -123,10 +126,7 @@ public class PurchaseCardColliderScriptVRV2 : MonoBehaviour
 
                 currentOffer = currentOffer + moneyValue;
 
-                PlayerMoneyHandler.PlayerMoney = PlayerMoneyHandler.PlayerMoney - total;
-
-                //playerMoneyText = playerMoneyTextBox.GetComponent<Text>();
-                //playerMoneyText.text = "Player Money: " + PlayerMoneyHandler.PlayerMoney.ToString("c");
+                PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - total;
 
                 outputTotalText.Clear();
                 outputTotalText.Append(newTotal.ToString("c"));
@@ -140,7 +140,7 @@ public class PurchaseCardColliderScriptVRV2 : MonoBehaviour
                     costReached = true;
                     payScreen.outputTotalText.text = "You paid with card. No change for you." + outputTotalText.ToString();
 
-                    selfCheckoutMainText.Append($"{currencyType} {PlayerMoneyHandler.PlayerMoney.ToString("c")} \n");
+                    selfCheckoutMainText.Append($"{currencyType} {PlayerMoneyHandlerVR.PlayerMoney.ToString("c")} \n");
                     payScreen.mainText.text = selfCheckoutMainText.ToString();
                 }
             }

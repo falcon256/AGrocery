@@ -21,7 +21,7 @@ public class DestroyOnCollisionProduct : MonoBehaviour
         {
             if (collidedProduct.GetComponent<ProductData>().hasBeenScanned == true)
             {
-                Destroy(collidedProduct.gameObject);
+                collidedProduct.gameObject.SetActive(false);
             }
 
         }

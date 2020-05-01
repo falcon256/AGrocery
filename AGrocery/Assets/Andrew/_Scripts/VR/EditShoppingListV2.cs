@@ -23,10 +23,10 @@ public class EditShoppingListV2 : MonoBehaviour
         SetActiveItem(0);
 
         listText = new StringBuilder();
-        
+
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (OVRInput.GetDown(OVRInput.Button.Four) || Input.GetKeyDown(KeyCode.Y))
         {
@@ -74,7 +74,8 @@ public class EditShoppingListV2 : MonoBehaviour
         if (addItemMenuOpen)
         {
             addItemPanel.SetActive(true);
-        } else
+        }
+        else
         {
             addItemPanel.SetActive(false);
         }
@@ -83,6 +84,7 @@ public class EditShoppingListV2 : MonoBehaviour
     public void AddItem(int index)
     {
         GameObject[] allProducts = GameObject.FindGameObjectsWithTag("Product");
+        List<GameObject> products = new List<GameObject>();
         GameObject currentProduct;
 
         if (allProducts != null)
@@ -91,26 +93,29 @@ public class EditShoppingListV2 : MonoBehaviour
             {
                 ProductData pd = product.GetComponent<ProductData>();
 
-                if (pd.category.ToString() == items[activeItemIndex].ToString())
+                if (pd.category.ToString() == items[index])
                 {
-                    int productIndex = Random.Range(0, allProducts.Length);
-                    currentProduct = allProducts[productIndex];
-
-                    listText.Clear();
-                    listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
-                    shoppingListText.text += listText.ToString();
-
-                    return;
+                    products.Add(product);
                 }
             }
         }
+
+        int rand = Random.Range(0, products.Count);
+
+        currentProduct = products[rand];
+
+        listText.Clear();
+        listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
+        shoppingListText.text += listText.ToString();
+
+        return;
     }
 
     public void SetActiveItem(int i)
     {
         if (activeItem != null)
         {
-            activeItem.GetComponent<Text>().color = Color.black; 
+            activeItem.GetComponent<Text>().color = Color.black;
         }
         activeItem = itemTypes[i];
         activeItem.GetComponent<Text>().color = Color.blue;

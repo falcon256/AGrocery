@@ -105,14 +105,6 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerMoneyHandler.PlayerMoney >= 100)
-        {
-            PlayerMoneyHandler.PlayerMoney = 100.00f;
-        }
-        if (PlayerMoneyHandler.TotalCost <= 0.00f)
-        {
-            PlayerMoneyHandler.TotalCost = 0.00f;
-        }
 
         scanTimer += Time.deltaTime;
 
@@ -123,57 +115,57 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
 
         if(dispensingChange)
         {
-                if (changeAmount > 50)
+                if (changeAmount >= 50)
                 {
                     Instantiate(fiftyDollar, changeSpawner.transform.position, Quaternion.identity);
                     changeAmount = changeAmount - 50;
                     changeCount = changeCount + 50;
                     
                 }
-                if (changeAmount > 20)
+                if (changeAmount >= 20)
                 {
                     Instantiate(twentyDollar, changeSpawner.transform.position, Quaternion.identity);
                     changeAmount = changeAmount - 20;
                     changeCount = changeCount + 20;
 
             }
-                if (changeAmount > 10)
+                if (changeAmount >= 10)
                 {
                     Instantiate(tenDollar, changeSpawner.transform.position, Quaternion.identity);
                     changeAmount = changeAmount - 10;
                     changeCount = changeCount + 5;
             }
-                if (changeAmount > 5)
+                if (changeAmount >= 5)
                 {
                     Instantiate(fiveDollar, changeSpawner.transform.position, Quaternion.identity);
                     changeAmount = changeAmount - 5;
                     changeCount = changeCount + 5;
             }
-                if (changeAmount > 1)
+                if (changeAmount >= 1)
                 {
                     Instantiate(oneDollar, changeSpawner.transform.position, Quaternion.identity);
                     changeAmount = changeAmount - 1;
                     changeCount = changeCount + 1;
             }
-                if (changeAmount > 0.25)
+                if (changeAmount >= 0.25)
                 {
                     Instantiate(quarter, changeSpawner.transform.position, Quaternion.identity);
                     changeAmount = changeAmount - 0.25f;
                     changeCount = changeCount + 0.25f;
             }
-                if (changeAmount > 0.10)
+                if (changeAmount >= 0.10)
                 {
                     Instantiate(dime, changeSpawner.transform.position, Quaternion.identity);
                     changeAmount = changeAmount - 0.10f;
                     changeCount = changeCount + 0.10f;
             }
-                if (changeAmount > 0.05)
+                if (changeAmount >= 0.05)
                 {
                     Instantiate(nickel, changeSpawner.transform.position, Quaternion.identity);
                     changeAmount = changeAmount - 0.05f;
                     changeCount = changeCount + 0.05f;
             }
-                if (changeAmount > 0.01)
+                if (changeAmount >= 0.01)
                 {
                     Instantiate(penny, changeSpawner.transform.position, Quaternion.identity);
                     changeAmount = changeAmount - 0.01f;
@@ -189,7 +181,7 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
         {
             if (collidedMoney.GetComponent<MoneyData>().hasBeenUsed == false)
             {
-                if (!costReached)
+                if (!costReached || costReached)
                 {
                     payScreen = GetComponentInParent<PayScreen>();
                     scanner.GetComponent<ScannerColliderScriptVRV2>();
@@ -214,11 +206,6 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
 
                     selfCheckoutMainText.Append($"{currencyType} {moneyValue.ToString("c")} {"Current Offer:" + currentOffer.ToString("c")} \n");
                     payScreen.mainText.text = selfCheckoutMainText.ToString();
-
-                    PlayerMoneyHandler.PlayerMoney = PlayerMoneyHandler.PlayerMoney - moneyValue;
-
-                    //playerMoneyText = playerMoneyTextBox.GetComponent<Text>();
-                    //playerMoneyText.text = "Player Money: " + PlayerMoneyHandler.PlayerMoney.ToString("c");
 
                     //outputTotalText.Clear();
                     //outputTotalText.Append(newTotal.ToString("c"));

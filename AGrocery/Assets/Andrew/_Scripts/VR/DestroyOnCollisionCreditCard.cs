@@ -15,11 +15,11 @@ public class DestroyOnCollisionCreditCard : MonoBehaviour
     {
 
     }
-    void OnTriggerEnter(Collider collidedProduct)
+    void OnTriggerEnter(Collider collidedCard)
     {
-        if (collidedProduct.gameObject.tag == "CardReader")
+        if (collidedCard.gameObject.tag == "Card")
         {
-                Destroy(this.gameObject);
+            collidedCard.gameObject.SetActive(false);
         }
     }
 }
