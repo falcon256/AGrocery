@@ -89,9 +89,6 @@ public class PurchaseCardColliderScriptVRV2 : MonoBehaviour
             PlayerMoneyHandlerVR.PlayerMoney = 0.00f;
         }
 
-        playerMoneyText = playerMoneyTextBox.GetComponent<Text>();
-        playerMoneyText.text = "Player Money: " + PlayerMoneyHandlerVR.PlayerMoney.ToString("c");
-
         scanTimer += Time.deltaTime;
 
         if (scanTimer > scanTime)
