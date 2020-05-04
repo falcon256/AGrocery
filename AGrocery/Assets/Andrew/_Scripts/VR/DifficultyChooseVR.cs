@@ -152,7 +152,7 @@ public class DifficultyChooseVR : MonoBehaviour
         currentProduct = products[productIndex];
         Debug.Log(currentProduct.name);
 
-        currentProduct.GetComponent<Light>().enabled = true;
+        //currentProduct.GetComponent<Light>().enabled = true;
 
         listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
         shoppingListText.text = listText.ToString();
@@ -181,7 +181,7 @@ public class DifficultyChooseVR : MonoBehaviour
         currentProduct = products[productIndex];
         Debug.Log(currentProduct.name);
 
-        currentProduct.GetComponent<Light>().enabled = true;
+        //currentProduct.GetComponent<Light>().enabled = true;
 
         listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
         shoppingListText.text = listText.ToString();
@@ -205,7 +205,7 @@ public class DifficultyChooseVR : MonoBehaviour
         productIndex = UnityEngine.Random.Range(0, products.Length);
         currentProduct = products[productIndex];
 
-        currentProduct.GetComponent<Light>().enabled = true;
+        //currentProduct.GetComponent<Light>().enabled = true;
 
         listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
         shoppingListText.text = listText.ToString();
