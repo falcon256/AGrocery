@@ -37,6 +37,7 @@ public class PayScreen : MonoBehaviour
   public AudioClip clip8;
 
   public decimal originalTotal;
+ 
 
 
 
@@ -72,6 +73,8 @@ public class PayScreen : MonoBehaviour
     cardSwipe.SetActive(false);
     cardInsert.SetActive(false);
 
+  
+
   }
 
   IEnumerator RemoveMainText()
@@ -84,7 +87,7 @@ public class PayScreen : MonoBehaviour
     if (itemizedText.text != String.Empty)
     {
      
-      originalTotal = scanner.GetComponent<ScannerColliderScriptVRV2>().newTotal;
+      originalTotal = scanner.GetComponentInChildren<ScannerColliderScriptVRV2>().newTotal;
       okButton.SetActive(false);
       creditButton.SetActive(true);
       cashButton.SetActive(true);
@@ -135,6 +138,6 @@ public class PayScreen : MonoBehaviour
     cardInsert.SetActive(false);
   }
 
- 
+
 
 }

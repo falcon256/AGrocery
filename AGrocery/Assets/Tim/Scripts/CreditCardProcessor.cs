@@ -29,6 +29,7 @@ public class CreditCardProcessor : MonoBehaviour
   public float processTimer;
   public bool isProcessing;
   public bool isConfirmed;
+  public bool isMain;
 
   //ScannerColliderScriptVR scanScript;
 
@@ -38,6 +39,12 @@ public class CreditCardProcessor : MonoBehaviour
     payScreenScript = GetComponentInParent<PayScreen>();
     audioSource1 = gameObject.GetComponent<AudioSource>();
     audioSourceOther = payScreenScript.audioSource2;
+
+    if(this.gameObject.tag == "CardReader")
+    {
+      isMain = true;
+    }
+
   }
   void Start()
   {
@@ -89,6 +96,16 @@ public class CreditCardProcessor : MonoBehaviour
 
         ProcessCreditPayment();
       }
+
+      if(isMain)
+      {
+        isProcessing = true;
+        creditCard.transform.rotation = Quaternion.Euler(0, 0, 0);
+        creditCard.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+        ProcessCreditPayment();
+
+      }
  
     }
   }
@@ -112,10 +129,19 @@ public class CreditCardProcessor : MonoBehaviour
   public void ProcessCreditPayment()
   {
 
-   
+   if(this.gameObject.tag == "CardReader")
+    {
+      audioSource1.mute = true;
+      audioSource1.PlayOneShot(clip5);
+      StartCoroutine("PaymentConfirmation");
+    }
+    else
+    {
+      audioSource1.PlayOneShot(clip5);
+      StartCoroutine("PaymentConfirmation");
+    }
 
-    audioSource1.PlayOneShot(clip5);
-    StartCoroutine("PaymentConfirmation");
+ 
 
   }
 

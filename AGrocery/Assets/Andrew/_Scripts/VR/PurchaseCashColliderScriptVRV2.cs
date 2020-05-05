@@ -220,7 +220,8 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
 
            
           }
-          if (Convert.ToDecimal(currentOffer) >= payScreenScript.originalTotal && scanner.GetComponent<ScannerColliderScriptVRV2>().numItemsScanned > 0)
+         // if (Convert.ToDecimal(currentOffer) >= payScreenScript.originalTotal &&
+          if (Convert.ToDecimal(currentOffer) >= newTotal && scanner.GetComponent<ScannerColliderScriptVRV2>().numItemsScanned > 0)
           {
 
             costReached = true;

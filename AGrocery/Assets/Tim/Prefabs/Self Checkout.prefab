@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4506183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.06, z: 0}
+  m_LocalPosition: {x: 0, y: 0.0012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6964531766341583700}
@@ -806,8 +806,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -57, y: 118}
-  m_SizeDelta: {x: 125, y: 140}
+  m_AnchoredPosition: {x: 5, y: 118}
+  m_SizeDelta: {x: 150, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &812837523
 CanvasRenderer:
@@ -1661,7 +1661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 22
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1680323761
 Transform:
   m_ObjectHideFlags: 0
@@ -2684,6 +2684,7 @@ MonoBehaviour:
   processTime: 3
   processTimer: 0
   isProcessing: 0
+  isConfirmed: 0
 --- !u!1 &3787919589205807841
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,6 +2852,7 @@ MonoBehaviour:
   processTime: 3
   processTimer: 0
   isProcessing: 0
+  isConfirmed: 0
 --- !u!82 &2109688514
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3683,20 +3685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8643553cbd8315749929f897fe869083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  penny: {fileID: 3748192555734678994, guid: 17eff6c39acfb8f4b93059015007ed3a, type: 3}
-  nickel: {fileID: 7908019957697281359, guid: 461f0b0b23f541443bd20c58e090aa22, type: 3}
-  dime: {fileID: 3677323382327000900, guid: 2f7b8a21a60e46a46b56d43b387d86b1, type: 3}
-  quarter: {fileID: 7078984797162921951, guid: e62c78ae328308c4da3e360ea37dbf50, type: 3}
-  oneDollar: {fileID: 1873497969233460491, guid: 6fa1761568e33e84eb05287643ecc9ea,
-    type: 3}
-  fiveDollar: {fileID: 2568470230763150162, guid: e4c7f7f562d0ed34481837c896a1ee70,
-    type: 3}
-  tenDollar: {fileID: 8957419694435249564, guid: fe0b6c049d73c024a8fed8593e664e44,
-    type: 3}
-  twentyDollar: {fileID: 5479893015168346257, guid: 939f9c4fee5dd5846ac3742494b1eb0e,
-    type: 3}
-  fiftyDollar: {fileID: 4291710641846697247, guid: 84b6b4aae8b29924393fa1a019c10b7b,
-    type: 3}
 --- !u!1 &7649307207491915491
 GameObject:
   m_ObjectHideFlags: 0
