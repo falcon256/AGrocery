@@ -104,9 +104,9 @@ GameObject:
   - component: {fileID: 2720959168603025802}
   - component: {fileID: 6705314959317701088}
   - component: {fileID: 5171223199846191815}
-  - component: {fileID: 5404013634442763854}
-  - component: {fileID: 6110869760305342711}
   - component: {fileID: 2800990599570259082}
+  - component: {fileID: 6690049921874140170}
+  - component: {fileID: 3484347971154097238}
   m_Layer: 11
   m_Name: 'Quarter '
   m_TagString: Money
@@ -121,14 +121,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7078984797162921951}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0.00000028088027}
   m_LocalPosition: {x: 7.780943, y: 1.2668729, z: -21.166342}
   m_LocalScale: {x: 0.31278038, y: 0.15639, z: 0.31278038}
   m_Children:
   - {fileID: 2950750478849363722}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
 --- !u!114 &6705314959317701088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,33 +162,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &5404013634442763854
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7078984797162921951}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &6110869760305342711
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7078984797162921951}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.05
-  m_Height: 0.01
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &2800990599570259082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,3 +179,29 @@ MonoBehaviour:
   category: 8
   value: 0.25
   hasBeenUsed: 0
+--- !u!65 &6690049921874140170
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7078984797162921951}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10384952, y: 0.024879672, z: 0.10208242}
+  m_Center: {x: -0.00031896154, y: 0.00027879607, z: -0.0001870534}
+--- !u!65 &3484347971154097238
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7078984797162921951}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10384952, y: 0.024879672, z: 0.10208242}
+  m_Center: {x: -0.00031896154, y: 0.00027879607, z: -0.0001870534}

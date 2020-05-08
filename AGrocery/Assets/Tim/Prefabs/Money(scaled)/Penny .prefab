@@ -89,9 +89,9 @@ GameObject:
   - component: {fileID: 4280119591074000629}
   - component: {fileID: 2528479507996325360}
   - component: {fileID: 2804772152799570475}
-  - component: {fileID: 464861022895226453}
-  - component: {fileID: 6467245422803284148}
   - component: {fileID: 5804792071888157625}
+  - component: {fileID: 2299505576217620886}
+  - component: {fileID: 1159172021059987950}
   m_Layer: 11
   m_Name: 'Penny '
   m_TagString: Money
@@ -147,33 +147,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &464861022895226453
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3748192555734678994}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &6467245422803284148
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3748192555734678994}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.05
-  m_Height: 0.01
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &5804792071888157625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,3 +164,29 @@ MonoBehaviour:
   category: 5
   value: 0.01
   hasBeenUsed: 0
+--- !u!65 &2299505576217620886
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3748192555734678994}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10384952, y: 0.024879672, z: 0.10208242}
+  m_Center: {x: -0.00031896154, y: 0.00027879607, z: -0.0001870534}
+--- !u!65 &1159172021059987950
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3748192555734678994}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10384952, y: 0.024879672, z: 0.10208242}
+  m_Center: {x: -0.00031896154, y: 0.00027879607, z: -0.0001870534}

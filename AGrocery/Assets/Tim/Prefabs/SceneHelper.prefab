@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5498271126294467727}
-  - component: {fileID: 6688351093633700443}
+  - component: {fileID: 7249687629378641690}
   m_Layer: 0
   m_Name: SceneHelper
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6688351093633700443
+--- !u!114 &7249687629378641690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50,19 +50,7 @@ MonoBehaviour:
   mainScreenCanvas: {fileID: 0}
   eventSystem: {fileID: 0}
   beveragesButton: {fileID: 0}
-  movePoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  movePoints: []
   walkSpeed: 5
   noHelpChosen: 0
   moveToBeverages: 0

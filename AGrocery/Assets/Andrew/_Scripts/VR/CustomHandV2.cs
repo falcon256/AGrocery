@@ -5,12 +5,19 @@ using UnityEngine.UI;
 
 public class CustomHandV2 : MonoBehaviour
 {
-  public GameObject creditCard;
   public GameObject oneDollar;
   public GameObject fiveDollar;
   public GameObject tenDollar;
   public GameObject twentyDollar;
   public GameObject fiftyDollar;
+  public GameObject penny;
+  public GameObject nickel;
+  public GameObject dime;
+  public GameObject quarter;
+  public GameObject creditCard;
+
+  public GameObject playerMoneyTextBox;
+  public Text playerMoneyText;
 
   public Text debug;
 
@@ -20,13 +27,17 @@ public class CustomHandV2 : MonoBehaviour
 
   private void Start()
   {
+
+    playerMoneyTextBox = GameObject.FindWithTag("PlayerMoneyText");
+
     offset = GameObject.FindGameObjectWithTag("hand").transform;
     holdingDollar = false;
   }
 
   private void OnTriggerStay(Collider other)
   {
-    if (other.tag == "icon")
+    if (other.tag == "icon" && PlayerMoneyHandlerVR.PlayerMoney > 0)
+    //if (other.tag == "icon")
     {
       if (other.name == "One")
       {
@@ -82,19 +93,56 @@ public class CustomHandV2 : MonoBehaviour
           }
         }
       }
-
-      if (other.name == "Credit")
+      if (other.name == "CreditCard")
       {
         if (RightIndexDown())
         {
           if (holdingDollar == false)
           {
-            TakeMoneyCreditCard();
+            TakeCreditCard();
           }
         }
       }
-
-
+      if (other.name == "Penny")
+      {
+        if (RightIndexDown())
+        {
+          if (holdingDollar == false)
+          {
+            TakeMoneyPenny();
+          }
+        }
+      }
+      if (other.name == "Nickel")
+      {
+        if (RightIndexDown())
+        {
+          if (holdingDollar == false)
+          {
+            TakeMoneyNickel();
+          }
+        }
+      }
+      if (other.name == "Dime")
+      {
+        if (RightIndexDown())
+        {
+          if (holdingDollar == false)
+          {
+            TakeMoneyDime();
+          }
+        }
+      }
+      if (other.name == "Quarter")
+      {
+        if (RightIndexDown())
+        {
+          if (holdingDollar == false)
+          {
+            TakeMoneyQuarter();
+          }
+        }
+      }
     }
   }
 
@@ -115,6 +163,10 @@ public class CustomHandV2 : MonoBehaviour
         UpdateLocation();
       }
     }
+
+    playerMoneyText = playerMoneyTextBox.GetComponent<Text>();
+    playerMoneyText.text = "Player Money: " + PlayerMoneyHandlerVR.PlayerMoney.ToString("c");
+
   }
 
   public void UpdateLocation()
@@ -143,6 +195,8 @@ public class CustomHandV2 : MonoBehaviour
     holdingDollar = true;
     dollar = Instantiate(oneDollar);
     //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+    PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 1.00m;
   }
 
   private void TakeMoneyFiveDollar()
@@ -150,6 +204,8 @@ public class CustomHandV2 : MonoBehaviour
     holdingDollar = true;
     dollar = Instantiate(fiveDollar);
     //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+    PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 5.00m;
   }
 
   private void TakeMoneyTenDollar()
@@ -157,6 +213,8 @@ public class CustomHandV2 : MonoBehaviour
     holdingDollar = true;
     dollar = Instantiate(tenDollar);
     //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+    PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 10.00m;
   }
 
   private void TakeMoneyTwentyDollar()
@@ -164,6 +222,8 @@ public class CustomHandV2 : MonoBehaviour
     holdingDollar = true;
     dollar = Instantiate(twentyDollar);
     //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+    PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 20.00m;
   }
 
   private void TakeMoneyFiftyDollar()
@@ -171,22 +231,67 @@ public class CustomHandV2 : MonoBehaviour
     holdingDollar = true;
     dollar = Instantiate(fiftyDollar);
     //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+    PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 50.00m;
   }
 
-  private void TakeMoneyCreditCard()
+  private void TakeCreditCard()
   {
     holdingDollar = true;
     dollar = Instantiate(creditCard);
-    //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+    //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());        
   }
 
+  private void TakeMoneyPenny()
+  {
+    holdingDollar = true;
+    dollar = Instantiate(penny);
+    //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+    PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 0.01m;
+  }
+
+  private void TakeMoneyNickel()
+  {
+    holdingDollar = true;
+    dollar = Instantiate(nickel);
+    //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+    PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 0.05m;
+  }
+
+  private void TakeMoneyDime()
+  {
+    holdingDollar = true;
+    dollar = Instantiate(dime);
+    //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+    PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 0.10m;
+  }
+
+  private void TakeMoneyQuarter()
+  {
+    holdingDollar = true;
+    dollar = Instantiate(quarter);
+    //dollar.GetComponent<OVRGrabbable>().GrabBegin(this.GetComponent<OVRGrabber>(), dollar.GetComponent<Collider>());
+
+    PlayerMoneyHandlerVR.PlayerMoney = PlayerMoneyHandlerVR.PlayerMoney - 0.25m;
+  }
 
   private void DropMoney()
   {
     holdingDollar = false;
-    dollar.transform.parent = null;
-    dollar.GetComponent<Rigidbody>().useGravity = true;
-    dollar.GetComponent<Rigidbody>().isKinematic = false;
-    dollar.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+
+    if (dollar)
+    {
+      dollar.GetComponent<Rigidbody>().isKinematic = false;
+      dollar.GetComponent<Rigidbody>().useGravity = true;
+    }
+
+
+    //dollar.transform.parent = null;
+    //dollar.GetComponent<Rigidbody>().useGravity = true;
+    //dollar.GetComponent<Rigidbody>().isKinematic = false;
+    //dollar.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
   }
 }

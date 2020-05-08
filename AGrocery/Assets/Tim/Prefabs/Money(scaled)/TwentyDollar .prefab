@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4999008481602392717}
   - component: {fileID: 2963802067326641593}
   - component: {fileID: 2017016373713001779}
-  - component: {fileID: 2017016373713001788}
   - component: {fileID: 3335722458064496229}
   - component: {fileID: 2801421866654184733}
+  - component: {fileID: 3681642869744405502}
   m_Layer: 11
   m_Name: 'TwentyDollar '
   m_TagString: Money
@@ -69,19 +69,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2017016373713001788
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5479893015168346257}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &3335722458064496229
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -112,6 +99,19 @@ MonoBehaviour:
   category: 3
   value: 20
   hasBeenUsed: 0
+--- !u!65 &3681642869744405502
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5479893015168346257}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.1, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6599564144473318512
 GameObject:
   m_ObjectHideFlags: 0

@@ -89,9 +89,9 @@ GameObject:
   - component: {fileID: 5368492088396040656}
   - component: {fileID: 6053991074009797655}
   - component: {fileID: 100839735666386800}
-  - component: {fileID: 2899821287115406849}
-  - component: {fileID: 8069734498543756104}
   - component: {fileID: 518309642191008076}
+  - component: {fileID: 8305200723968425048}
+  - component: {fileID: 6239613250460564749}
   m_Layer: 11
   m_Name: 'Nickel '
   m_TagString: Money
@@ -106,14 +106,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7908019957697281359}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0.00000028088027}
   m_LocalPosition: {x: 7.780943, y: 1.2668729, z: -21.081964}
   m_LocalScale: {x: 0.2345853, y: 0.15639, z: 0.2345853}
   m_Children:
   - {fileID: 3750745114442132618}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
 --- !u!114 &6053991074009797655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,33 +147,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2899821287115406849
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7908019957697281359}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &8069734498543756104
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7908019957697281359}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.05
-  m_Height: 0.01
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &518309642191008076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,3 +164,29 @@ MonoBehaviour:
   category: 6
   value: 0.05
   hasBeenUsed: 0
+--- !u!65 &8305200723968425048
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7908019957697281359}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10384952, y: 0.024879672, z: 0.10208242}
+  m_Center: {x: -0.00031896154, y: 0.00027879607, z: -0.0001870534}
+--- !u!65 &6239613250460564749
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7908019957697281359}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10384952, y: 0.024879672, z: 0.10208242}
+  m_Center: {x: -0.00031896154, y: 0.00027879607, z: -0.0001870534}

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2624859670101921660}
   - component: {fileID: 7865407438728043351}
   - component: {fileID: 1976320450142296668}
-  - component: {fileID: 1976320450142296669}
   - component: {fileID: 7628214281679533219}
   - component: {fileID: 3776539880855307609}
+  - component: {fileID: 8390685201293769333}
   m_Layer: 11
   m_Name: FiveDollar
   m_TagString: Money
@@ -69,19 +69,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1976320450142296669
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2568470230763150162}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &7628214281679533219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -112,6 +99,19 @@ MonoBehaviour:
   category: 1
   value: 5
   hasBeenUsed: 0
+--- !u!65 &8390685201293769333
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2568470230763150162}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.1, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6534875424440396056
 GameObject:
   m_ObjectHideFlags: 0

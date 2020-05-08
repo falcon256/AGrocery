@@ -40,7 +40,7 @@ public class PriceTagAutoFill : MonoBehaviour
             if(nearestDist<1000000.0f)
             {
                 myNearestProduct = nearestObject.GetComponent<ProductData>();
-                text.text = "$"+myNearestProduct.price;
+                text.text = myNearestProduct.price.ToString("c");
             }
         }
     }

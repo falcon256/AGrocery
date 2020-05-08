@@ -6,16 +6,21 @@ public class PlayerSound : MonoBehaviour
 {
   AudioSource soundPlayer;
   GameObject soundObject;
+
   SoundManager soundManager;
-  GameObject player;
+  public GameObject player;
+  public GameObject store;
+
   CharacterController characterController;
   float footstepTimer;
   public bool isMoving = false;
+ 
 
   void Start()
   {
     soundObject = GameObject.Find("SoundManager");
     soundPlayer = transform.GetComponent<AudioSource>();
+   
     soundManager = soundObject.GetComponent<SoundManager>();
     characterController = transform.GetComponent<CharacterController>();
 
@@ -64,15 +69,8 @@ public class PlayerSound : MonoBehaviour
         soundPlayer.volume = .3f;
         soundPlayer.PlayOneShot(soundManager.footsteps);
 
-
-
         footstepTimer = 0;
       }
-
-
-      
-
-
 
     }
     else
@@ -83,7 +81,15 @@ public class PlayerSound : MonoBehaviour
     }
 
     footstepTimer += Time.deltaTime;
+
+ 
+
+ 
+    
   }
+
+
+
 
 
 }

@@ -79,14 +79,21 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
   float scanTime = .5f;
   float scanTimer = 0;
   bool scannable = true;
+  bool isMain;
 
   decimal total;
   decimal newTotal;
   
   
 
-  float currentOffer;
+  decimal currentOffer;
   decimal changeAmount;
+
+  
+  decimal changeStartingAmount;
+  decimal changeCount;
+
+  decimal changeTextAmount;
 
   // Start is called before the first frame update
   void Start()
@@ -106,6 +113,11 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
     money = GameObject.FindWithTag("Money");
     allMoney = GameObject.FindGameObjectsWithTag("Money");
     changeCalculator = new ChangeCalculator();
+
+    if(gameObject.name == "MainCheckoutMoneyDrop")
+    {
+      isMain = true;
+    }
    
   }
 
@@ -162,75 +174,112 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
 
       if (payScreenScript.isCash)
       {
-        thisObject = collidedMoney.gameObject;
-        if (collidedMoney.GetComponent<MoneyData>().hasBeenUsed == false)
+        ProcessCashPayment(collidedMoney);
+
+      }
+
+      if (isMain)
+      {
+        if(scanner.GetComponent<ScannerColliderScriptVRV2>().numItemsScanned > 0)
         {
-          /* var objGrabbable = thisObject.GetComponent<OVRGrabbable>();
-           Destroy(objGrabbable);
-           thisObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
-           thisObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-           thisObject.transform.position = Vector3.Lerp(thisObject.transform.position, moneyGrabber.position, .02f);
-           StartCoroutine("DestroyMoney");*/
-          if (!costReached)
-          {
+          ProcessCashPayment(collidedMoney);
+        }
+        else
+        {
+          payScreenScript.mainText.text = "No Items";
+        }
+      }
 
-            scanner.GetComponent<ScannerColliderScriptVRV2>();
+   
+    }
+  }
 
-            total = scanner.GetComponent<ScannerColliderScriptVRV2>().total;
-            
+  private void ProcessCashPayment(Collider collidedMoney)
+  {
+    thisObject = collidedMoney.gameObject;
+   
+   
+      if (collidedMoney.GetComponent<MoneyData>().hasBeenUsed == false)
+      {
+        if (!costReached || costReached)
+        {
+          //payScreen = GetComponentInParent<PayScreen>();
+          scanner.GetComponent<ScannerColliderScriptVRV2>();
 
-            itemizedText = scanner.GetComponent<ScannerColliderScriptVRV2>().itemizedText;
-            selfCheckoutMainText = scanner.GetComponent<ScannerColliderScriptVRV2>().selfCheckoutMainText;
-            outputTotalText = scanner.GetComponent<ScannerColliderScriptVRV2>().outputTotalText;
+          total = scanner.GetComponent<ScannerColliderScriptVRV2>().total;
+       
+          newTotal = scanner.GetComponent<ScannerColliderScriptVRV2>().newTotal;
 
-            usingCash = true;
-            collidedMoney.GetComponent<MoneyData>().hasBeenUsed = true;
+          itemizedText = scanner.GetComponent<ScannerColliderScriptVRV2>().itemizedText;
+          selfCheckoutMainText = scanner.GetComponent<ScannerColliderScriptVRV2>().selfCheckoutMainText;
+          outputTotalText = scanner.GetComponent<ScannerColliderScriptVRV2>().outputTotalText;
 
-            moneyData = collidedMoney.GetComponent<MoneyData>();
-            moneyValue = moneyData.value;
-            var moneyValueConverted = Convert.ToDecimal(moneyValue);
-            currencyType = collidedMoney.name.Replace("(Clone)", " ");
+          usingCash = true;
+          collidedMoney.GetComponent<MoneyData>().hasBeenUsed = true;
 
-            newTotal = Decimal.Subtract(total , moneyValueConverted);
-            scanner.GetComponent<ScannerColliderScriptVRV2>().total = newTotal;
-            itemizedText.Append($"\n -{moneyValue:c}");
-            payScreenScript.itemizedText.text = itemizedText.ToString();
-            outputTotalText.Clear();
-            outputTotalText.Append(newTotal.ToString("c"));
-            payScreenScript.outputTotalText.text = outputTotalText.ToString();
-           
+          moneyData = collidedMoney.GetComponent<MoneyData>();
+          moneyValue = moneyData.value;
+          currencyType = collidedMoney.name.Replace("(Clone)", " ");
 
+          newTotal = total - Convert.ToDecimal(moneyValue);
+          scanner.GetComponent<ScannerColliderScriptVRV2>().total -= Convert.ToDecimal(moneyValue);
+   
+          itemizedText.Append($"\n -{moneyValue:c}");
+          payScreenScript.itemizedText.text = itemizedText.ToString();
+          currentOffer = currentOffer + Convert.ToDecimal(moneyValue);
 
-            currentOffer = currentOffer + moneyValue;
-            selfCheckoutMainText.Clear();
-            selfCheckoutMainText.Append($"{currencyType} {moneyValue.ToString("c")} {"Current Offer:" + currentOffer.ToString("c")} \n");
-            payScreenScript.mainText.text = selfCheckoutMainText.ToString();
+          selfCheckoutMainText.Clear();
+          selfCheckoutMainText.Append($"{currencyType} {moneyValue.ToString("c")} {"Current Offer:" + currentOffer.ToString("c")} \n");
+          payScreenScript.mainText.text = selfCheckoutMainText.ToString();
 
-            PlayerMoneyHandler.PlayerMoney = PlayerMoneyHandler.PlayerMoney - moneyValue;
-           
+          outputTotalText.Clear();
+          outputTotalText.Append(newTotal.ToString("c"));
+          payScreenScript.outputTotalText.text = outputTotalText.ToString();
 
+          scannable = false;
+          scanTimer = 0;
+
+        if (!isMain)
+        {
+          StartCoroutine("DestroyMoney");
+        }
+        else
+        {
           
-            StartCoroutine("DestroyMoney");
-            scannable = false;
-            scanTimer = 0;
+        }
 
-
-            
-
-
-           
-          }
-         // if (Convert.ToDecimal(currentOffer) >= payScreenScript.originalTotal &&
-          if (Convert.ToDecimal(currentOffer) >= newTotal && scanner.GetComponent<ScannerColliderScriptVRV2>().numItemsScanned > 0)
+        if (Convert.ToDecimal(moneyValue) >= total && scanner.GetComponent<ScannerColliderScriptVRV2>().numItemsScanned > 0)
           {
-
             costReached = true;
+            changeTextAmount = Convert.ToDecimal(moneyValue) - total;
+            changeStartingAmount = currentOffer - total;
             changeAmount = Convert.ToDecimal(moneyValue) - total;
-            payScreenScript.outputTotalText.text = $"{0:c}";
+            var zero = 0;
+            outputTotalText.Clear();
+            outputTotalText.Append(zero.ToString("c"));
+            payScreenScript.outputTotalText.text = outputTotalText.ToString();
+
+            //costReached = true;
+            //changeAmount = Convert.ToDecimal(moneyValue) - total;
+           // payScreenScript.outputTotalText.text = $"{0:c}";
             payScreenScript.changeText.text = "CHANGE: " + $"{changeAmount:c}";
-           
+
             var expectedChange = changeCalculator.MakeChange(changeAmount);
-            
+
+            if (isMain)
+            {
+              GameObject[] monies = GameObject.FindGameObjectsWithTag("Money");
+
+              foreach (var amount in monies)
+              {
+                if(amount != null)
+              {
+                Destroy(amount);
+              }
+             
+              }
+            }
+
 
             foreach (var amt in expectedChange)
             {
@@ -270,16 +319,12 @@ public class PurchaseCashColliderScriptVRV2 : MonoBehaviour
                   break;
               }
             }
-              StartCoroutine("PaymentReceived");
-          }
+            StartCoroutine("PaymentReceived");
 
-        
-         
+
+          }
         }
-    
-      
-     
       }
-    }
+    
   }
 }
