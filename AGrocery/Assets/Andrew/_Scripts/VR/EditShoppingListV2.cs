@@ -104,6 +104,8 @@ public class EditShoppingListV2 : MonoBehaviour
 
         currentProduct = products[rand];
 
+        currentProduct.GetComponent<Light>().enabled = true;
+
         listText.Clear();
         listText.Append(currentProduct.name.Replace("(Clone)", " ").ToString() + " \n");
         shoppingListText.text += listText.ToString();

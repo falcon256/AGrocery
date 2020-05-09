@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: -690140317778797995}
   - component: {fileID: 2846828027466411652}
   - component: {fileID: -9153470860048054518}
+  - component: {fileID: -7367396091111026826}
   m_Layer: 10
-  m_Name: Comb
+  m_Name: HeatResistantComb
   m_TagString: Product
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174,6 +175,18 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &-7367396091111026826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3928976881644232750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0faa1e06e32fe4fb44f43068dfea44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6131055476591530421
 PrefabInstance:
   m_ObjectHideFlags: 0

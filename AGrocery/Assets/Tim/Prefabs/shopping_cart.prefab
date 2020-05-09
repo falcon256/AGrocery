@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2039723844592103768}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: transform6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3055208852212419143}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: frt_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7842643074412772644}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: transform7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2350722448398956270}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: transform4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 5708089198599615064}
   - component: {fileID: 2079480944687478395}
   - component: {fileID: 8290712160530556842}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface2__Hand_v2:fist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 878571915253769731}
   - component: {fileID: 1426591808460260487}
   - component: {fileID: 6086407778070453427}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: frt_wheels_inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1997138050372891505}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: transform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8533957164608379337}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: transform9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1209681474876633649}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: cart_base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8338655204334273353}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: CartHand2
   m_TagString: CartHand2
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8338655204107621951}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CartHand1
   m_TagString: CartHand1
   m_Icon: {fileID: 0}
@@ -437,8 +437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1557529595614801277}
-  - component: {fileID: 863129538347093154}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: transform8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,22 +458,6 @@ Transform:
   m_Father: {fileID: 7840080548027090887}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &863129538347093154
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5494802408481658007}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &6184034284407911967
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,7 +467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4268590668143093683}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: transform2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8977156258436604506}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: handle_bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,7 +538,7 @@ GameObject:
   - component: {fileID: 5475272270992834693}
   - component: {fileID: 4975372725253388609}
   - component: {fileID: 431936684588878388}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: shopping_cart
   m_TagString: ShoppingCart
   m_Icon: {fileID: 0}
@@ -597,13 +580,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6391006022099797202}
   serializedVersion: 2
-  m_Mass: 1000
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 36
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!82 &6391006022099797203
 AudioSource:
@@ -822,7 +805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7027886966112580481}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: back_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,7 +838,7 @@ GameObject:
   - component: {fileID: 6473818788564239903}
   - component: {fileID: 8823923513568639070}
   - component: {fileID: 1054928338081934953}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: cart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -934,7 +917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4312027743808073564}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: cart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -966,7 +949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7840080548027090887}
   - component: {fileID: 7254212419618824714}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: handle_grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1010,7 +993,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7025591896939063068}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: transform10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1042,7 +1025,7 @@ GameObject:
   - component: {fileID: 3229293227396492241}
   - component: {fileID: 8052355213522818041}
   - component: {fileID: 2883623687504464845}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: back_wheels_outer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1118,7 +1101,7 @@ GameObject:
   - component: {fileID: 4111630221392957143}
   - component: {fileID: 8290758531095813159}
   - component: {fileID: 3798142956768101395}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: frt_wheels_outer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1192,7 +1175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6845503642154058010}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: transform3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1222,7 +1205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1708219826113165091}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: transform5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1254,7 +1237,7 @@ GameObject:
   - component: {fileID: 6614343940551949699}
   - component: {fileID: 8953221691523756180}
   - component: {fileID: 4322116030337493152}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: back_wheels_inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1330,7 +1313,7 @@ GameObject:
   - component: {fileID: 1435779292287843317}
   - component: {fileID: 3045620851325875022}
   - component: {fileID: 3570475169850455358}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: fist
   m_TagString: Untagged
   m_Icon: {fileID: 0}

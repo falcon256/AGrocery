@@ -56,7 +56,7 @@ public class CartItem : MonoBehaviour
     if (isCartItem && timer >= time )
     {
       rb.Sleep();
-      rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+      rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY;
       rb.drag = 5;
      
     
