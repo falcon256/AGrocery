@@ -86,7 +86,9 @@ public class CustomGrab : MonoBehaviour
     {
         if (OVRInput.GetUp(OVRInput.Button.PrimaryHandTrigger, controller) && itemInHand == true)
         {
+            isFlying = false;
             itemInHand = false;
+
             //handAnimator.SetBool("GrabItem", false);
 
             if (grabbedItem.name.Contains("Loaded") == false)
